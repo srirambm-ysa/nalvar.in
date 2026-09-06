@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Nalvar — The Four Saivite Saints</title>
+  <meta name="description" content="Nalvar - Appar, Sambandar, Sundarar, Manickavasagar — the four great Saiva Siddhanta saints" />
+  <meta name="theme-color" content="#4a2c11">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family: ui-sans-system, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background:#fdf8f0; color:#2c1810; line-height:1.6; min-height:100dvh; display:flex; flex-direction:column; }
+    img { display:block; max-width:100%; }
+    a { color:#9a3412; }
+    button { font:inherit; }
+    .site-header { background:#4a2c11; color:#fdf8f0; position:sticky; top:0; z-index:40; box-shadow:0 2px 12px rgba(0,0,0,.18); padding-top: env(safe-area-inset-top); }
+    .hero-emblem { display:flex; align-items:center; justify-content:center; gap:10px; padding:6px 12px 4px; border-bottom:1px solid rgba(255,255,255,.10); }
+    .hero-emblem img { height:52px; width:auto; object-fit:contain; filter: drop-shadow(0 1px 6px rgba(0,0,0,.35)); }
+    .header-inner { max-width:1200px; margin:0 auto; padding:8px 16px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; }
+    .brand h1 { font-size:1.05rem; font-weight:800; letter-spacing:.02em; line-height:1.1; }
+    .brand p { font-size:.70rem; opacity:.82; margin-top:2px; letter-spacing:.07em; text-transform:uppercase; }
+    .brand .tamil { font-size:.66rem; opacity:.65; text-transform:none; font-style:italic; letter-spacing:.03em; }
+    .brand-title-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+    .nalvar-chip { display:inline-flex; width:148px; height:52px; border-radius:14px; overflow:hidden; border:none; background:transparent; box-shadow:none; flex-shrink:0; padding:0; }
+    .nalvar-chip img { width:100%; height:100%; object-fit:contain; object-position:center; display:block; }
+    @media (max-width:640px){ .nalvar-chip { width:110px; height:40px; border-radius:10px; border-width:1.5px; padding:3px; } .brand-title-row { gap:8px; } }
+    .header-meta { font-size:.68rem; opacity:.70; max-width:240px; line-height:1.35; text-align:right; }
+    @media (max-width:640px){ .header-meta{ display:none; } }
+    .tabs-wrap { max-width:1200px; margin:0 auto; width:100%; padding:0 16px; }
+    .tabs { display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; padding-bottom:6px; border-bottom:1px solid rgba(255,255,255,.14); min-height:36px; }
+    .tabs.loading { opacity:.6; }
+    .tab-btn { appearance:none; border:1px solid rgba(255,255,255,.20); background:rgba(255,255,255,.08); color:#fdf8f0; padding:6px 12px; border-radius:999px; font-weight:600; font-size:.82rem; cursor:pointer; transition:all .2s; display:inline-flex; align-items:center; gap:6px; min-height:36px; }
+    .tab-btn:hover { background:rgba(255,255,255,.14); }
+    .tab-btn[aria-selected="true"] { background:#fdf8f0; color:#4a2c11; border-color:#fdf8f0; box-shadow:0 2px 8px rgba(0,0,0,.16); }
+    .tab-btn .dot-mini { width:6px; height:6px; border-radius:50%; background:currentColor; opacity:.5; }
+    .tab-btn[aria-selected="true"] .dot-mini { opacity:1; }
+    main { flex:1; max-width:1200px; width:100%; margin:0 auto; padding:16px 16px calc(28px + env(safe-area-inset-bottom)); }
+    .panel { display:none; animation:fade .22s ease; }
+    .panel.active { display:block; }
+    @keyframes fade { from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:translateY(0)} }
+    .card { background:#fff; border-radius:18px; box-shadow:0 10px 28px rgba(74,44,17,.12); border:1px solid #f0dfc8; overflow:hidden; height: min(560px, 62dvh); min-height:480px; position:relative; display:flex; flex-direction:column; }
+    @media (max-width:640px){ .card{ height:560px; border-radius:16px; } }
+    .card-carousel { display:flex; width:100%; height:100%; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scroll-behavior:smooth; scrollbar-width:none; -ms-overflow-style:none; }
+    .card-carousel::-webkit-scrollbar{ display:none; }
+    .slide { flex:0 0 100%; width:100%; height:100%; scroll-snap-align:start; padding:22px 24px; display:flex; flex-direction:column; justify-content:flex-start; overflow-y:auto; -webkit-overflow-scrolling:touch; position:relative; isolation:isolate; }
+    .slide.wm { background-color:#0f0a04; color:#fdf8f0; }
+    .slide.wm::before { content:""; position:absolute; inset:0; z-index:0; background-image: var(--wm); background-repeat:no-repeat; background-position:center 38%; background-size: 68% auto; opacity:0.22; filter: grayscale(1) sepia(.08) contrast(1.05) brightness(1.15); pointer-events:none; }
+    .slide.wm::after { content:""; position:absolute; inset:0; z-index:0; background: linear-gradient(to bottom, rgba(10,6,2,.46) 0%, rgba(15,10,4,.72) 55%, rgba(10,6,2,.88) 100%); pointer-events:none; }
+    .slide.wm > * { position:relative; z-index:1; }
+    .slide.wm h3 { color:#fde68a; }
+    .slide.wm p, .slide.wm ul { color:#fdf8f0; }
+    .slide.wm li { color:#fdf8f0; }
+    .slide.wm li::marker { color:#fcd34d; }
+    .slide.wm strong { color:#fff; }
+    .slide.wm a { color:#fcd34d; border-bottom-color:rgba(252,211,77,.45); }
+    .slide.wm a:hover { border-bottom-color:#fcd34d; color:#fef3c7; }
+    .slide.wm em { color:#fef3c7; }
+    #panel-appar .slide.wm::before, #panel-sundarar .slide.wm::before, #panel-manickavasagar .slide.wm::before { background-size: auto 78%; background-position: center 14px; }
+    @media (max-width:640px){ .slide.wm::before { background-size: 84% auto; background-position:center 32%; opacity:0.20; } #panel-appar .slide.wm::before, #panel-sundarar .slide.wm::before, #panel-manickavasagar .slide.wm::before { background-size: auto 72%; background-position:center 10px; } }
+    .slide-image { padding:0; position:relative; overflow:hidden; display:block; background:#1a0e04; }
+    .slide-image .backdrop { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; filter: blur(18px) brightness(0.72) scale(1.08); opacity:1; transform:scale(1.08); }
+    .slide-image picture { position:relative; z-index:1; width:100%; height:100%; display:grid; place-items:center; }
+    .slide-image picture img { width:auto; height:100%; max-width:100%; max-height:100%; object-fit:contain; object-position:center center; }
+    @media (max-width:640px){ .slide-image picture img { width:100%; height:100%; object-fit:cover; object-position:top center; } .slide-image .backdrop { display:none; } }
+    .overlay-title { position:absolute; inset:auto 0 0 0; z-index:2; background:linear-gradient(transparent, rgba(26,14,4,.86) 68%); color:#fff; padding:22px 16px 28px; text-align:center; pointer-events:none; }
+    .overlay-title h2 { font-size:1.35rem; font-weight:800; line-height:1.2; text-shadow:0 2px 10px rgba(0,0,0,.5); }
+    .overlay-title .subtitle { font-size:.78rem; opacity:.88; margin-top:4px; letter-spacing:.06em; text-transform:uppercase; }
+    .overlay-title small { display:block; margin-top:8px; opacity:.68; font-size:.74rem; }
+    @media (max-width:640px){ .overlay-title h2{font-size:1.2rem} }
+    .slide h3 { color:#9a3412; font-size:1rem; font-weight:800; margin-bottom:10px; padding-bottom:0; display:inline-block; }
+    .slide p, .slide ul { font-size:.92rem; color:#44403c; line-height:1.62; }
+    .slide ul { padding-left:18px; margin-top:6px; }
+    .slide li { margin-bottom:7px; }
+    .slide li::marker { color:#c2410c; }
+    .slide a { color:#c2410c; text-decoration:none; font-weight:700; border-bottom:1px dashed #fed7aa; }
+    .slide a:hover { border-bottom-style:solid; }
+    .slide strong { color:#1c1917; }
+    .dots-indicator { position:absolute; bottom:10px; left:0; right:0; display:flex; justify-content:center; gap:6px; pointer-events:none; z-index:3; }
+    .dot { width:7px; height:7px; border-radius:999px; background:rgba(255,255,255,.55); transition:all .26s; box-shadow:0 1px 4px rgba(0,0,0,.4); }
+    .dot.active { background:#fff; width:20px; box-shadow:0 2px 8px rgba(0,0,0,.5); }
+    .dots-indicator.alt .dot { background:rgba(0,0,0,.18); box-shadow:none; }
+    .dots-indicator.alt .dot.active { background:#9a3412; }
+    .carousel-nav { position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.92); border:1px solid #e7c9a6; display:grid; place-items:center; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,.15); transition:all .2s; z-index:3; user-select:none; font-size:1.4rem; line-height:1; }
+    .carousel-nav:hover { background:#fff; transform:translateY(-50%) scale(1.06); }
+    .carousel-nav.prev { left:8px; } .carousel-nav.next { right:8px; }
+    @media (max-width:640px){ .carousel-nav{ display:none; } }
+    .meta-grid { margin-top:14px; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:12px; }
+    .meta-card { background: linear-gradient(to bottom, #fffefb 0%, #fff7ed 100%); border:1.5px solid #e7c9a6; border-left:4px solid #d97706; border-radius:14px; padding:14px 16px; box-shadow: 0 8px 24px rgba(74,44,17,.14), 0 3px 8px rgba(74,44,17,.10), 0 1px 0 rgba(251,191,36,.18) inset; position:relative; }
+    .meta-card::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, #f59e0b 0%, #d97706 45%, #92400e 100%); border-radius:14px 14px 0 0; opacity:.85; }
+    .meta-card h4 { font-size:.76rem; letter-spacing:.07em; text-transform:uppercase; color:#92400e; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
+    .meta-card h4::before { content:"◆"; color:#f59e0b; font-size:.62rem; }
+    .meta-card p { font-size:.84rem; color:#57534e; line-height:1.5; }
+    /* Remedies */
+    .remedy-wrap { background:#fff; border:1.5px solid #e7c9a6; border-radius:18px; padding:18px; box-shadow:0 10px 28px rgba(74,44,17,.10); }
+    .remedy-header h2 { font-size:1.15rem; color:#7c2d12; }
+    .remedy-header p { font-size:.88rem; color:#57534e; margin-top:4px; }
+    .remedy-disclaimer { font-size:.76rem; color:#92400e; background:#fffbeb; border:1px solid #fde68a; padding:8px 12px; border-radius:10px; margin-top:10px; }
+    .category-pills { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 8px; }
+    .pill { appearance:none; border:1px solid #e7c9a6; background:#fff7ed; color:#7c2d12; padding:6px 12px; border-radius:999px; font-size:.82rem; font-weight:600; cursor:pointer; transition:all .2s; }
+    .pill.active, .pill:hover { background:#4a2c11; color:#fdf8f0; border-color:#4a2c11; }
+    .remedy-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:12px; margin-top:10px; }
+    .remedy-card { background: linear-gradient(to bottom, #fffefb, #fff7ed); border:1.5px solid #e7c9a6; border-left:4px solid #d97706; border-radius:14px; padding:14px 14px 12px; box-shadow:0 6px 18px rgba(74,44,17,.10); display:flex; flex-direction:column; gap:6px; }
+    .remedy-card h4 { font-size:.92rem; color:#7c2d12; line-height:1.3; }
+    .remedy-card .meta { font-size:.78rem; color:#78716c; }
+    .remedy-card .links { display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; }
+    .remedy-card .links a { font-size:.78rem; font-weight:700; padding:6px 10px; border-radius:999px; text-decoration:none; border:1px solid #fcd34d; }
+    .remedy-card .links a.primary { background:#4a2c11; color:#fdf8f0; border-color:#4a2c11; }
+    .remedy-card .links a.secondary { background:#fff; color:#92400e; }
+    footer { text-align:center; padding:18px 16px calc(18px + env(safe-area-inset-bottom)); color:#78716c; font-size:.78rem; border-top:1px solid #ead9c3; background:#fff7ed; margin-top:10px; }
+    .install-btn { display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:8px 14px; border-radius:999px; background:#4a2c11; color:#fdf8f0; border:0; cursor:pointer; font-weight:700; font-size:.84rem; min-height:36px; }
+    .install-btn[hidden]{ display:none; }
+    .loading-msg { text-align:center; padding:40px 20px; color:#92400e; }
+    .error-msg { background:#fef2f2; border:1px solid #fecaca; color:#991b1b; padding:16px; border-radius:12px; margin:20px 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="hero-emblem">
+      <picture>
+        <source srcset="images/siva_with_nandi_transparent.webp 175w, images/siva_with_nandi_transparent-350w.webp 350w, images/siva_with_nandi_transparent-525w.webp 525w" type="image/webp" sizes="(max-width:640px) 260px, 320px">
+        <img src="images/siva_with_nandi_transparent.png" alt="Shiva with Nandi" height="52" width="175" style="height:52px;width:auto;object-fit:contain" loading="eager" decoding="async">
+      </picture>
+    </div>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-title-row">
+          <h1 id="site-title">Nalvar — The Four Saints</h1>
+          <span class="nalvar-chip" title="Nalvar">
+            <picture>
+              <source srcset="images/nalvar-badge-280.webp 280w, images/nalvar-badge-360.webp 360w, images/nalvar-badge-480.webp 480w" type="image/webp" sizes="(max-width:640px) 110px, 148px">
+              <img src="images/nalvar-transparent.webp" alt="Nalvar — Four Saints" width="148" height="52" loading="eager" decoding="async" style="object-fit:contain;width:100%;height:100%">
+            </picture>
+          </span>
+        </div>
+        <p id="site-subtitle">Saiva Siddhanta • Tevaram &amp; Tiruvasagam</p>
+        <p class="tamil" id="site-tamil">நால்வர் — அப்பர் • சம்பந்தர் • சுந்தரர் • மாணிக்கவாசகர்</p>
+      </div>
+      <div class="header-meta" id="site-meta">7th–9th c. CE • Tamil Nadu • 4 saints who shaped Saivism</div>
+    </div>
+    <div class="tabs-wrap">
+      <div class="tabs loading" role="tablist" aria-label="Nalvar saints" id="tabs"></div>
+    </div>
+  </header>
+
+  <main>
+    <div id="panels"></div>
+    <div id="loading" class="loading-msg">Loading saint biographies…</div>
+    <noscript><div class="error-msg">This site needs JavaScript to load content from <code>data.json</code>. Please enable JavaScript.</div></noscript>
+  </main>
+
+  <footer>
+    <div style="max-width:900px;margin:0 auto;">
+      <p style="font-size:.82rem;color:#57534e;line-height:1.6"><strong>Disclaimer:</strong> This site is for informational and educational purposes only. Content is compiled from public sources, Tevaram/Tiruvasagam translations and temple histories. While every effort is made to ensure accuracy, we do not guarantee completeness or authenticity of historical details. This is not an official temple or religious authority site.</p>
+      <p style="margin-top:10px;font-size:.78rem;color:#78716c">© 2026 Nalvar — The Four Saints. All rights reserved. &nbsp;•&nbsp; Content may be shared for non-commercial educational use with attribution.</p>
+      <p style="margin-top:6px;font-size:.78rem;color:#78716c">Site built by <a href="https://balaramansriram.com" target="_blank" rel="noopener" style="color:#9a3412;font-weight:700;text-decoration:none;border-bottom:1px dotted #fed7aa">balaramansriram.com</a> &nbsp;•&nbsp; Related: <a href="https://tirumandiram.in" target="_blank" rel="noopener" style="color:#9a3412;font-weight:600;text-decoration:none;border-bottom:1px dotted #fed7aa">Tirumandiram.in</a> — Thirumoolar’s Thirumandiram (Tirumurai 10)</p>
+      <button id="installBtn" class="install-btn" hidden>⬇ Install App</button>
+    </div>
+  </footer>
+
+  <script>
+    // Data-driven render — design stays in index.html, content in data.json
+    const DATA_URL = './data.json';
+    const REMEDY_URL = './remedies.json';
+    let saintsData = [];
+    let remediesData = null;
+    let activeId = null;
+
+    function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    async function loadData(){
+      try {
+        const [res, res2] = await Promise.all([
+          fetch(DATA_URL, {cache:'no-store'}),
+          fetch(REMEDY_URL, {cache:'no-store'}).catch(()=>null)
+        ]);
+        if(!res.ok) throw new Error('HTTP '+res.status);
+        const data = await res.json();
+        if(res2 && res2.ok) remediesData = await res2.json();
+        // header
+        if(data.site){
+          document.getElementById('site-title').textContent = data.site.title || document.getElementById('site-title').textContent;
+          document.getElementById('site-subtitle').textContent = data.site.subtitle || '';
+          document.getElementById('site-tamil').textContent = data.site.tamil || '';
+          document.getElementById('site-meta').textContent = data.site.meta || '';
+          document.title = data.site.title || document.title;
+        }
+        saintsData = data.saints || [];
+        renderTabs();
+        renderPanels();
+        if(remediesData) renderRemedies();
+        document.getElementById('loading').style.display='none';
+        // activate hash or first (supports #remedies)
+        const hash = location.hash.replace('#','');
+        const allIds = [...saintsData.map(s=>s.id), ...(remediesData?['remedies']:[])];
+        const first = saintsData[0]?.id;
+        const target = allIds.includes(hash) ? hash : first;
+        if(target) activateTab(target);
+        initCarouselObservers();
+      } catch(e){
+        document.getElementById('loading').innerHTML = '<div class="error-msg">Failed to load <code>data.json</code>: '+esc(e.message)+'<br>Check that <code>data.json</code> is valid JSON and served via HTTP (not file://). Run <code>python -m http.server 8000</code></div>';
+        console.error(e);
+      }
+    }
+
+    function renderTabs(){
+      const tabs = document.getElementById('tabs');
+      tabs.classList.remove('loading');
+      tabs.innerHTML = saintsData.map((s,i)=>`
+        <button class="tab-btn" role="tab" aria-selected="${i===0?'true':'false'}" data-tab="${esc(s.id)}" id="tab-${esc(s.id)}"><span class="dot-mini"></span> ${esc(s.shortName)}</button>
+      `).join('') + (remediesData ? `<button class="tab-btn" role="tab" aria-selected="false" data-tab="remedies" id="tab-remedies"><span class="dot-mini"></span> Remedies</button>` : '');
+      tabs.querySelectorAll('.tab-btn').forEach(btn=>{
+        btn.addEventListener('click',()=> activateTab(btn.dataset.tab));
+      });
+    }
+
+    function renderPanels(){
+      const wrap = document.getElementById('panels');
+      wrap.innerHTML = saintsData.map((s,i)=>`
+        <section class="panel ${i===0?'active':''}" id="panel-${esc(s.id)}" role="tabpanel" aria-labelledby="tab-${esc(s.id)}" ${i===0?'':'hidden'}>
+          <div class="card" data-card>
+            <div class="card-carousel" data-carousel>
+              <div class="slide slide-image">
+                <img class="backdrop" src="${esc(s.images.coverJpg)}" alt="" aria-hidden="true" loading="${i===0?'eager':'lazy'}">
+                <picture>
+                  <source srcset="${esc(s.images.cover400)} 400w, ${esc(s.images.cover)} 800w" type="image/webp" sizes="(max-width:640px) 100vw, 560px">
+                  <img src="${esc(s.images.coverJpg)}" alt="${esc(s.fullName)}" width="800" height="1000" loading="${i===0?'eager':'lazy'}" decoding="async" ${i===0?'fetchpriority="high"':''} onerror="this.src='${esc(s.images.fallback)}'">
+                </picture>
+                <div class="overlay-title">
+                  <h2>${esc(s.fullName)}</h2>
+                  <div class="subtitle">${s.subtitle}</div>
+                  <small>Swipe to explore →</small>
+                </div>
+              </div>
+              <div class="slide wm" style="--wm: url('${esc(s.images.watermark)}')">
+                <h3>${esc(s.bio.title)}</h3>
+                ${s.bio.fields.map(f=>`<p><strong>${esc(f.label)}:</strong> ${f.value}</p>`).join('')}
+                <br>
+                ${s.bio.paragraphs.map(p=>`<p>${p}</p><br>`).join('').replace(/<br>$/,'')}
+              </div>
+              <div class="slide wm" style="--wm: url('${esc(s.images.watermark)}')">
+                <h3>${esc(s.events.title)}</h3>
+                <ul>${s.events.items.map(it=>`<li>${it}</li>`).join('')}</ul>
+              </div>
+              <div class="slide wm" style="--wm: url('${esc(s.images.watermark)}')">
+                <h3>${esc(s.works.title)}</h3>
+                ${s.works.intro ? `<p>${s.works.intro}</p><br>` : ''}
+                <ul>${s.works.items.map(it=>`<li><strong>${it.label}:</strong> ${it.value}</li>`).join('')}</ul>
+              </div>
+              <div class="slide wm" style="--wm: url('${esc(s.images.watermark)}')">
+                <h3>${esc(s.temples.title)}</h3>
+                <p><strong>${esc(s.temples.label)}:</strong></p>
+                <ul>${s.temples.items.map(it=>{
+                  if(typeof it === 'string') return `<li>${esc(it)}</li>`;
+                  return `<li><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)} ↗</a></li>`;
+                }).join('')}</ul>
+                <br>
+                <p><a href="https://www.youtube.com/results?search_query=${esc(s.temples.youtubeQuery)}" target="_blank" rel="noopener">${esc(s.temples.youtubeLabel)}</a></p>
+              </div>
+            </div>
+            <button class="carousel-nav prev" aria-label="Previous">‹</button>
+            <button class="carousel-nav next" aria-label="Next">›</button>
+            <div class="dots-indicator" data-dots>
+              <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="meta-grid">
+            ${s.meta.map(m=>`<div class="meta-card"><h4>${esc(m.title)}</h4><p>${esc(m.text)}</p></div>`).join('')}
+          </div>
+        </section>
+      `).join('');
+      // re-bind carousel nav after injection
+      document.querySelectorAll('[data-card]').forEach(card=>{
+        const car = card.querySelector('[data-carousel]');
+        const prev = card.querySelector('.prev');
+        const next = card.querySelector('.next');
+        prev?.addEventListener('click',()=> car.scrollBy({left:-car.clientWidth, behavior:'smooth'}));
+        next?.addEventListener('click',()=> car.scrollBy({left: car.clientWidth, behavior:'smooth'}));
+      });
+    }
+
+    function renderRemedies(){
+      if(!remediesData) return;
+      const wrap = document.getElementById('panels');
+      const cats = remediesData.categories || [];
+      const catPills = cats.map((c,i)=>`<button class="pill ${i===0?'active':''}" data-cat="${esc(c.id)}">${c.icon||''} ${esc(c.label)}</button>`).join('');
+      const firstCat = cats[0];
+      const gridFor = (catId) => {
+        const cat = cats.find(c=>c.id===catId) || firstCat;
+        return (cat.items||[]).map(it=>`
+          <div class="remedy-card">
+            <h4>${esc(it.problem)}</h4>
+            <div class="meta">${esc(it.saint)} • ${esc(it.pathigam)} ${it.thirumurai?`• ${esc(it.thirumurai)}`:''}</div>
+            <div class="meta" style="color:#92400e;font-style:italic">${esc(it.benefit)}</div>
+            <div class="links">
+              <a class="primary" href="${esc(it.url)}" target="_blank" rel="noopener">Read Text ↗</a>
+              <a class="secondary" href="${esc(it.youtube)}" target="_blank" rel="noopener">YouTube ▶</a>
+            </div>
+          </div>
+        `).join('');
+      };
+      const html = `
+        <section class="panel" id="panel-remedies" role="tabpanel" aria-labelledby="tab-remedies" hidden>
+          <div class="remedy-wrap">
+            <div class="remedy-header">
+              <h2>${esc(remediesData.title)}</h2>
+              <p>${esc(remediesData.subtitle)}</p>
+              <div class="remedy-disclaimer">⚠️ ${esc(remediesData.disclaimer)}</div>
+              <div style="margin-top:8px"><a href="https://tirumandiram.in" target="_blank" rel="noopener" style="font-size:.82rem;color:#7c2d12;font-weight:700;text-decoration:none;border-bottom:1px dotted #fcd34d">Explore Thirumoolars Thirumandiram (3000 verses, Tirumurai 10) at Tirumandiram.in ↗</a></div>
+              <div class="category-pills" id="remedy-pills">${catPills}</div>
+            </div>
+            <div class="remedy-grid" id="remedy-grid">${gridFor(firstCat?.id)}</div>
+            <p style="margin-top:14px;font-size:.76rem;color:#78716c">Sources: ${remediesData.sources.map(s=>`<a href="${esc(s)}" target="_blank" rel="noopener" style="color:#92400e">${esc(new URL(s).hostname)}</a>`).join(' • ')} — see <code>remedy-sources.md</code> for provenance. Full index: <a href="https://www.sivaya.org/nalam_tharum_pathigam.php?lang=tamil" target="_blank" rel="noopener">Sivaya Nalam Tharum</a></p>
+          </div>
+        </section>
+      `;
+      wrap.insertAdjacentHTML('beforeend', html);
+      // pills interaction
+      document.querySelectorAll('#remedy-pills .pill').forEach(pill=>{
+        pill.addEventListener('click',()=>{
+          document.querySelectorAll('#remedy-pills .pill').forEach(x=>x.classList.remove('active'));
+          pill.classList.add('active');
+          document.getElementById('remedy-grid').innerHTML = gridFor(pill.dataset.cat);
+        });
+      });
+    }
+
+    function activateTab(name){
+      document.querySelectorAll('.tab-btn').forEach(b=> b.setAttribute('aria-selected', String(b.dataset.tab===name)));
+      document.querySelectorAll('.panel').forEach(p=>{
+        const show = p.id==='panel-'+name;
+        p.classList.toggle('active', show);
+        p.hidden = !show;
+      });
+      const car = document.querySelector('#panel-'+name+' [data-carousel]');
+      if(car) car.scrollTo({left:0, behavior:'auto'});
+      updateAllDots();
+      history.replaceState(null,'','#'+name);
+      activeId = name;
+    }
+
+    // Delegated tab key handling
+    document.addEventListener('keydown', e=>{
+      const cur = document.querySelector('.tab-btn[aria-selected="true"]');
+      if(!cur) return;
+      const tabs = [...document.querySelectorAll('.tab-btn')];
+      const idx = tabs.indexOf(cur);
+      if(e.key==='ArrowRight'){ const n=tabs[(idx+1)%tabs.length]; activateTab(n.dataset.tab); n.focus(); }
+      if(e.key==='ArrowLeft'){ const p=tabs[(idx-1+tabs.length)%tabs.length]; activateTab(p.dataset.tab); p.focus(); }
+    });
+
+    function updateDots(car){
+      const w = car.clientWidth, idx = Math.round(car.scrollLeft / w);
+      car.parentElement.querySelectorAll('[data-dots] .dot').forEach((d,i)=> d.classList.toggle('active', i===idx));
+      const ind = car.parentElement.querySelector('[data-dots]');
+      if(idx===0) ind?.classList.remove('alt'); else ind?.classList.add('alt');
+    }
+    function updateAllDots(){ document.querySelectorAll('[data-carousel]').forEach(updateDots); }
+    function initCarouselObservers(){
+      document.querySelectorAll('[data-carousel]').forEach(car=>{
+        car.addEventListener('scroll',()=> updateDots(car), {passive:true});
+        window.addEventListener('resize',()=> updateDots(car));
+      });
+    }
+
+    // PWA
+    let deferredPrompt; const installBtn=document.getElementById('installBtn');
+    window.addEventListener('beforeinstallprompt', e=>{ e.preventDefault(); deferredPrompt=e; installBtn.hidden=false; });
+    installBtn?.addEventListener('click', async()=>{ if(!deferredPrompt) return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; installBtn.hidden=true; });
+    if('serviceWorker' in navigator) window.addEventListener('load',()=> navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+
+    loadData();
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{
+  "title": "Remedies — Which Padigam for Which Need",
+  "subtitle": "Nalam Tharum Pathigam — Thirumurai as Marundhu (medicine). Tap a problem to open text & audio.",
+  "disclaimer": "For faith, cultural and educational information only — not medical, legal or astrological advice. Recitation is a devotional practice; consult professionals for health/legal matters.",
+  "sources": [
+    "https://nandinimuthuswamy.wordpress.com/2009/02/21/benefits-derived-from-singing-tevaram-s/",
+    "https://www.sivaya.org/nalam_tharum_pathigam.php?lang=tamil",
+    "https://shaivam.org/prayers-for-specific-ailments/"
+  ],
+  "categories": [
+    {
+      "id": "health",
+      "label": "Health",
+      "tamil": "உடல் நலம்",
+      "icon": "🩺",
+      "items": [
+        { "problem": "Stomach pain / incurable stomach ills", "pathigam": "Kootraayina Vaaru", "incipit": "Kootraayina Vaaru Vilakkeergal", "saint": "Appar", "thirumurai": "4.001", "benefit": "Cure for stomach/intestinal disorders", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=4.001&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Kootraayina+Vaaru+Appar" },
+        { "problem": "Bone fracture / bone disease / paralysis", "pathigam": "Tunivalar Thingal", "incipit": "Thunivalar Thingal Thulangi", "saint": "Sambandar", "thirumurai": "3.072", "benefit": "Bone strength, fracture healing, polio/paralysis", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=3.072&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Tunivalar+Thingal" },
+        { "problem": "Heat diseases / fever", "pathigam": "Maasil Veenaiyum", "incipit": "Maasil veenaiyum", "saint": "Appar", "thirumurai": "4.004", "benefit": "Heat-related ailments", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=2.066&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Maasil+Veenaiyum" },
+        { "problem": "Poison, snake / scorpion bite, allergy", "pathigam": "Onru Kolaam", "incipit": "Onru kolaam avar sinthai", "saint": "Appar", "thirumurai": "4.018", "benefit": "Antidote, allergy relief", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=4.018&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Onru+Kolaam+Appar" },
+        { "problem": "Back pain / hunchback / spine", "pathigam": "Vazhga Anthananar", "incipit": "Vazhga anthananar", "saint": "Sambandar", "thirumurai": "3.054", "benefit": "Back pain, hunchback cure (Koon)", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=3.054&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Vazhga+Anthananar" },
+        { "problem": "Eye disorders — left eye", "pathigam": "Aalam Thaan Uganthu", "incipit": "Aalam thaan uganthu", "saint": "Sundarar", "thirumurai": "7.061", "benefit": "Left eye ailments", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=7.061&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Aalam+Thaan+Uganthu" },
+        { "problem": "Eye disorders — right eye", "pathigam": "Meelaa Adimai", "incipit": "Meelaa adimai", "saint": "Sundarar", "thirumurai": "7.095", "benefit": "Right eye ailments", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=7.095&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Meelaa+Adimai+Sundarar" },
+        { "problem": "Diabetes / blood pressure / addiction / unknown illness", "pathigam": "Thunivalar Thingal (Sirkazhi)", "incipit": "Thunivalar thingal", "saint": "Sambandar", "thirumurai": "1.044", "benefit": "Systemic ills, de-addiction", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=1.044&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Thunivalar+Thingal+Sambandar" },
+        { "problem": "Fever, throat, blackmagic / evil eye", "pathigam": "Avvinai", "incipit": "Avvinai kkivvinai", "saint": "Sambandar", "thirumurai": "1.116", "benefit": "Tiruneelakanta — poison, fever, suram, seivinai", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=1.116&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Avvinai+Thiruneelakanta" },
+        { "problem": "Stuttering / speech", "pathigam": "Thiruvasagam 8.112", "incipit": "Poosuvathum Venniru", "saint": "Manickavasagar", "thirumurai": "8.112", "benefit": "Speech fluency (thikkuvai)", "url": "https://shaivam.org/thirumurai/eighth-thirumurai-thiruvasagam/", "youtube": "https://www.youtube.com/results?search_query=Thiruvasagam+Poosuvathum" },
+        { "problem": "Fear of death / poison / wild beasts", "pathigam": "Kandukollariyaanai / Sunnaven", "incipit": "Sunnaven santhana", "saint": "Appar", "thirumurai": "4.002", "benefit": "Fearlessness, poison protection", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=4.002&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Sunnaven+Appar" },
+        { "problem": "General wellness", "pathigam": "Mandiramavathu Neeru", "incipit": "Mandiramavathu Neeru", "saint": "Sambandar", "thirumurai": "2.066", "benefit": "Tiruneeru — overall health", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=2.066&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Mandiramavathu+Neeru" }
+      ]
+    },
+    {
+      "id": "planets",
+      "label": "Planets & Dosha",
+      "tamil": "கோள்கள்",
+      "icon": "🪐",
+      "items": [
+        { "problem": "Navagraha dosha — all 9 planets", "pathigam": "Kolaru Pathigam", "incipit": "Veyuru Tholipangan", "saint": "Sambandar", "thirumurai": "2.085", "benefit": "Turns evil to good, shields from planetary afflictions", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=2.085&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Kolaru+Pathigam+Sambandar" },
+        { "problem": "Saturn (Sani) affliction", "pathigam": "Bogamaartha", "incipit": "Bogamaartha Pozhilo", "saint": "Sambandar", "thirumurai": "—", "benefit": "Offset Sani dosha", "url": "https://nandinimuthuswamy.wordpress.com/2009/02/21/benefits-derived-from-singing-tevaram-s/", "youtube": "https://www.youtube.com/results?search_query=Bogamaartha+Sambandar" }
+      ]
+    },
+    {
+      "id": "economy",
+      "label": "Wealth & Livelihood",
+      "tamil": "பொருளாதாரம்",
+      "icon": "💰",
+      "items": [
+        { "problem": "Economic prosperity / poverty", "pathigam": "Idarinum Thalarinum", "incipit": "Idarinum thalarinum", "saint": "Sambandar", "thirumurai": "1. —", "benefit": "Wealth, removal of poverty", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=1.015&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Idarinum+Thalarinum" },
+        { "problem": "Daily food / sustenance", "pathigam": "Annam Paalikkum", "incipit": "Annam paalikkum", "saint": "Appar", "thirumurai": "—", "benefit": "Never lack food", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?category2=%20%E0%AE%AA%E0%AF%8A%E0%AE%B0%E0%AF%81%E0%AE%B3%E0%AE%BE%E0%AE%A4%E0%AE%BE%E0%AE%B0%E0%AE%AE%E0%AF%8D&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Annam+Paalikkum+Appar" }
+      ]
+    },
+    {
+      "id": "marriage",
+      "label": "Marriage",
+      "tamil": "திருமணம்",
+      "icon": "💍",
+      "items": [
+        { "problem": "Success in marriage / alliance", "pathigam": "Sadayaai", "incipit": "Sadayaai ennum maal", "saint": "Sambandar", "thirumurai": "—", "benefit": "Marriage fixed, obstacles removed", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?category2=%20%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%AE%E0%AE%A3%E0%AE%AE%E0%AF%8D&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Sadayaai+Ennum+Maal+Sambandar" },
+        { "problem": "Auspicious weddings / anniversaries", "pathigam": "Mannil Nalla Vannam", "incipit": "Mannil nalla vannam vaazhalaam", "saint": "Sambandar", "thirumurai": "—", "benefit": "To be sung at weddings", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?category2=%20%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%AE%E0%AE%A3%E0%AE%AE%E0%AF%8D&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Mannil+Nalla+Vannam" }
+      ]
+    },
+    {
+      "id": "child",
+      "label": "Child & Family",
+      "tamil": "குழந்தை",
+      "icon": "👶",
+      "items": [
+        { "problem": "Blessing of progeny", "pathigam": "Kankaatunudalaanum", "incipit": "Kankaatunudalaanum", "saint": "Sambandar", "thirumurai": "—", "benefit": "Child boon", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?category2=%20%E0%AE%95%E0%AF%81%E0%AE%B4%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%88&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Kankaatunudalaanum+Sambandar" },
+        { "problem": "Safe delivery / childbirth", "pathigam": "Nanrudaiyaanai / Mattuvaar Kuzhalaal", "incipit": "Nanrudaiyaanai / Mattuvaar", "saint": "Sambandar / Appar", "thirumurai": "—", "benefit": "Ease during delivery", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?category2=%20%E0%AE%95%E0%AF%81%E0%AE%B4%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%88&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Nanrudaiyaanai+Mattuvaar+Kuzhal" }
+      ]
+    },
+    {
+      "id": "legal",
+      "label": "Legal & Fear",
+      "tamil": "வழக்கு / அச்சம்",
+      "icon": "⚖️",
+      "items": [
+        { "problem": "Success in lawsuits", "pathigam": "Vaasi Teerave / Maraiyudayaai", "incipit": "Vaasi teerave", "saint": "Sambandar", "thirumurai": "—", "benefit": "Victory in litigation", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?category2=%20%E0%AE%89%E0%AE%B1%E0%AE%B5%E0%AF%81%E0%AE%95%E0%AE%B3%E0%AF%8D&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Vaasi+Teerave+Sambandar" },
+        { "problem": "Imprisonment / bondage", "pathigam": "Maasil Veenaiyum / Maasu Il Veenaiyum", "incipit": "Maasil veenaiyum / Maas-il veenaiyum", "saint": "Appar", "thirumurai": "5.090", "benefit": "Release from jail/fetters", "url": "https://www.sivaya.org/thirumurai_song.php?pathigam_no=5.090&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Maasil+Veenaiyum+Appar" },
+        { "problem": "Fear of death", "pathigam": "Kandukollariyaanai", "incipit": "Kandukolla riyaam", "saint": "Appar", "thirumurai": "—", "benefit": "Freedom from fear of death", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Kandukollariyaanai+Appar" }
+      ]
+    },
+    {
+      "id": "mind",
+      "label": "Mind & Confidence",
+      "tamil": "ஆளுமை",
+      "icon": "🧘",
+      "items": [
+        { "problem": "Self-confidence / daily worship", "pathigam": "Sottrunai Vediyan / Vetraagi", "incipit": "Sottrunai vediyan", "saint": "Appar", "thirumurai": "—", "benefit": "Confidence, everyday prayer", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?category2=%20%E0%AE%86%E0%AE%B3%E0%AF%81%E0%AE%AE%E0%AF%88%20&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Sottrunai+Vediyan+Appar" },
+        { "problem": "Education / knowledge", "pathigam": "Thiruthondathogai-linked / Kalvi", "incipit": "Kalvi — Tirumurai for study", "saint": "Sambandar", "thirumurai": "—", "benefit": "Focus in studies (Sivaya Kalvi category)", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?category2=%20%E0%AE%95%E0%AE%B2%E0%AF%8D%E0%AE%B5%E0%AE%BF%20&lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Thirugnana+Sambandar+Kalvi+Thevaram" }
+      ]
+    },
+    {
+      "id": "spiritual",
+      "label": "Spiritual",
+      "tamil": "ஆன்மீகம்",
+      "icon": "🕉️",
+      "items": [
+        { "problem": "Daily spiritual uplift", "pathigam": "Sivapuranam (Namachivaya Vazhga)", "incipit": "Namachivaya vazhga", "saint": "Manickavasagar", "thirumurai": "8.001", "benefit": "Heart-melting, liberation — recited daily", "url": "https://shaivam.org/thirumurai/eighth-thirumurai-thiruvasagam/1124/sivapuranam-pathikamum-uraiyum", "youtube": "https://www.youtube.com/results?search_query=Sivapuranam+Manickavasagar" },
+        { "problem": "General well-being (Thiruppugazh)", "pathigam": "Thiruppugazh various", "incipit": "Eelai suram", "saint": "Arunagirinathar", "thirumurai": "Thiruppugazh 1027/243", "benefit": "Holistic wellness (Sivaya adds Thiruppugazh)", "url": "https://www.sivaya.org/nalam_tharum_pathigam.php?lang=tamil", "youtube": "https://www.youtube.com/results?search_query=Thiruppugazh+Eelai+Suram" }
+      ]
+    }
+  ]
+}
