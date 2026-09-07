@@ -9,7 +9,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="manifest" href="/manifest.webmanifest?v=21">
   <link rel="icon" href="/icons/favicon.ico" sizes="32x32">
   <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192">
   <link rel="icon" href="/icons/icon-512.png" type="image/png" sizes="512x512">
@@ -408,7 +408,7 @@
     let deferredPrompt; const installBtn=document.getElementById('installBtn');
     window.addEventListener('beforeinstallprompt', e=>{ e.preventDefault(); deferredPrompt=e; installBtn.hidden=false; });
     installBtn?.addEventListener('click', async()=>{ if(!deferredPrompt) return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; installBtn.hidden=true; });
-    if('serviceWorker' in navigator) window.addEventListener('load',()=> navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+    if('serviceWorker' in navigator) window.addEventListener('load',()=> navigator.serviceWorker.register('/sw.js?v=21').catch(()=>{}));
 
     loadData();
   </script>

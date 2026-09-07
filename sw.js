@@ -1,8 +1,7 @@
 // Nalvar PWA — offline shell cache
-const CACHE = 'nalvar-v20';
+const CACHE = 'nalvar-v21';
 const SHELL = [
   '/',
-  '/index.html',
   '/manifest.webmanifest',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
@@ -42,9 +41,15 @@ self.addEventListener('fetch', (e) => {
   const req = e.request;
   // only handle GET same-origin
   if (req.method !== 'GET' || !req.url.startsWith(self.location.origin)) return;
+  // normalize /index.html → / for cache lookup (Cloudflare serves /index.html as 307 → /)
+  const url = new URL(req.url);
+  const isIndexHtml = url.pathname === '/index.html';
+  const cacheKey = isIndexHtml ? new Request(url.origin + '/', {headers: req.headers}) : req;
   e.respondWith(
-    caches.match(req).then(hit => {
+    caches.match(cacheKey).then(hit => {
       if (hit) return hit;
+      // for /index.html, also try "/" directly
+      if (isIndexHtml) return caches.match('/').then(r => r || fetch(req).catch(()=> caches.match('/')));
       return fetch(req).then(res => {
         // runtime cache successful same-origin responses
         if (res.ok) {
@@ -53,8 +58,8 @@ self.addEventListener('fetch', (e) => {
         }
         return res;
       }).catch(() => {
-        // offline fallback for navigations — try index variants
-        if (req.headers.get('accept')?.includes('text/html')) return caches.match('/index.html').then(r => r || caches.match('/'));
+        // offline fallback for navigations — always serve "/"
+        if (req.headers.get('accept')?.includes('text/html')) return caches.match('/').then(r => r || caches.match('/index.html'));
       });
     })
   );
