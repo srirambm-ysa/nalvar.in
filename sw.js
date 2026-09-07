@@ -1,27 +1,28 @@
 // Nalvar PWA — offline shell cache
-const CACHE = 'nalvar-v19';
+const CACHE = 'nalvar-v20';
 const SHELL = [
-  './',
-  './index.html',
-  './manifest.webmanifest',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './icons/apple-touch-icon.png',
+  '/',
+  '/index.html',
+  '/manifest.webmanifest',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png',
+  '/icons/maskable-512.png',
+  '/icons/apple-touch-icon.png',
+  '/icons/favicon.ico',
   // optimized images — precache small set for offline
-  './images/optimized/appar-800.webp',
-  './images/optimized/sambandar-800.webp',
-  './images/optimized/sundarar-800.webp',
-  './images/optimized/manickavasagar-800.webp',
-  './images/siva_with_nandi_transparent.webp',
-  './images/siva_with_nandi_transparent-350w.webp',
-  './images/siva_with_nandi_transparent-525w.webp',
-  './data.json',
-  './remedies.json',
-  './remedy-sources.md',
-  './images/nalvar-badge-280.webp',
-  './images/nalvar-badge-360.webp',
-  './images/nalvar-badge-480.webp',
-  './images/nalvar-transparent.webp'
+  '/images/optimized/appar-800.webp',
+  '/images/optimized/sambandar-800.webp',
+  '/images/optimized/sundarar-800.webp',
+  '/images/optimized/manickavasagar-800.webp',
+  '/images/siva_with_nandi_transparent.webp',
+  '/images/siva_with_nandi_transparent-350w.webp',
+  '/images/siva_with_nandi_transparent-525w.webp',
+  '/data.json',
+  '/remedies.json',
+  '/images/nalvar-badge-280.webp',
+  '/images/nalvar-badge-360.webp',
+  '/images/nalvar-badge-480.webp',
+  '/images/nalvar-transparent.webp'
 ];
 
 self.addEventListener('install', (e) => {
@@ -52,8 +53,8 @@ self.addEventListener('fetch', (e) => {
         }
         return res;
       }).catch(() => {
-        // offline fallback for navigations
-        if (req.headers.get('accept')?.includes('text/html')) return caches.match('./index.html');
+        // offline fallback for navigations — try index variants
+        if (req.headers.get('accept')?.includes('text/html')) return caches.match('/index.html').then(r => r || caches.match('/'));
       });
     })
   );

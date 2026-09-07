@@ -2,8 +2,9 @@
   "name": "Nalvar — The Four Saivite Saints",
   "short_name": "Nalvar",
   "description": "Appar, Sambandar, Sundarar, Manickavasagar — Saiva Siddhanta Nalvar biography, Tevaram & Tiruvasagam",
-  "start_url": "./index.html",
-  "scope": "./",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "background_color": "#fdf8f0",
@@ -13,28 +14,34 @@
   "categories": ["education", "religion"],
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/maskable-512.png",
+      "src": "/icons/maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "shortcuts": [
-    { "name": "Appar", "url": "./index.html#appar", "description": "Thirunavukkarasar" },
-    { "name": "Sambandar", "url": "./index.html#sambandar", "description": "Thirugnana Sambandar" },
-    { "name": "Sundarar", "url": "./index.html#sundarar", "description": "Sundaramurthy" },
-    { "name": "Manickavasagar", "url": "./index.html#manickavasagar", "description": "Tiruvasagam" }
+    { "name": "Appar", "url": "/#appar", "description": "Thirunavukkarasar" },
+    { "name": "Sambandar", "url": "/#sambandar", "description": "Thirugnana Sambandar" },
+    { "name": "Sundarar", "url": "/#sundarar", "description": "Sundaramurthy" },
+    { "name": "Manickavasagar", "url": "/#manickavasagar", "description": "Tiruvasagam" }
   ]
 }
