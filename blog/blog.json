@@ -1,0 +1,999 @@
+{
+  "site": {
+    "title": "Nalvar Blog — Saiva Siddhanta Reader",
+    "description": "Beginner to Advanced learning pathway for Saiva Siddhanta — history, Thirumurai, and Meykandar Shastras.",
+    "baseUrl": "https://nalvar.in/blog/"
+  },
+  "levels": [
+    {
+      "id": "beginner",
+      "label": "Beginner",
+      "tamil": "அடிப்படை",
+      "categories": [
+        {
+          "id": "history-nayanmars",
+          "label": "History & Nayanmars",
+          "articles": [
+            {
+              "slug": "who-were-the-nayanmars",
+              "title": "Who Were the Nayanmars? The 63 Devotees Who Ignited Tamil Bhakti",
+              "excerpt": "Kings, weavers, farmers and hunters united by love for Shiva — how 63 lives sparked the Tamil Bhakti movement.",
+              "date": "2026-09-08",
+              "readTime": 11,
+              "level": "beginner",
+              "category": "history-nayanmars",
+              "headings": [
+                {
+                  "id": "who-they-were",
+                  "text": "1. Who Were the Nayanmars?"
+                },
+                {
+                  "id": "three-masters",
+                  "text": "2. The Three Great Masters of Tevaram"
+                },
+                {
+                  "id": "why-they-matter",
+                  "text": "3. Why Their Stories Still Matter"
+                }
+              ]
+            },
+            {
+              "slug": "rediscovery-thirumurai",
+              "title": "The Rediscovery of the Thirumurai: How Palm Leaves Saved Saivism",
+              "excerpt": "Nambi and Raja Raja Chola open the Chidambaram vault — the miracle of the 12 Tirumurai.",
+              "date": "2026-09-07",
+              "readTime": 8,
+              "level": "beginner",
+              "category": "history-nayanmars",
+              "headings": [
+                {
+                  "id": "vault",
+                  "text": "1. The Sealed Vault at Chidambaram"
+                },
+                {
+                  "id": "nambi",
+                  "text": "2. Nambi Andar Nambi's Search"
+                },
+                {
+                  "id": "legacy",
+                  "text": "3. Why Palm Leaves Still Save Saivism Today"
+                }
+              ]
+            },
+            {
+              "slug": "periya-puranam-101-legendary-stories-of-unwavering-devotion",
+              "title": "Periya Puranam 101: Legendary Stories of Unwavering Devotion",
+              "excerpt": "How Sekkizhar’s 12th Tirumurai turns 63 human lives into a beginner’s map of what complete surrender looks like.",
+              "date": "2026-09-03",
+              "readTime": 9,
+              "level": "beginner",
+              "category": "history-nayanmars",
+              "headings": [
+                {
+                  "id": "what-is-periya-puranam",
+                  "text": "1. What the Periya Puranam Actually Is"
+                },
+                {
+                  "id": "three-devotion-stories",
+                  "text": "2. Three Stories That Define Unwavering Devotion"
+                },
+                {
+                  "id": "how-to-read-as-beginner",
+                  "text": "3. How to Read the Periya Puranam Without Getting Lost"
+                }
+              ]
+            },
+            {
+              "slug": "saint-appar-and-sambandar-dynamic-duo-of-saiva-revival",
+              "title": "Saint Appar and Sambandar: The Dynamic Duo of the Saiva Revival",
+              "excerpt": "An elder who swept temple floors and a child who sang gold — how two poet-saints revived Tamil Saivism together.",
+              "date": "2026-09-02",
+              "readTime": 9,
+              "level": "beginner",
+              "category": "history-nayanmars",
+              "headings": [
+                {
+                  "id": "two-lives-one-movement",
+                  "text": "1. Two Lives, One Movement"
+                },
+                {
+                  "id": "appar-service",
+                  "text": "2. Appar: The Path of Service (Thondu)"
+                },
+                {
+                  "id": "sambandar-song",
+                  "text": "3. Sambandar: The Path of Song (Jnana Sambandham)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "devotional-poetry",
+          "label": "Devotional Poetry & The 12 Thirumurais",
+          "articles": [
+            {
+              "slug": "introduction-to-tevaram",
+              "title": "An Introduction to Tevaram: The Music and Meaning of Early Saiva Hymns",
+              "excerpt": "Pann, ragam, and devotion — how Tevaram hymns are sung and why they move hearts.",
+              "date": "2026-09-06",
+              "readTime": 8,
+              "level": "beginner",
+              "category": "devotional-poetry",
+              "headings": [
+                {
+                  "id": "what-is-tevaram",
+                  "text": "1. What Is Tevaram?"
+                },
+                {
+                  "id": "pann-system",
+                  "text": "2. The Pann Musical System"
+                },
+                {
+                  "id": "how-to-listen",
+                  "text": "3. How to Begin Listening"
+                }
+              ]
+            },
+            {
+              "slug": "unpacking-sivapuranam-saint-manikkavacakars-opening-prayer",
+              "title": "Unpacking Sivapuranam: Saint Manikkavacakar’s Opening Prayer",
+              "excerpt": "Why the first 95 lines of Thiruvasagam contain the whole of Saiva Siddhanta for beginners.",
+              "date": "2026-09-01",
+              "readTime": 8,
+              "level": "beginner",
+              "category": "devotional-poetry",
+              "headings": [
+                {
+                  "id": "why-sivapuranam-first",
+                  "text": "1. Why Sivapuranam Comes First"
+                },
+                {
+                  "id": "line-by-line-map",
+                  "text": "2. A Line-by-Line Map for Beginners"
+                },
+                {
+                  "id": "how-to-chant-live",
+                  "text": "3. How to Chant and Live Sivapuranam"
+                }
+              ]
+            },
+            {
+              "slug": "why-thiruvasagam-softens-hardest-hearts-beginners-guide",
+              "title": "Why Thiruvasagam Softens the Hardest Hearts: A Beginner’s Guide",
+              "excerpt": "The 658-verse classic that Tamils trust to melt stone — what it says, why it weeps, and how to begin reading it.",
+              "date": "2026-08-31",
+              "readTime": 8,
+              "level": "beginner",
+              "category": "devotional-poetry",
+              "headings": [
+                {
+                  "id": "what-makes-thiruvasagam",
+                  "text": "1. What Makes Thiruvasagam Different"
+                },
+                {
+                  "id": "weeping-method",
+                  "text": "2. The Method Behind the Weeping"
+                },
+                {
+                  "id": "five-entry-points",
+                  "text": "3. Five Entry Points for Today’s Beginner"
+                }
+              ]
+            },
+            {
+              "slug": "simple-breakdown-of-12-thirumurais-and-how-they-are-organized",
+              "title": "A Simple Breakdown of the 12 Thirumurais (And How They Are Organized)",
+              "excerpt": "A beginner’s shelf-map to the 12-book Saiva canon — who sang what, when, and how to start reading without overwhelm.",
+              "date": "2026-08-30",
+              "readTime": 7,
+              "level": "beginner",
+              "category": "devotional-poetry",
+              "headings": [
+                {
+                  "id": "what-tirumurai-means",
+                  "text": "1. What ‘Tirumurai’ Means"
+                },
+                {
+                  "id": "twelve-books-map",
+                  "text": "2. The 12 Books at a Glance"
+                },
+                {
+                  "id": "beginner-reading-path",
+                  "text": "3. A Beginner’s Reading Path"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "foundational-philosophy",
+          "label": "Foundational Philosophy",
+          "articles": [
+            {
+              "slug": "three-eternal-realities-what-are-pati-pasu-and-pasa",
+              "title": "The Three Eternal Realities: What are Pati, Pasu, and Pasa?",
+              "excerpt": "Pati (Lord), Pasu (soul), Pasa (bond) — the simple triad that carries the whole of Saiva Siddhanta philosophy for beginners.",
+              "date": "2026-08-29",
+              "readTime": 9,
+              "level": "beginner",
+              "category": "foundational-philosophy",
+              "headings": [
+                {
+                  "id": "why-three",
+                  "text": "1. Why Three and Not One?"
+                },
+                {
+                  "id": "meeting-three",
+                  "text": "2. Meeting Pati, Pasu, and Pasa Up Close"
+                },
+                {
+                  "id": "living-triad",
+                  "text": "3. Living the Triad Today"
+                }
+              ]
+            },
+            {
+              "slug": "three-impurities-malas-anava-karma-and-maya-explained",
+              "title": "The Three Impurities (Malas): Anava, Karma, and Maya Explained",
+              "excerpt": "The soul’s threefold bondage — how egoity, action-seeds, and matter veil us, and how grace slowly ripens and removes them.",
+              "date": "2026-08-28",
+              "readTime": 8,
+              "level": "beginner",
+              "category": "foundational-philosophy",
+              "headings": [
+                {
+                  "id": "what-is-mala",
+                  "text": "1. What ‘Mala’ Means"
+                },
+                {
+                  "id": "three-malas-deep",
+                  "text": "2. The Three Malas Deep Dive"
+                },
+                {
+                  "id": "ripening-and-removal",
+                  "text": "3. Ripening, Removal, and Daily Practice"
+                }
+              ]
+            },
+            {
+              "slug": "four-paths-to-liberation-service-worship-yoga-and-wisdom",
+              "title": "The Four Paths to Liberation: Service, Worship, Yoga, and Wisdom",
+              "excerpt": "Charya, Kriya, Yoga, Jnana — four successive labors that turn a temple visitor into a knower who cannot forget.",
+              "date": "2026-08-27",
+              "readTime": 8,
+              "level": "beginner",
+              "category": "foundational-philosophy",
+              "headings": [
+                {
+                  "id": "why-four-padas",
+                  "text": "1. Why Four Paths?"
+                },
+                {
+                  "id": "four-padas-explained",
+                  "text": "2. The Four Padas Explained"
+                },
+                {
+                  "id": "walking-today",
+                  "text": "3. Walking the Four Today"
+                }
+              ]
+            },
+            {
+              "slug": "what-is-grace-in-saiva-siddhanta-understanding-arul",
+              "title": "What Is Grace in Saiva Siddhanta? Understanding Arul",
+              "excerpt": "Arul is not a favor but a power — how Saiva Siddhanta understands grace as the only force that can unbind the soul.",
+              "date": "2026-08-26",
+              "readTime": 8,
+              "level": "beginner",
+              "category": "foundational-philosophy",
+              "headings": [
+                {
+                  "id": "arul-not-what",
+                  "text": "1. What Arul Is Not"
+                },
+                {
+                  "id": "arul-what-how",
+                  "text": "2. What Arul Is and How It Works"
+                },
+                {
+                  "id": "cooperating-with-grace",
+                  "text": "3. Cooperating with Grace Without Forcing It"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "symbols-practices",
+          "label": "Symbols & Practices",
+          "articles": [
+            {
+              "slug": "hidden-symbolism-of-lord-natarajas-cosmic-dance",
+              "title": "The Hidden Symbolism of Lord Nataraja’s Cosmic Dance",
+              "excerpt": "Why Shiva dances inside a ring of fire — the five acts, 108 karanas, and tilai forest lore that make Nataraja more than an icon.",
+              "date": "2026-08-25",
+              "readTime": 8,
+              "level": "beginner",
+              "category": "symbols-practices",
+              "headings": [
+                {
+                  "id": "more-than-icon",
+                  "text": "1. More Than an Icon"
+                },
+                {
+                  "id": "reading-five-acts",
+                  "text": "2. Reading the Five Acts in the Body"
+                },
+                {
+                  "id": "tilai-forest-lesson",
+                  "text": "3. The Tiliai Forest Lesson for Today"
+                }
+              ]
+            },
+            {
+              "slug": "why-do-saivites-wear-holy-ash-vibhuti",
+              "title": "Why Do Saivites Wear Holy Ash (Vibhuti)?",
+              "excerpt": "More than a forehead stripe — how vibhuti, made of burnt dung and mantra, teaches impermanence, protection, and belonging.",
+              "date": "2026-08-24",
+              "readTime": 7,
+              "level": "beginner",
+              "category": "symbols-practices",
+              "headings": [
+                {
+                  "id": "what-is-vibhuti",
+                  "text": "1. What Vibhuti Actually Is"
+                },
+                {
+                  "id": "meanings-three-lines",
+                  "text": "2. The Three Lines: Meanings Layered on Skin"
+                },
+                {
+                  "id": "how-to-wear-live",
+                  "text": "3. How to Wear Vibhuti Today"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intermediate",
+      "label": "Intermediate",
+      "tamil": "இடைநிலை",
+      "categories": [
+        {
+          "id": "shastras-intro",
+          "label": "Intro to Philosophical Texts",
+          "articles": [
+            {
+              "slug": "decoding-unmai-vilakkam",
+              "title": "Decoding Unmai Vilakkam: A Simple Guide to the Building Blocks of Existence",
+              "excerpt": "36 Tattvas in miniature — Manavasagam Kadanthar’s lucid map of reality.",
+              "date": "2026-09-05",
+              "readTime": 9,
+              "level": "intermediate",
+              "category": "shastras-intro",
+              "headings": [
+                {
+                  "id": "why-unmai",
+                  "text": "1. Why Unmai Vilakkam First?"
+                },
+                {
+                  "id": "tattvas-mini",
+                  "text": "2. The 36 Tattvas in Brief"
+                },
+                {
+                  "id": "practice",
+                  "text": "3. From Map to Practice"
+                }
+              ]
+            },
+            {
+              "slug": "grace-karma-and-soul-freedom-10-core-lessons-from-thiruvarutpayan",
+              "title": "Grace, Karma, and Soul Freedom: 10 Core Lessons from Thiruvarutpayan",
+              "excerpt": "Umapati Shivacharya’s 100-verse fruit of grace — ten chapters that turn cosmology into daily discernment.",
+              "date": "2026-08-18",
+              "readTime": 8,
+              "level": "intermediate",
+              "category": "shastras-intro",
+              "headings": [
+                {
+                  "id": "why-thiruvarutpayan",
+                  "text": "1. Why Thiruvarutpayan — Grace Before Logic"
+                },
+                {
+                  "id": "ten-lessons",
+                  "text": "2. Ten Core Lessons — Soul, Karma, Grace, Freedom"
+                },
+                {
+                  "id": "reading-living",
+                  "text": "3. Reading and Living One Kural a Day"
+                }
+              ]
+            },
+            {
+              "slug": "how-sivaprakasam-explains-mechanics-of-divine-grace",
+              "title": "How Sivaprakasam Explains the Mechanics of Divine Grace",
+              "excerpt": "Umapati’s system of light on Light — eye-sun, crystal-color, and why grace must be the method of knowing.",
+              "date": "2026-08-17",
+              "readTime": 8,
+              "level": "intermediate",
+              "category": "shastras-intro",
+              "headings": [
+                {
+                  "id": "why-sivaprakasam",
+                  "text": "1. Why Sivaprakasam — The Light That Explains Light"
+                },
+                {
+                  "id": "mechanics-of-grace",
+                  "text": "2. Mechanics of Grace — How Arul Actually Works"
+                },
+                {
+                  "id": "study-as-sadhana",
+                  "text": "3. Studying Sivaprakasam as Sadhana"
+                }
+              ]
+            },
+            {
+              "slug": "moving-beyond-bhakti-transitioning-from-hymns-to-siddhanta-philosophy",
+              "title": "Moving Beyond Bhakti: Transitioning from Hymns to Siddhanta Philosophy",
+              "excerpt": "How to carry melody into logic — bridging Tirumurai devotion and Meykandar inquiry without losing either.",
+              "date": "2026-08-16",
+              "readTime": 8,
+              "level": "intermediate",
+              "category": "shastras-intro",
+              "headings": [
+                {
+                  "id": "why-beyond-bhakti",
+                  "text": "1. Why ‘Beyond Bhakti’ Is Not Against Bhakti"
+                },
+                {
+                  "id": "hymns-to-shastra-bridge",
+                  "text": "2. The Bridge — From Singing to Seeing"
+                },
+                {
+                  "id": "transition-practices",
+                  "text": "3. Transitional Practices for the Hymn-Lover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "symbols-practices",
+          "label": "Symbols Practices",
+          "articles": [
+            {
+              "slug": "charya-kriya-yoga-jnana-how-daily-saiva-worship-evolves",
+              "title": "Charya, Kriya, Yoga, Jnana: How Daily Saiva Worship Evolves",
+              "excerpt": "From sweeping temple floors to silent knowing — how the four padas turn routine worship into a ladder of maturity.",
+              "date": "2026-08-23",
+              "readTime": 9,
+              "level": "intermediate",
+              "category": "symbols-practices",
+              "headings": [
+                {
+                  "id": "evolution-not-menu",
+                  "text": "1. Why Worship Must Evolve — Beyond a Menu of Options"
+                },
+                {
+                  "id": "four-padas-lived",
+                  "text": "2. The Four Padas as Lived Experience, Not Theory"
+                },
+                {
+                  "id": "daily-practice-intermediate",
+                  "text": "3. Designing an Intermediate Daily Practice Across the Four Padas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mystical-poetry",
+          "label": "Mystical Poetry",
+          "articles": [
+            {
+              "slug": "thirukkovaiyar-unlocked-sacred-love-story-between-soul-and-shiva",
+              "title": "Thirukkovaiyar Unlocked: The Sacred Love Story Between the Soul and Shiva",
+              "excerpt": "Manikkavacakar’s 400-verse love allegory — how akam poetics encodes the soul’s wait, grace’s arrival, and union without merger.",
+              "date": "2026-08-22",
+              "readTime": 8,
+              "level": "intermediate",
+              "category": "mystical-poetry",
+              "headings": [
+                {
+                  "id": "why-love-story",
+                  "text": "1. Why a Love Story? The Soul’s Romance with Shiva"
+                },
+                {
+                  "id": "reading-thirukkovaiyar",
+                  "text": "2. Reading Thirukkovaiyar Without Getting Lost"
+                },
+                {
+                  "id": "living-allegory",
+                  "text": "3. Living the Allegory — From Poem to Practice"
+                }
+              ]
+            },
+            {
+              "slug": "sacred-chants-for-temple-consecrations-exploring-9th-thirumurai",
+              "title": "Sacred Chants for Temple Consecrations: Exploring the 9th Thirumurai",
+              "excerpt": "Tiruvisaippa and Tiruppallandu — how nine poets gave Saivism its temple-consecration soundtrack, from Chidambaram to Thanjavur.",
+              "date": "2026-08-21",
+              "readTime": 8,
+              "level": "intermediate",
+              "category": "mystical-poetry",
+              "headings": [
+                {
+                  "id": "what-is-ninth",
+                  "text": "1. What the 9th Thirumurai Actually Is"
+                },
+                {
+                  "id": "chanting-consecration",
+                  "text": "2. Chanting That Consecrates — How Verses Become Temple"
+                },
+                {
+                  "id": "learning-to-listen",
+                  "text": "3. Learning to Listen and Sing the 9th Today"
+                }
+              ]
+            },
+            {
+              "slug": "secrets-of-thirumandhiram-siddha-wisdom-for-everyday-life",
+              "title": "Secrets of the Thirumandhiram: Siddha Wisdom for Everyday Life",
+              "excerpt": "Tirumular’s 3048 verses as householder handbook — breath, body, ethics and cosmos across nine tantras, safely approached.",
+              "date": "2026-08-20",
+              "readTime": 9,
+              "level": "intermediate",
+              "category": "mystical-poetry",
+              "headings": [
+                {
+                  "id": "why-thirumandhiram-now",
+                  "text": "1. Why Thirumandhiram Now — From Hymn to Handbook"
+                },
+                {
+                  "id": "tantra-themes-daily",
+                  "text": "2. Five Siddha Themes You Can Live Today"
+                },
+                {
+                  "id": "reading-safely",
+                  "text": "3. How to Read 3000 Verses Without Losing Your Way"
+                }
+              ]
+            },
+            {
+              "slug": "hidden-gems-of-11th-thirumurai-forgotten-saints-and-forgotten-hymns",
+              "title": "The Hidden Gems of the 11th Thirumurai: Forgotten Saints and Forgotten Hymns",
+              "excerpt": "From Karaikkal Ammaiyar’s ghoul songs to Pattinathar’s fierce renunciation — the anthology that preserves Saivism’s outliers.",
+              "date": "2026-08-19",
+              "readTime": 8,
+              "level": "intermediate",
+              "category": "mystical-poetry",
+              "headings": [
+                {
+                  "id": "why-11th-forgotten",
+                  "text": "1. Why the 11th Remains Forgotten — An Anthology’s Fate"
+                },
+                {
+                  "id": "voices-you-must-meet",
+                  "text": "2. Four Forgotten Voices You Must Meet"
+                },
+                {
+                  "id": "reading-anthology",
+                  "text": "3. How to Read an Anthology Without Overwhelm"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "culture-temple",
+          "label": "Culture Temple",
+          "articles": [
+            {
+              "slug": "64-miracles-in-madurai-captivating-stories-of-thiruvilayadal-puranam",
+              "title": "64 Miracles in Madurai: The Captivating Stories of Thiruvilayadal Puranam",
+              "excerpt": "Shiva as coolie, fisherman, and poet — reading Madurai’s 64 sacred games as city theology and Siddhanta in disguise.",
+              "date": "2026-08-15",
+              "readTime": 8,
+              "level": "intermediate",
+              "category": "culture-temple",
+              "headings": [
+                {
+                  "id": "what-is-thiruvilayadal",
+                  "text": "1. What Thiruvilayadal Puranam Actually Is"
+                },
+                {
+                  "id": "three-miracles-mirrors",
+                  "text": "2. Three Miracles as Mirrors"
+                },
+                {
+                  "id": "reading-as-practice",
+                  "text": "3. Reading 64 Stories as Practice"
+                }
+              ]
+            },
+            {
+              "slug": "decoding-the-temple-what-agama-shastras-teach-about-sacred-spaces",
+              "title": "Decoding the Temple: What Agama Shastras Teach Us About Sacred Spaces",
+              "excerpt": "Gopuram to garbhagriha — how 28 Agamas encode cosmos, city, and body into walkable theology, and how to bring it home.",
+              "date": "2026-08-14",
+              "readTime": 9,
+              "level": "intermediate",
+              "category": "culture-temple",
+              "headings": [
+                {
+                  "id": "agama-blueprint",
+                  "text": "1. The Agama Blueprint — Temple as Cosmos"
+                },
+                {
+                  "id": "walking-temple",
+                  "text": "2. Walking the Temple — From Gopuram to Garbhagriha"
+                },
+                {
+                  "id": "home-as-temple",
+                  "text": "3. Bringing the Agama Home"
+                }
+              ]
+            },
+            {
+              "slug": "sacred-geometry-and-symbolism-understanding-the-shivalingam",
+              "title": "Sacred Geometry and Symbolism: Understanding the Shivalingam",
+              "excerpt": "The mark that measures the measurer — Agamic geometry, tattva map, and living with the Lingam beyond iconography.",
+              "date": "2026-08-13",
+              "readTime": 7,
+              "level": "intermediate",
+              "category": "culture-temple",
+              "headings": [
+                {
+                  "id": "what-lingam-is-and-isnt",
+                  "text": "1. What the Shivalingam Is — and Isn’t"
+                },
+                {
+                  "id": "reading-lingam",
+                  "text": "2. Reading the Lingam — Geometry, Form, and Energy"
+                },
+                {
+                  "id": "living-symbol",
+                  "text": "3. Living with the Symbol — Beyond Iconography"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced",
+      "label": "Advanced",
+      "tamil": "மேம்பாடு",
+      "categories": [
+        {
+          "id": "deep-works",
+          "label": "Deep Philosophical Works",
+          "articles": [
+            {
+              "slug": "unlocking-sivajnana-bodham",
+              "title": "Unlocking the 12 Sutras: A Deep Dive into Sivajnana Bodham",
+              "excerpt": "Meykandar’s 12 sutras — the razor that separates Siddhanta from every rival view.",
+              "date": "2026-09-04",
+              "readTime": 10,
+              "level": "advanced",
+              "category": "deep-works",
+              "headings": [
+                {
+                  "id": "why-bodham",
+                  "text": "1. Why Bodham Is the Apex"
+                },
+                {
+                  "id": "structure",
+                  "text": "2. Structure: 12 Sutras in 4 Chapters"
+                },
+                {
+                  "id": "entering",
+                  "text": "3. How to Enter Without Drowning"
+                }
+              ]
+            },
+            {
+              "slug": "inside-sivajnana-siddhiyar-how-saiva-siddhanta-refutes-rival-schools",
+              "title": "Inside Sivajnana Siddhiyar: How Saiva Siddhanta Refutes Rival Schools",
+              "excerpt": "Arulnandi’s 300-verse polemic is a compassion machine — cataloguing every rival darshana only to show why Pati-Pasu-Pasa explains more, and liberates better.",
+              "date": "2026-08-11",
+              "readTime": 9,
+              "level": "advanced",
+              "category": "deep-works",
+              "headings": [
+                {
+                  "id": "structure-of-polemic",
+                  "text": "1. Structure of a Polemic: Parapaksham and Supaksham in 300 Verses"
+                },
+                {
+                  "id": "six-rivals-dismantled",
+                  "text": "2. Six Rivals Dismantled: Lokayata to Advaita Through Siddhanta Logic"
+                },
+                {
+                  "id": "refutation-as-compassion",
+                  "text": "3. Why Refutation Is Compassion: The Soteriological Purpose of Debate"
+                }
+              ]
+            },
+            {
+              "slug": "sivajnana-mapadiyam-exploring-the-masterpiece-of-saiva-logic",
+              "title": "Sivajnana Mapadiyam: Exploring the Masterpiece of Saiva Logic",
+              "excerpt": "Sivajnana Munivar’s 18th-century mapadiyam turns twelve terse sutras into a whole university — logic, epistemology, and liberation in one Tamil commentary.",
+              "date": "2026-08-10",
+              "readTime": 10,
+              "level": "advanced",
+              "category": "deep-works",
+              "headings": [
+                {
+                  "id": "from-sutra-to-system",
+                  "text": "1. From Sutra to System: Meykandar to Sivajnana Munivar"
+                },
+                {
+                  "id": "logic-of-measurement",
+                  "text": "2. The Logic of Measurement: Alavai (Pramana) and Conceptual Apparatus"
+                },
+                {
+                  "id": "reading-mapadiyam-today",
+                  "text": "3. Reading Mapadiyam Today: Commentary as Spiritual Practice"
+                }
+              ]
+            },
+            {
+              "slug": "epistemology-of-grace-how-we-know-what-we-know-in-saiva-siddhanta",
+              "title": "Epistemology of Grace: How We Know What We Know in Saiva Siddhanta",
+              "excerpt": "Perception deceives, inference stalls, scripture quarrels — until grace steadies the knower. A rigorous tour of knowing and its hidden condition.",
+              "date": "2026-08-09",
+              "readTime": 9,
+              "level": "advanced",
+              "category": "deep-works",
+              "headings": [
+                {
+                  "id": "three-pramanas-limits",
+                  "text": "1. Three Pramanas and Their Limits: Perception, Inference, and Agama"
+                },
+                {
+                  "id": "sivajnana-fourth-knowing",
+                  "text": "2. Sivajnana (Siva-Knowledge) as Fourth Knowing: Grace as Epistemic Condition"
+                },
+                {
+                  "id": "knowing-as-becoming",
+                  "text": "3. Knowing as Becoming: From Intellectual Assent to Realized Union"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "culture-temple",
+          "label": "Culture Temple",
+          "articles": [
+            {
+              "slug": "the-dual-path-how-tantra-and-veda-merge-in-saiva-siddhanta",
+              "title": "The Dual Path: How Tantra and Veda Merge in Saiva Siddhanta",
+              "excerpt": "Veda and Agama are not rivals but root and fruit — how Saiva Siddhanta holds both without contradiction, from altar to temple tower.",
+              "date": "2026-08-12",
+              "readTime": 10,
+              "level": "advanced",
+              "category": "culture-temple",
+              "headings": [
+                {
+                  "id": "false-binary",
+                  "text": "1. The False Binary: Veda vs. Agama in Colonial and Modern Scholarship"
+                },
+                {
+                  "id": "vaidika-saiva-synthesis",
+                  "text": "2. Vaidika-Saiva Synthesis: How the Agamas Complete Rather Than Contradict the Veda"
+                },
+                {
+                  "id": "living-dual-path",
+                  "text": "3. Living the Dual Path: Ritual, Temple, and Personal Practice Today"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced-agamic",
+          "label": "Advanced Agamic",
+          "articles": [
+            {
+              "slug": "decoding-the-36-tattvas-from-pure-energy-to-gross-matter",
+              "title": "Decoding the 36 Tattvas: From Pure Energy to Gross Matter",
+              "excerpt": "Thirty-six steps from Shiva to stone — how the Agamas map emanation, embodiment, and the return path through the same layers.",
+              "date": "2026-08-08",
+              "readTime": 10,
+              "level": "advanced",
+              "category": "advanced-agamic",
+              "headings": [
+                {
+                  "id": "five-pure-tattvas",
+                  "text": "1. Five Pure Tattvas (Suddha): Where Shiva Becomes World Without Changing"
+                },
+                {
+                  "id": "seven-mixed-twentyfour",
+                  "text": "2. Seven Mixed and Twenty-Four Impure: The Descent into Embodied Experience"
+                },
+                {
+                  "id": "tattvas-as-temple-body",
+                  "text": "3. Tattvas as Temple and Body: Mapping Cosmology onto Sadhana"
+                }
+              ]
+            },
+            {
+              "slug": "beyond-the-surface-of-thirumandhiram-tantra-chakras-and-kundalini",
+              "title": "Beyond the Surface of Thirumandhiram: Tantra, Chakras, and Kundalini Realization",
+              "excerpt": "Tirumoolar’s 3000 verses are not folklore but Agamic laboratory — where breath, mantra, and body become the retort for making Siva perceptible.",
+              "date": "2026-08-07",
+              "readTime": 8,
+              "level": "advanced",
+              "category": "advanced-agamic",
+              "headings": [
+                {
+                  "id": "tirumoolar-tantric-siddhanta",
+                  "text": "1. Thirumoolar’s Tantric Siddhanta: Not Imported Yoga but Agamic Core"
+                },
+                {
+                  "id": "six-adharas-kundalini",
+                  "text": "2. Six Adharas, Kundalini, and the Eightfold Yoga Within 3000 Verses"
+                },
+                {
+                  "id": "reading-without-reducing",
+                  "text": "3. Reading Thirumandhiram Without Reducing It to Modern Chakra Charts"
+                }
+              ]
+            },
+            {
+              "slug": "the-agamic-blueprint-four-padas-of-saiva-agamas",
+              "title": "The Agamic Blueprint: Understanding the Four Padas of Saiva Agamas",
+              "excerpt": "A house with four storeys: Charya, Kriya, Yoga and Jnana as the Agamas' single spiral from sweeping to seeing — why order matters and how householders inhabit all four without bypass.",
+              "date": "2026-08-06",
+              "readTime": 10,
+              "level": "advanced",
+              "category": "advanced-agamic",
+              "headings": [
+                {
+                  "id": "charya-dasa-marga",
+                  "text": "1. Charya Pada — The Servant's Ground: Dasa Marga and the Purification of Maya"
+                },
+                {
+                  "id": "kriya-satputra-marga",
+                  "text": "2. Kriya Pada — The Child's Temple: Satputra Marga and the Ritual of Love"
+                },
+                {
+                  "id": "jnana-sanmarga-yoga",
+                  "text": "3. Yoga and Jnana Padas — The Friend and the Knower: Sakha and Sanmarga as Crown"
+                }
+              ]
+            },
+            {
+              "slug": "dissolution-and-recreation-cosmic-cycles-saiva-philosophy",
+              "title": "Dissolution and Re-Creation: The Cosmic Cycles According to Saiva Philosophy",
+              "excerpt": "Five acts, four pralayas, one compassion: why worlds must fold and re-emit, how tattvas roll like a carpet, and why your daily sleep is already rehearsal for cosmic dissolution.",
+              "date": "2026-08-05",
+              "readTime": 9,
+              "level": "advanced",
+              "category": "advanced-agamic",
+              "headings": [
+                {
+                  "id": "why-cycles-not-line",
+                  "text": "1. Why Cycles and Not a Straight Line: The Ethical Necessity of Dissolution"
+                },
+                {
+                  "id": "how-dissolution-unfolds",
+                  "text": "2. How Dissolution Unfolds — Folding of Tattvas and the Six Paths"
+                },
+                {
+                  "id": "recreation-as-re-gracing",
+                  "text": "3. Re-Creation as Re-Gracing — Why Every Dawn Is Agama"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ultimate-path",
+          "label": "Ultimate Path",
+          "articles": [
+            {
+              "slug": "turning-point-of-soul-unpacking-iruvinai-oppu",
+              "title": "The Turning Point of the Soul: Unpacking Iruvinai Oppu",
+              "excerpt": "When merit and demerit both taste like rope — the hinge called Iruvinai Oppu where the soul ceases to barter with karma and becomes addressable by grace, between Charya and Saktinipata.",
+              "date": "2026-08-04",
+              "readTime": 9,
+              "level": "advanced",
+              "category": "ultimate-path",
+              "headings": [
+                {
+                  "id": "what-iruvinai-oppu-is",
+                  "text": "1. What Iruvinai Oppu Is — and Is Not: Equanimity, Not Equivalence"
+                },
+                {
+                  "id": "how-iruvinai-oppu-ripens",
+                  "text": "2. How Iruvinai Oppu Ripens — Malaparipaka, Suffering, and the Guru's Arrival"
+                },
+                {
+                  "id": "living-iruvinai-oppu-today",
+                  "text": "3. Living Iruvinai Oppu Today — From Doctrine to Daily Discernment"
+                }
+              ]
+            },
+            {
+              "slug": "when-grace-falls-four-stages-of-saktinipatham",
+              "title": "When Grace Falls: The Four Stages of Saktinipatham",
+              "excerpt": "Same Sakti, four receptions — Manda to Tivrataram: how Saiva Siddhanta grades the descent of grace to preserve justice without making grace arbitrary, and what each grade asks of Guru and diksha.",
+              "date": "2026-08-03",
+              "readTime": 10,
+              "level": "advanced",
+              "category": "ultimate-path",
+              "headings": [
+                {
+                  "id": "four-stages-mapped",
+                  "text": "1. Mapping the Four Stages — From Manda to Tivrataram"
+                },
+                {
+                  "id": "how-saktinipata-works",
+                  "text": "2. How Saktinipata Works — Sakti as Eye-Light, Not Lightning Bolt"
+                },
+                {
+                  "id": "after-fall-guru-diksha",
+                  "text": "3. After the Fall — Guru, Diksha, and the Sadhana Each Stage Demands"
+                }
+              ]
+            },
+            {
+              "slug": "jivanmukti-living-liberated-while-still-in-body",
+              "title": "Jivanmukti: Living fully Liberated While Still in the Physical Body",
+              "excerpt": "Burnt rope, remaining shape: what stays after nirvana diksha, how the liberated live with bills, grief and worship, and the householder proofs Tamil Siddhanta prizes over siddhi displays.",
+              "date": "2026-08-02",
+              "readTime": 9,
+              "level": "advanced",
+              "category": "ultimate-path",
+              "headings": [
+                {
+                  "id": "what-jivanmukti-is",
+                  "text": "1. What Jivanmukti Is — And What Body Still Carries: Burnt Rope Doctrine"
+                },
+                {
+                  "id": "how-jivanmukta-lives",
+                  "text": "2. How the Jivanmukta Lives — Ethics, Love, and Temple After Liberation"
+                },
+                {
+                  "id": "jivanmukti-misreads",
+                  "text": "3. Jivanmukti Misreadings and the Householder's Proof"
+                }
+              ]
+            },
+            {
+              "slug": "non-dualism-without-monism-suddhadvaita-vs-advaita-vedanta",
+              "title": "Non-Dualism Without Monism: How Suddhadvaita Differs from Advaita Vedanta",
+              "excerpt": "Tamil Siddhanta keeps non-duality without erasing the other: why eye-and-sun beats wave-and-water, Siddhiyar's four rejoinders to Mayavada, and how suddhadvaita makes love — and grace — remain true.",
+              "date": "2026-08-01",
+              "readTime": 10,
+              "level": "advanced",
+              "category": "ultimate-path",
+              "headings": [
+                {
+                  "id": "what-suddhadvaita-claims",
+                  "text": "1. What Suddhadvaita Claims — Three Realities in One Love"
+                },
+                {
+                  "id": "how-advaita-argues",
+                  "text": "2. How Advaita Vedanta Argues — And Where Siddhanta Presses"
+                },
+                {
+                  "id": "living-non-dual-without-monism",
+                  "text": "3. Living Non-Dual Without Monism — Practice, Hymn, and Temple Today"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

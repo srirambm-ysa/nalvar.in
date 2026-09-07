@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Nalvar Blog — Saiva Siddhanta Reader</title>
+  <meta name="description" content="Nalvar Blog — Beginner to Advanced Saiva Siddhanta learning pathway: Nayanmars, Thirumurai, and Meykandar Shastras." />
+  <link rel="canonical" href="https://nalvar.in/blog/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Nalvar" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:url" content="https://nalvar.in/blog/" />
+  <meta property="og:title" content="Nalvar Blog — Saiva Siddhanta Reader" />
+  <meta property="og:description" content="Beginner to Advanced Saiva Siddhanta pathway — 39 articles on Nayanmars, Thirumurai and Meykandar Shastras." />
+  <meta property="og:image" content="https://nalvar.in/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nalvar Blog — Saiva Siddhanta Reader" />
+  <meta name="twitter:description" content="39 articles — Nayanmars, Thirumurai, Meykandar Shastras." />
+  <meta name="twitter:image" content="https://nalvar.in/og-image.jpg" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Nalvar Blog","url":"https://nalvar.in/blog/","description":"Saiva Siddhanta Reader — 39 articles","publisher":{"@type":"Organization","name":"Nalvar","url":"https://nalvar.in/"}}</script>
+  <meta name="theme-color" content="#4a2c11">
+  <link rel="icon" href="/icons/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <style>
+    :root {
+      --bg-main: #fdf8f0;
+      --bg-sidebar: #fff7ed;
+      --bg-card: #fff;
+      --text-main: #2c1810;
+      --text-muted: #78716c;
+      --accent: #4a2c11;
+      --accent-2: #7c2d12;
+      --gold: #d97706;
+      --gold-light: #f59e0b;
+      --border: #e7c9a6;
+      --border-2: #f0dfc8;
+      --font-body: Georgia, 'Times New Roman', serif;
+      --font-ui: ui-sans-system, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family: var(--font-ui); background: var(--bg-main); color: var(--text-main); line-height:1.6; min-height:100dvh; display:flex; flex-direction:column; }
+    a { color: var(--accent-2); }
+    /* Top bar — continuity with Nalvar header */
+    .site-header { background: var(--accent); color: var(--bg-main); position:sticky; top:0; z-index:40; box-shadow:0 2px 12px rgba(0,0,0,.18); padding-top: env(safe-area-inset-top); }
+    .hero-emblem { display:flex; align-items:center; justify-content:center; gap:10px; padding:6px 12px 4px; border-bottom:1px solid rgba(255,255,255,.10); }
+    .hero-emblem img { height:36px; width:auto; object-fit:contain; filter: drop-shadow(0 1px 6px rgba(0,0,0,.35)); }
+    .header-inner { max-width:1400px; margin:0 auto; padding:8px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .brand { display:flex; align-items:center; gap:10px; }
+    .brand h1 { font-size:1rem; font-weight:800; letter-spacing:.02em; line-height:1.1; }
+    .brand h1 a { color: var(--bg-main); text-decoration:none; }
+    .brand .sub { font-size:.70rem; opacity:.82; letter-spacing:.07em; text-transform:uppercase; }
+    .header-actions { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+    .header-actions a { color: var(--bg-main); text-decoration:none; font-size:.82rem; font-weight:600; padding:6px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.08); }
+    .header-actions a:hover { background: rgba(255,255,255,.14); }
+    .header-actions a.primary { background: var(--bg-main); color: var(--accent); border-color: var(--bg-main); }
+    /* Search in header */
+    .search-wrap { display:flex; align-items:center; gap:8px; }
+    .search-wrap input { padding:8px 12px; border-radius:999px; border:1px solid var(--border); background:#fff; font-size:.86rem; width:260px; max-width:48vw; }
+    .search-wrap input:focus { outline:2px solid var(--gold-light); outline-offset:1px; }
+    .level-filter { padding:7px 10px; border-radius:999px; border:1px solid var(--border); background:#fff; font-size:.82rem; font-weight:600; color: var(--accent-2); }
+    /* Layout */
+    .app-container { display:grid; grid-template-columns: 280px 1fr 260px; max-width:1400px; margin:0 auto; width:100%; min-height: calc(100dvh - 56px); flex:1; }
+    .sidebar { background: var(--bg-sidebar); padding:16px 12px; font-size:.88rem; border-right:1px solid var(--border); overflow-y:auto; position:sticky; top:56px; height: calc(100dvh - 56px); }
+    .sidebar.right { border-right:none; border-left:1px solid var(--border); }
+    .sidebar h2 { font-size:.74rem; letter-spacing:.07em; text-transform:uppercase; color: var(--accent-2); margin-bottom:8px; display:flex; align-items:center; gap:6px; }
+    .sidebar h2::before { content:"◆"; color: var(--gold-light); font-size:.60rem; }
+    .nav-group { margin-bottom:16px; }
+    .nav-group-title { font-weight:700; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; color: var(--accent-2); margin:10px 0 6px; display:flex; align-items:center; gap:6px; cursor:pointer; user-select:none; }
+    .nav-group-title .chev { font-size:.70rem; transition:transform .2s; display:inline-block; }
+    .nav-group.collapsed .nav-list { display:none; }
+    .nav-group.collapsed .chev { transform: rotate(-90deg); }
+    .nav-list { list-style:none; }
+    .nav-list li { margin-bottom:2px; }
+    .nav-list a { display:block; padding:6px 8px; color: var(--text-main); text-decoration:none; border-radius:8px; border-left:3px solid transparent; font-size:.84rem; line-height:1.3; }
+    .nav-list a:hover { background: rgba(0,0,0,.04); }
+    .nav-list a.active { background:#fff; color: var(--accent); font-weight:700; border-left-color: var(--gold); box-shadow:0 1px 4px rgba(0,0,0,.06); }
+    .nav-list a .meta { display:block; font-size:.72rem; color: var(--text-muted); margin-top:2px; }
+    /* Main */
+    .main-content { padding:24px 28px; max-width:820px; margin:0 auto; width:100%; background: transparent; }
+    .breadcrumbs { font-size:.78rem; color: var(--text-muted); margin-bottom:10px; }
+    .breadcrumbs a { color: var(--accent-2); text-decoration:none; border-bottom:1px dotted #fed7aa; }
+    .article-header { margin-bottom:18px; padding-bottom:14px; border-bottom:1px solid var(--border-2); }
+    .article-title { font-family: var(--font-body); font-size:1.95rem; line-height:1.2; font-weight:800; color: var(--text-main); }
+    .article-meta { font-size:.80rem; color: var(--text-muted); margin-top:8px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .level-badge { display:inline-flex; padding:3px 8px; border-radius:999px; font-size:.68rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--border); }
+    .level-badge.beginner { background:#fffbeb; color:#92400e; border-color:#fde68a; }
+    .level-badge.intermediate { background:#fff7ed; color:#7c2d12; border-color:#e7c9a6; }
+    .level-badge.advanced { background:#4a2c11; color:#fdf8f0; border-color:#4a2c11; }
+    .article-body { font-family: var(--font-body); font-size:1.02rem; line-height:1.72; color: #44403c; }
+    .article-body h3 { font-family: var(--font-ui); font-size:1.05rem; font-weight:800; color: var(--accent-2); margin:22px 0 8px; }
+    .article-body p { margin-bottom:12px; }
+    .article-body ul { margin:8px 0 14px 18px; }
+    .article-body li { margin-bottom:6px; }
+    .article-body li::marker { color: var(--gold); }
+    .article-body blockquote { border-left:3px solid var(--gold); padding-left:12px; margin:14px 0; font-style:italic; color: var(--text-muted); background:#fffbeb; border-radius:0 8px 8px 0; padding:10px 12px; }
+    /* TOC */
+    .toc-list { list-style:none; margin-top:6px; }
+    .toc-list li { margin-bottom:2px; }
+    .toc-list a { color: var(--text-muted); text-decoration:none; display:block; padding:4px 6px; border-radius:6px; font-size:.82rem; }
+    .toc-list a:hover { color: var(--accent); background: rgba(0,0,0,.04); }
+    .next-card { margin-top:18px; padding:12px; background:#fff; border:1.5px solid var(--border); border-left:4px solid var(--gold); border-radius:12px; box-shadow:0 4px 12px rgba(74,44,17,.08); }
+    .next-card small { color: var(--text-muted); font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; }
+    .next-card a { display:block; color: var(--accent); font-weight:700; text-decoration:none; margin-top:4px; font-size:.88rem; }
+    .next-card a:hover { color: var(--accent-2); }
+    .search-empty { text-align:center; padding:28px 16px; color: var(--text-muted); font-size:.88rem; }
+    /* Mobile */
+    .drawer-btn { display:none; appearance:none; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.08); color:var(--bg-main); padding:6px 10px; border-radius:999px; font-weight:700; font-size:.82rem; cursor:pointer; }
+    @media (max-width:1024px){ .app-container{ grid-template-columns: 240px 1fr 220px; } }
+    @media (max-width:900px){
+      .app-container{ grid-template-columns:1fr; }
+      .sidebar{ position:static; height:auto; border:none; border-bottom:1px solid var(--border); }
+      .sidebar.right{ display:none; }
+      .drawer-btn{ display:inline-flex; }
+      .sidebar:not(.open){ display:none; }
+      .main-content{ padding:18px 16px; }
+      .search-wrap input{ width:180px; }
+    }
+    footer { text-align:center; padding:18px 16px; color:#78716c; font-size:.76rem; border-top:1px solid var(--border); background: var(--bg-sidebar); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner" style="padding:8px 16px 8px;">
+      <div class="brand" style="display:flex;align-items:center;gap:12px;">
+        <a href="/" aria-label="Nalvar home" style="display:inline-flex;align-items:center">
+          <img src="/images/siva_with_nandi_transparent.webp" alt="Nalvar" height="32" style="height:32px;width:auto" loading="eager">
+        </a>
+        <div>
+          <h1 style="line-height:1"><a href="/">Nalvar</a> <span style="opacity:.65;font-weight:600">· Blog</span> <span class="sub" style="margin-left:8px;opacity:.82;letter-spacing:.06em;text-transform:uppercase;font-size:.70rem">Saiva Siddhanta Reader</span></h1>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="drawer-btn" id="drawerBtn" aria-expanded="false">☰ Syllabus</button>
+        <a href="/">← Nalvar Home</a>
+        <a href="/#remedies">Remedies</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <aside class="sidebar left" id="leftSidebar">
+      <div class="search-wrap" style="margin-bottom:12px;display:flex;flex-direction:column;gap:8px;">
+        <input type="search" id="searchInput" placeholder="Search topics or keywords..." autocomplete="off" style="width:100%;max-width:none">
+        <select id="levelFilter" class="level-filter" style="width:100%"><option value="">All Levels</option><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select>
+      </div>
+      <h2>Curriculum</h2>
+      <div id="curriculumNav"></div>
+      <div style="margin-top:12px;font-size:.76rem;color:var(--text-muted)">39 articles • 14 Beginner · 12 Intermediate · 13 Advanced • local preview</div>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+      <div class="breadcrumbs" id="breadcrumbs">Home &gt; Blog</div>
+      <article id="articleRoot">
+        <header class="article-header">
+          <h1 class="article-title" id="articleTitle">Loading…</h1>
+          <div class="article-meta" id="articleMeta"></div>
+        </header>
+        <div class="article-body" id="articleBody"><p>Loading article…</p></div>
+      </article>
+    </main>
+
+    <aside class="sidebar right" id="rightSidebar">
+      <h2>On This Page</h2>
+      <ul class="toc-list" id="tocList"></ul>
+      <div class="next-card" id="nextCard" hidden>
+        <small>Next Lesson</small>
+        <a href="#" id="nextLink"></a>
+      </div>
+      <div style="margin-top:16px;font-size:.76rem;color:var(--text-muted)">Tip: use search to filter syllabus</div>
+    </aside>
+  </div>
+
+  <footer>© 2026 Nalvar — <a href="/">nalvar.in</a> · <a href="https://tirumandiram.in" target="_blank" rel="noopener">Tirumandiram.in</a></footer>
+
+  <script>
+    const BLOG_URL = './blog.json';
+    let blogData = null;
+    let allArticles = [];
+    let currentSlug = null;
+    const mdCache = new Map();
+
+    function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function escAttr(s){ return esc(s).replace(/"/g,'&quot;'); }
+
+    function parseFrontmatter(md){
+      if(!md.startsWith('---')) return {meta:{}, body: md};
+      const end = md.indexOf('\n---',3);
+      if(end===-1) return {meta:{}, body: md};
+      const fmRaw = md.slice(3, end).trim();
+      const body = md.slice(end+4).replace(/^\n+/,'');
+      const meta = {};
+      const headings = [];
+      let cur = null;
+      fmRaw.split('\n').forEach(line=>{
+        const m = line.match(/^(\w+):\s*(.*)$/);
+        if(m){
+          const k=m[1], v=m[2].trim().replace(/^"|"$/g,'').replace(/\\"/g,'"');
+          if(k==='headings'){ cur='headings'; }
+          else { meta[k]=v; cur=null; }
+        } else {
+          const hm = line.match(/^\s*-\s*id:\s*(.+)$/);
+          if(hm){ headings.push({id: hm[1].trim()}); cur='h'; }
+          else {
+            const tm = line.match(/^\s*text:\s*"(.*)"\s*$/);
+            if(tm && headings.length) headings[headings.length-1].text = tm[1].replace(/\\"/g,'"');
+          }
+        }
+      });
+      if(headings.length) meta.headings = headings;
+      return {meta, body};
+    }
+
+    function inlineMd(s){
+      // escape html then apply markdown inline
+      s = s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      s = s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+      s = s.replace(/\*(.+?)\*/g,'<em>$1</em>');
+      s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+      return s;
+    }
+
+    function mdToHtml(md, headings){
+      const lines = md.split('\n');
+      let out = '';
+      let inList = false;
+      let paraBuf = [];
+      const flushPara = ()=>{
+        if(paraBuf.length){
+          const txt = paraBuf.join(' ').trim();
+          if(txt) out += '<p>' + inlineMd(txt) + '</p>\n';
+          paraBuf = [];
+        }
+      };
+      const flushList = ()=>{
+        if(inList){ out += '</ul>\n'; inList=false; }
+      };
+      const headingIdFor = (text, idx)=>{
+        if(headings && headings[idx]) return headings[idx].id;
+        // fallback: find by text
+        if(headings){
+          const h = headings.find(x=>x.text===text);
+          if(h) return h.id;
+        }
+        return text.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+      };
+      let hIdx = 0;
+      for(let i=0;i<lines.length;i++){
+        const raw = lines[i];
+        const line = raw.trim();
+        if(!line){
+          flushPara(); flushList();
+          continue;
+        }
+        if(line.startsWith('### ')){
+          flushPara(); flushList();
+          const text = line.slice(4).trim();
+          const id = headingIdFor(text, hIdx++);
+          out += '<h3 id="'+escAttr(id)+'">'+inlineMd(text)+'</h3>\n';
+        } else if(line.startsWith('## ')){
+          flushPara(); flushList();
+          const text = line.slice(3).trim();
+          out += '<h3 id="'+escAttr(text.toLowerCase().replace(/[^a-z0-9]+/g,'-'))+'">'+inlineMd(text)+'</h3>\n';
+        } else if(line.startsWith('> ')){
+          flushPara(); flushList();
+          // collect consecutive blockquote lines
+          let bq = [];
+          let j=i;
+          while(j<lines.length && lines[j].trim().startsWith('> ')){
+            bq.push(lines[j].trim().slice(2));
+            j++;
+          }
+          i=j-1;
+          out += '<blockquote><p>' + inlineMd(bq.join(' ')) + '</p></blockquote>\n';
+        } else if(line.startsWith('- ')){
+          flushPara();
+          if(!inList){ out += '<ul>\n'; inList=true; }
+          out += '<li>' + inlineMd(line.slice(2).trim()) + '</li>\n';
+        } else {
+          // para line
+          if(inList) flushList();
+          paraBuf.push(line);
+        }
+      }
+      flushPara(); flushList();
+      return out;
+    }
+
+    async function loadBlog(){
+      try{
+        const res = await fetch(BLOG_URL, {cache:'no-store'});
+        if(!res.ok) throw new Error('HTTP '+res.status);
+        blogData = await res.json();
+        // flatten
+        allArticles = [];
+        blogData.levels.forEach(lv=>{
+          lv.categories.forEach(cat=>{
+            cat.articles.forEach(a=>{
+              allArticles.push({...a, levelId: lv.id, levelLabel: lv.label, categoryLabel: cat.label, categoryId: cat.id});
+            });
+          });
+        });
+        renderCurriculum();
+        bindSearch();
+        // initial route from hash or first article
+        const hash = location.hash.replace('#','');
+        const slug = allArticles.find(a=>a.slug===hash)?.slug || allArticles[0]?.slug;
+        if(slug) navigate(slug);
+        window.addEventListener('hashchange', ()=>{
+          const h = location.hash.replace('#','');
+          if(h) navigate(h);
+        });
+      }catch(e){
+        document.getElementById('articleBody').innerHTML = '<p style="color:#991b1b">Failed to load blog.json: '+esc(e.message)+'</p>';
+      }
+    }
+
+    function renderCurriculum(filter=''){
+      const nav = document.getElementById('curriculumNav');
+      const q = filter.trim().toLowerCase();
+      const levelFilter = document.getElementById('levelFilter').value;
+      let html = '';
+      let anyVisible = false;
+      blogData.levels.forEach(lv=>{
+        if(levelFilter && lv.id !== levelFilter) return;
+        const catsHtml = lv.categories.map(cat=>{
+          const arts = cat.articles.filter(a=>{
+            if(!q) return true;
+            const hay = (a.title+' '+a.excerpt+' '+cat.label).toLowerCase();
+            return hay.includes(q);
+          });
+          if(!arts.length) return '';
+          anyVisible = true;
+          return `<div class="nav-group" data-level="${lv.id}"><div class="nav-group-title"><span class="chev">▼</span> ${esc(cat.label)}</div><ul class="nav-list">${arts.map(a=>{
+            const active = a.slug === currentSlug ? 'active' : '';
+            return `<li><a href="#${esc(a.slug)}" class="${active}" data-slug="${esc(a.slug)}">${esc(a.title)}<span class="meta">${esc(lv.label)} • ${a.readTime} min</span></a></li>`;
+          }).join('')}</ul></div>`;
+        }).join('');
+        if(catsHtml){
+          html += `<div class="nav-group" data-level="${lv.id}"><div class="nav-group-title" style="color:var(--accent);"><span class="chev">▼</span> ${esc(lv.label)}</div>${catsHtml}</div>`;
+        }
+      });
+      if(!anyVisible) html = '<div class="search-empty">No articles match. Try another keyword or level.</div>';
+      nav.innerHTML = html;
+      // chev toggles
+      nav.querySelectorAll('.nav-group-title').forEach(el=>{
+        el.addEventListener('click', ()=>{
+          const g = el.closest('.nav-group');
+          g.classList.toggle('collapsed');
+        });
+      });
+      nav.querySelectorAll('a[data-slug]').forEach(a=>{
+        a.addEventListener('click', e=>{
+          // hash will trigger navigate, close drawer on mobile
+          document.getElementById('leftSidebar').classList.remove('open');
+        });
+      });
+    }
+
+    async function navigate(slug){
+      const art = allArticles.find(a=>a.slug===slug);
+      if(!art) return;
+      currentSlug = slug;
+      history.replaceState(null,'','#'+slug);
+      renderCurriculum(document.getElementById('searchInput').value);
+      window.scrollTo({top:0, behavior:'smooth'});
+      // show loading shell
+      document.title = art.title + ' — Nalvar Blog';
+      document.getElementById('articleTitle').textContent = art.title;
+      document.getElementById('breadcrumbs').innerHTML = `<a href="/">Home</a> &gt; <a href="/blog/">Blog</a> &gt; ${esc(art.levelLabel)} &gt; ${esc(art.categoryLabel)}`;
+      document.getElementById('articleMeta').innerHTML = `<span class="level-badge ${esc(art.level)}">${esc(art.levelLabel)}</span> <span>Published: ${esc(art.date)} • ${art.readTime} min read</span>`;
+      document.getElementById('articleBody').innerHTML = '<p style="color:var(--text-muted)">Loading article…</p>';
+      // TOC from index headings immediate
+      const toc = document.getElementById('tocList');
+      if(art.headings && art.headings.length){
+        toc.innerHTML = art.headings.map(h=>`<li><a href="#${esc(h.id)}">${esc(h.text)}</a></li>`).join('');
+      } else {
+        toc.innerHTML = '<li style="color:var(--text-muted);font-size:.82rem">No sections</li>';
+      }
+      // Next card
+      const idx = allArticles.findIndex(a=>a.slug===art.slug);
+      const next = allArticles[idx+1];
+      const card = document.getElementById('nextCard');
+      if(next){
+        card.hidden = false;
+        document.getElementById('nextLink').textContent = next.title + ' →';
+        document.getElementById('nextLink').href = '#'+next.slug;
+        document.getElementById('nextLink').onclick = (e)=>{ e.preventDefault(); navigate(next.slug); };
+      } else {
+        card.hidden = true;
+      }
+      try{
+        let md;
+        if(mdCache.has(slug)){
+          md = mdCache.get(slug);
+        } else {
+          const res = await fetch('./posts/'+slug+'.md', {cache:'no-store'});
+          if(!res.ok) throw new Error('HTTP '+res.status);
+          const raw = await res.text();
+          const parsed = parseFrontmatter(raw);
+          md = parsed.body;
+          mdCache.set(slug, md);
+        }
+        const html = mdToHtml(md, art.headings);
+        document.getElementById('articleBody').innerHTML = html;
+      }catch(e){
+        document.getElementById('articleBody').innerHTML = '<p style="color:#991b1b">Failed to load post: '+esc(e.message)+'</p>';
+      }
+      // dynamic OG / canonical / JSON-LD for this article (helps sharers that execute JS; real crawlers use sitemap entry)
+      try{
+        const url = 'https://nalvar.in/blog/#' + slug;
+        let link = document.querySelector('link[rel=\"canonical\"]');
+        if(link) link.href = url;
+        let ogUrl = document.querySelector('meta[property=\"og:url\"]');
+        if(ogUrl) ogUrl.content = url;
+        let ogTitle = document.querySelector('meta[property=\"og:title\"]');
+        if(ogTitle) ogTitle.content = art.title + ' — Nalvar Blog';
+        let ogDesc = document.querySelector('meta[property=\"og:description\"]');
+        if(ogDesc) ogDesc.content = art.excerpt;
+        let twTitle = document.querySelector('meta[name=\"twitter:title\"]');
+        if(twTitle) twTitle.content = art.title;
+        let twDesc = document.querySelector('meta[name=\"twitter:description\"]');
+        if(twDesc) twDesc.content = art.excerpt;
+      }catch(_){}
+    }
+
+    function renderArticle(art){
+      // legacy no-op kept for compatibility — navigate now handles rendering
+      document.title = art.title + ' — Nalvar Blog';
+      document.getElementById('articleTitle').textContent = art.title;
+      document.getElementById('breadcrumbs').innerHTML = `<a href="/">Home</a> &gt; <a href="/blog/">Blog</a> &gt; ${esc(art.levelLabel)} &gt; ${esc(art.categoryLabel)}`;
+      document.getElementById('articleMeta').innerHTML = `<span class="level-badge ${esc(art.level)}">${esc(art.levelLabel)}</span> <span>Published: ${esc(art.date)} • ${art.readTime} min read</span>`;
+      document.getElementById('articleBody').innerHTML = '<p style="color:var(--text-muted)">Loading…</p>';
+      // TOC
+      const toc = document.getElementById('tocList');
+      if(art.headings && art.headings.length){
+        toc.innerHTML = art.headings.map(h=>`<li><a href="#${esc(h.id)}">${esc(h.text)}</a></li>`).join('');
+      } else {
+        toc.innerHTML = '<li style="color:var(--text-muted);font-size:.82rem">No sections</li>';
+      }
+      // Next
+      const idx = allArticles.findIndex(a=>a.slug===art.slug);
+      const next = allArticles[idx+1];
+      const card = document.getElementById('nextCard');
+      if(next){
+        card.hidden = false;
+        document.getElementById('nextLink').textContent = next.title + ' →';
+        document.getElementById('nextLink').href = '#'+next.slug;
+        document.getElementById('nextLink').onclick = (e)=>{ e.preventDefault(); navigate(next.slug); };
+      } else {
+        card.hidden = true;
+      }
+    }
+
+    function bindSearch(){
+      const inp = document.getElementById('searchInput');
+      const sel = document.getElementById('levelFilter');
+      inp.addEventListener('input', ()=> renderCurriculum(inp.value));
+      sel.addEventListener('change', ()=> renderCurriculum(inp.value));
+      document.getElementById('drawerBtn').addEventListener('click', ()=>{
+        const sb = document.getElementById('leftSidebar');
+        const open = sb.classList.toggle('open');
+        document.getElementById('drawerBtn').setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    loadBlog();
+  </script>
+</body>
+</html>

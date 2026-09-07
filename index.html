@@ -449,12 +449,17 @@
         renderPanels();
         if(remediesData) renderRemedies();
         document.getElementById('loading').style.display='none';
-        // activate hash or first (supports #remedies)
+        // path routing: /appar etc and hash fallback
+        const path = location.pathname.replace(/^\/+|\/+$/g,'');
         const hash = location.hash.replace('#','');
         const allIds = [...saintsData.map(s=>s.id), ...(remediesData?['remedies']:[])];
         const first = saintsData[0]?.id;
-        const target = allIds.includes(hash) ? hash : first;
-        if(target) activateTab(target);
+        let target = first;
+        if (path && allIds.includes(path)) target = path;
+        else if (hash && allIds.includes(hash)) target = hash;
+        // blog is separate page
+        if (path === 'blog') { window.location.replace('/blog/'); return; }
+        if(target) activateTab(target, false);
         initCarouselObservers();
       } catch(e){
         document.getElementById('loading').innerHTML = '<div class="error-msg">Failed to load <code>data.json</code>: '+esc(e.message)+'<br>Check that <code>data.json</code> is valid JSON and served via HTTP (not file://). Run <code>python -m http.server 8000</code></div>';
@@ -467,9 +472,9 @@
       tabs.classList.remove('loading');
       tabs.innerHTML = saintsData.map((s,i)=>`
         <button class="tab-btn" role="tab" aria-selected="${i===0?'true':'false'}" data-tab="${esc(s.id)}" id="tab-${esc(s.id)}"><span class="dot-mini"></span> ${esc(s.shortName)}</button>
-      `).join('') + (remediesData ? `<button class="tab-btn" role="tab" aria-selected="false" data-tab="remedies" id="tab-remedies"><span class="dot-mini"></span> Remedies</button>` : '');
+      `).join('') + (remediesData ? `<button class="tab-btn" role="tab" aria-selected="false" data-tab="remedies" id="tab-remedies"><span class="dot-mini"></span> Remedies</button>` : '') + `<a class="tab-btn" href="/blog/" style="text-decoration:none"><span class="dot-mini"></span> Blog</a>`;
       tabs.querySelectorAll('.tab-btn').forEach(btn=>{
-        btn.addEventListener('click',()=> activateTab(btn.dataset.tab));
+        if(btn.dataset.tab) btn.addEventListener('click',()=> activateTab(btn.dataset.tab));
       });
     }
 
@@ -602,7 +607,7 @@
       });
     }
 
-    function activateTab(name){
+    function activateTab(name, push=true){
       document.querySelectorAll('.tab-btn').forEach(b=> b.setAttribute('aria-selected', String(b.dataset.tab===name)));
       document.querySelectorAll('.panel').forEach(p=>{
         const show = p.id==='panel-'+name;
@@ -612,8 +617,19 @@
       const car = document.querySelector('#panel-'+name+' [data-carousel]');
       if(car) car.scrollTo({left:0, behavior:'auto'});
       updateAllDots();
-      history.replaceState(null,'','#'+name);
+      if(push){
+        const first = saintsData[0]?.id;
+        const url = (name === first) ? '/' : '/'+name;
+        history.pushState(null,'',url);
+      } else {
+        const first = saintsData[0]?.id;
+        const url = (name === first) ? '/' : '/'+name;
+        history.replaceState(null,'',url);
+      }
       activeId = name;
+      // update canonical/og for SEO (optional)
+      const canon = document.querySelector('link[rel=\"canonical\"]');
+      if(canon) canon.href = 'https://nalvar.in' + ((name === saintsData[0]?.id) ? '/' : '/'+name);
     }
 
     // Delegated tab key handling
@@ -647,8 +663,13 @@
         const first = saintsData[0]?.id || 'appar';
         activateTab(first);
         window.scrollTo({top:0, behavior:'smooth'});
-        history.replaceState(null,'','/');
       });
+    });
+    window.addEventListener('popstate', ()=>{
+      const path = location.pathname.replace(/^\/+|\/+$/g,'');
+      const allIds = [...saintsData.map(s=>s.id), ...(remediesData?['remedies']:[])];
+      if(allIds.includes(path)) activateTab(path, false);
+      else if(!path) activateTab(saintsData[0]?.id, false);
     });
     // PWA
     let deferredPrompt; const installBtn=document.getElementById('installBtn');
