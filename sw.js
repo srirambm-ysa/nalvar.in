@@ -1,5 +1,5 @@
 // Nalvar PWA — offline shell cache
-const CACHE = 'nalvar-v21';
+const CACHE = 'nalvar-v22';
 const SHELL = [
   '/',
   '/manifest.webmanifest',

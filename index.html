@@ -9,7 +9,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="manifest" href="/manifest.webmanifest?v=21">
+  <link rel="manifest" href="/manifest.webmanifest?v=22">
   <link rel="icon" href="/icons/favicon.ico" sizes="32x32">
   <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192">
   <link rel="icon" href="/icons/icon-512.png" type="image/png" sizes="512x512">
@@ -114,8 +114,9 @@
     .remedy-card .links a { font-size:.78rem; font-weight:700; padding:6px 10px; border-radius:999px; text-decoration:none; border:1px solid #fcd34d; min-height:32px; display:inline-flex; align-items:center; }
     .remedy-card .links a.primary { background:#4a2c11; color:#fdf8f0; border-color:#4a2c11; }
     .remedy-card .links a.secondary { background:#fff; color:#92400e; }
-    .remedy-card .links .wa-share { font-size:.78rem; font-weight:700; padding:6px 10px; border-radius:999px; border:1px solid #25D366; background:#25D366; color:#fff; cursor:pointer; min-height:32px; display:inline-flex; align-items:center; gap:6px; }
-    .remedy-card .links .wa-share:hover { background:#128C7E; border-color:#128C7E; }
+    .remedy-card .links .wa-share { font-size:.78rem; font-weight:700; padding:6px 12px; border-radius:999px; border:1px solid #e7c9a6; background:#fff; color:#7c2d12; cursor:pointer; min-height:32px; display:inline-flex; align-items:center; gap:6px; transition:all .2s; }
+    .remedy-card .links .wa-share:hover { background:#fff7ed; border-color:#d97706; color:#4a2c11; }
+    .remedy-card .links .wa-share svg { width:14px; height:14px; flex-shrink:0; }
     .hero-emblem a, .nalvar-chip { cursor:pointer; }
     .hero-emblem a:focus-visible, .nalvar-chip:focus-visible { outline:2px solid #fcd34d; outline-offset:2px; border-radius:8px; }
     footer { text-align:center; padding:18px 16px calc(18px + env(safe-area-inset-bottom)); color:#78716c; font-size:.78rem; border-top:1px solid #ead9c3; background:#fff7ed; margin-top:10px; }
@@ -310,7 +311,7 @@
             <div class="links">
               <a class="primary" href="${esc(it.url)}" target="_blank" rel="noopener">Read Text ↗</a>
               <a class="secondary" href="${esc(it.youtube)}" target="_blank" rel="noopener">YouTube ▶</a>
-              <button class="wa-share" type="button" data-wa="${esc(waText)}" aria-label="Share ${esc(it.pathigam)} on WhatsApp">WhatsApp <span aria-hidden="true">↗</span></button>
+              <button class="wa-share" type="button" data-wa="${esc(waText)}" aria-label="Share ${esc(it.pathigam)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share</button>
             </div>
           </div>
         `}).join('');
@@ -408,7 +409,7 @@
     let deferredPrompt; const installBtn=document.getElementById('installBtn');
     window.addEventListener('beforeinstallprompt', e=>{ e.preventDefault(); deferredPrompt=e; installBtn.hidden=false; });
     installBtn?.addEventListener('click', async()=>{ if(!deferredPrompt) return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; installBtn.hidden=true; });
-    if('serviceWorker' in navigator) window.addEventListener('load',()=> navigator.serviceWorker.register('/sw.js?v=21').catch(()=>{}));
+    if('serviceWorker' in navigator) window.addEventListener('load',()=> navigator.serviceWorker.register('/sw.js?v=22').catch(()=>{}));
 
     loadData();
   </script>
