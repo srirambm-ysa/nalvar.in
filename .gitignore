@@ -5,3 +5,12 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 *.log
+
+# Periapuranam — keep repo lean: audio + chunk-level artifacts are reversible, not committed
+periapuranam/output/**/audio/
+periapuranam/output/**/tamil_real/periyapuranam-*_chunk*.txt
+periapuranam/_test_merge/
+.ocgraph/
+discarded/
+dist/
+C:/Users/Sony/AppData/Local/Temp/opencode/
