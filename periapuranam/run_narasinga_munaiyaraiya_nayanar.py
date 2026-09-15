@@ -150,7 +150,7 @@ Tamil source:
 """
     headers_en=dict(headers_llm)
     headers_en["X-Title"]=f"Nalvar Periyapuranam - {nayanar} English"
-    payload_en={"model":MODEL,"messages":[{"role":"user","content":[{"type":"text","text":translate_prompt}]}],"max_tokens":12000,"temperature":0.4}
+    payload_en={"model":MODEL,"messages":[{"role":"user","content":[{"type":"text","text":translate_prompt}]}],"max_tokens":30000,"temperature":0.4}
     for retry in range(3):
         try:
             r=requests.post(ENDPOINT, headers=headers_en, json=payload_en, timeout=300)
