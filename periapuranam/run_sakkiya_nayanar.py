@@ -73,7 +73,11 @@ def run(nayanar, seq_fid_list):
                         content=content.split("\n",1)[-1].rsplit("```",1)[0].strip()
                     return content,j
                 else:
-                    print(f"    HTTP {r.status_code} retry {retry+1}: {r.text[:400]}")
+                    body = r.text[:800]
+                    if r.status_code in (402,403) and ("Budget" in body or "budget" in body.lower() or "insufficient" in body.lower()):
+                        print(f"    FATAL BUDGET {r.status_code}: {body[:400]} — aborting, no retry")
+                        sys.exit(2)
+                    print(f"    HTTP {r.status_code} retry {retry+1}: {body[:400]}")
                     time.sleep(2*(retry+1))
             except Exception as e:
                 print(f"    exception retry {retry+1}: {e}")
@@ -230,7 +234,11 @@ Tamil source:
                 print(f"BILINGUAL -> {bilingual}")
                 break
             else:
-                print(f"EN HTTP {r.status_code}: {r.text[:500]}")
+                body = r.text[:800]
+                if r.status_code in (402,403) and ("Budget" in body or "budget" in body.lower() or "insufficient" in body.lower()):
+                    print(f"EN FATAL BUDGET {r.status_code}: {body[:400]} — aborting")
+                    sys.exit(2)
+                print(f"EN HTTP {r.status_code}: {body[:500]}")
                 time.sleep(2*(retry+1))
         except Exception as e:
             print(f"EN exception {e}")

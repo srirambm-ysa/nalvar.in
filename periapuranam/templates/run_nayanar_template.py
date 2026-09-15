@@ -73,7 +73,11 @@ def run(nayanar, seq_fid_list):
                         content=content.split("\n",1)[-1].rsplit("```",1)[0].strip()
                     return content,j
                 else:
-                    print(f"    HTTP {r.status_code} retry {retry+1}: {r.text[:400]}")
+                    body = r.text[:800]
+                    if r.status_code in (402,403) and ("Budget" in body or "budget" in body.lower() or "insufficient" in body.lower()):
+                        print(f"    FATAL BUDGET {r.status_code}: {body[:400]} — aborting, no retry")
+                        sys.exit(2)
+                    print(f"    HTTP {r.status_code} retry {retry+1}: {body[:400]}")
                     time.sleep(2*(retry+1))
             except Exception as e:
                 print(f"    exception retry {retry+1}: {e}")
@@ -159,15 +163,15 @@ def run(nayanar, seq_fid_list):
                 print(f"    FAILED chunk {i} seq {seq} (empty)")
                 if content is None:
                     content="[FAILED TRANSCRIPTION]"; meta={"error":"failed"}
-                _flag_anomaly(seq,i,content,meta,dur_t,1.2,dur)
+                _flag_anomaly(seq,i,content,meta,dur_t,2.0,dur)
             else:
                 print(f"    -> {len(content)} chars, cost {meta.get('usage',{}).get('cost','?') if meta else '?'}")
-                _flag_anomaly(seq,i,content,meta,dur_t,1.2,dur)
+                _flag_anomaly(seq,i,content,meta,dur_t,2.0,dur)
             chunk_txt=TAMIL_DIR/f"periyapuranam-{seq:03d}_chunk{i:02d}.txt"
             chunk_txt.write_text(content,encoding="utf-8")
             seq_out_parts.append(content)
             seq_metas.append({"chunk":i,"offset":offset,"dur":dur,"chars":len(content),"meta":meta})
-            time.sleep(1.2)
+            time.sleep(2.0)
         merged="\n\n".join(seq_out_parts)
         seq_out=TAMIL_DIR/f"periyapuranam-{seq:03d}-tamil-real.txt"
         seq_out.write_text(merged,encoding="utf-8")
@@ -192,7 +196,7 @@ def run(nayanar, seq_fid_list):
     # dump instrumentation before translate
     instr_path = TAMIL_DIR / f"{SLUG}_instrumentation.json"
     with open(instr_path, "w", encoding="utf-8") as f:
-        json.dump({"experiment":"2-workers-parallel-dur-aware","nayanar":nayanar,"slug":SLUG,"day":DAY,"start":EXPERIMENT_START,"end":time.time(),"elapsed_s":round(time.time()-EXPERIMENT_START,1),"per_chunk":INSTRUMENT,"anomalies":ANOMALIES,"seq_results":all_results}, f, ensure_ascii=False, indent=2)
+        json.dump({"experiment":"3-workers-parallel-dur-aware","nayanar":nayanar,"slug":SLUG,"day":DAY,"start":EXPERIMENT_START,"end":time.time(),"elapsed_s":round(time.time()-EXPERIMENT_START,1),"per_chunk":INSTRUMENT,"anomalies":ANOMALIES,"seq_results":all_results}, f, ensure_ascii=False, indent=2)
     print(f"\nINSTRUMENTATION -> {instr_path} anomalies {len(ANOMALIES)}")
     if ANOMALIES:
         print("  MANUAL REVIEW REQUIRED for flagged chunks (check tamil_real/*_chunk*.txt and audio):")
@@ -236,7 +240,11 @@ Tamil source:
                 print(f"BILINGUAL -> {bilingual}")
                 break
             else:
-                print(f"EN HTTP {r.status_code}: {r.text[:500]}")
+                body = r.text[:800]
+                if r.status_code in (402,403) and ("Budget" in body or "budget" in body.lower() or "insufficient" in body.lower()):
+                    print(f"EN FATAL BUDGET {r.status_code}: {body[:400]} — aborting")
+                    sys.exit(2)
+                print(f"EN HTTP {r.status_code}: {body[:500]}")
                 time.sleep(2*(retry+1))
         except Exception as e:
             print(f"EN exception {e}")
