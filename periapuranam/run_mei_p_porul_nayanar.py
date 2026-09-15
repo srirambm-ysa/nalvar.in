@@ -10,7 +10,7 @@ def slugify(name):
 
 def run(nayanar, seq_fid_list):
     SLUG = slugify(nayanar)
-    DAY = "day-01"  # change per batch: day-01, day-02, ... day-10, day-11+
+    DAY = "day-04"  # change per batch: day-01, day-02, ... day-10, day-11+
     print(f"\n=== {nayanar} -> {SLUG} seq {seq_fid_list} ===")
     BASE = pathlib.Path(r"D:\nalvar\periapuranam\output") / DAY / SLUG
     AUDIO_DIR = BASE / "audio"
@@ -78,29 +78,26 @@ def run(nayanar, seq_fid_list):
             except Exception as e:
                 print(f"    exception retry {retry+1}: {e}")
                 time.sleep(2*(retry+1))
-        return None,None
-
-    # === INSTRUMENTATION & FAIL-SAFE (parallel experiment 2-workers, dur-aware) ===
+        
+    # === INSTRUMENTATION & FAIL-SAFE (parallel experiment 2-workers) ===
     INSTRUMENT = []  # per-chunk
     ANOMALIES = []
     EXPERIMENT_START = time.time()
-    def _flag_anomaly(seq, chunk_idx, content, meta, duration, throttle_wait, dur):
+    def _flag_anomaly(seq, chunk_idx, content, meta, duration, throttle_wait):
         chars = len(content) if content else 0
         flag = None
-        # duration-aware: ~8 chars/s for Tamil (300s ~2400c min, 11s ~88c min)
-        min_expected = max(30, int(dur * 6))  # allow 6c/s lower bound, min 30 for 1s tails
-        max_expected = int(dur * 20) + 500  # allow 20c/s upper + slack
-        if chars == 0 or not (content or "").strip():
+        if chars == 0:
             flag = "EMPTY_0CHAR"
-        elif chars < min_expected:
-            flag = f"TINY_{chars}_dur{dur:.0f}_exp{min_expected}"
-        elif chars > max_expected:
-            flag = f"HUGE_{chars}_dur{dur:.0f}_exp{max_expected}"
+        elif chars < 500:
+            flag = f"TINY_{chars}"
+        elif chars > 8000:
+            flag = f"HUGE_{chars}"
         else:
             if chars > 1000:
+                from collections import Counter
                 windows = [content[i:i+8] for i in range(0, len(content)-8, 8)]
                 if windows:
-                    most_common, cnt = collections.Counter(windows).most_common(1)[0]
+                    most_common, cnt = Counter(windows).most_common(1)[0]
                     if cnt > 30 and len(most_common.strip()) > 3:
                         flag = f"REPEAT_{most_common[:12]}_{cnt}"
         usage = (meta or {}).get("usage", {}) if isinstance(meta, dict) else {}
@@ -111,13 +108,11 @@ def run(nayanar, seq_fid_list):
                 finish = meta["choices"][0].get("finish_reason")
         except:
             finish = None
-        # only flag finish error if truly failed (cost 0 and chars tiny)
         if finish and finish != "stop":
-            if cost == 0 or cost is None or chars < min_expected:
-                flag = (flag + "|" if flag else "") + f"FINISH_{finish}"
+            flag = (flag + "|" if flag else "") + f"FINISH_{finish}"
         rec = {
             "seq": seq, "chunk": chunk_idx, "chars": chars, "flag": flag,
-            "duration_chunk_s": dur, "duration_transcribe_s": round(duration,2), "throttle_s": throttle_wait,
+            "duration_s": round(duration,2), "throttle_s": throttle_wait,
             "cost": cost, "finish_reason": finish,
             "prompt_tokens": usage.get("prompt_tokens") if usage else None,
             "completion_tokens": usage.get("completion_tokens") if usage else None,
@@ -126,7 +121,7 @@ def run(nayanar, seq_fid_list):
         INSTRUMENT.append(rec)
         if flag:
             ANOMALIES.append(rec)
-            print(f"    !! ANOMALY flagged {flag} seq {seq} chunk {chunk_idx} chars {chars} dur {dur:.0f}s")
+            print(f"    !! ANOMALY flagged {flag} seq {seq} chunk {chunk_idx} chars {chars}")
         return flag
 
     overall_log = TAMIL_DIR / "transcribe_log.json"
@@ -155,14 +150,13 @@ def run(nayanar, seq_fid_list):
             t0=time.time()
             content,meta=transcribe_chunk(chunk_path, seq,i,chunks)
             dur_t=time.time()-t0
-            if content is None or not (content or "").strip():
-                print(f"    FAILED chunk {i} seq {seq} (empty)")
-                if content is None:
-                    content="[FAILED TRANSCRIPTION]"; meta={"error":"failed"}
-                _flag_anomaly(seq,i,content,meta,dur_t,1.2,dur)
+            if content is None:
+                print(f"    FAILED chunk {i} seq {seq}")
+                content="[FAILED TRANSCRIPTION]"; meta={"error":"failed"}
+                _flag_anomaly(seq,i,content,meta,dur_t,1.2)
             else:
                 print(f"    -> {len(content)} chars, cost {meta.get('usage',{}).get('cost','?') if meta else '?'}")
-                _flag_anomaly(seq,i,content,meta,dur_t,1.2,dur)
+                _flag_anomaly(seq,i,content,meta,dur_t,1.2)
             chunk_txt=TAMIL_DIR/f"periyapuranam-{seq:03d}_chunk{i:02d}.txt"
             chunk_txt.write_text(content,encoding="utf-8")
             seq_out_parts.append(content)
@@ -189,18 +183,18 @@ def run(nayanar, seq_fid_list):
         json.dump(all_results,f,ensure_ascii=False,indent=2)
     print(f"Log -> {overall_log}")
 
+    # translation
     # dump instrumentation before translate
     instr_path = TAMIL_DIR / f"{SLUG}_instrumentation.json"
     with open(instr_path, "w", encoding="utf-8") as f:
-        json.dump({"experiment":"2-workers-parallel-dur-aware","nayanar":nayanar,"slug":SLUG,"day":DAY,"start":EXPERIMENT_START,"end":time.time(),"elapsed_s":round(time.time()-EXPERIMENT_START,1),"per_chunk":INSTRUMENT,"anomalies":ANOMALIES,"seq_results":all_results}, f, ensure_ascii=False, indent=2)
+        json.dump({"experiment":"2-workers-parallel","nayanar":nayanar,"slug":SLUG,"day":DAY,"start":EXPERIMENT_START,"end":time.time(),"elapsed_s":round(time.time()-EXPERIMENT_START,1),"per_chunk":INSTRUMENT,"anomalies":ANOMALIES,"seq_results":all_results}, f, ensure_ascii=False, indent=2)
     print(f"\nINSTRUMENTATION -> {instr_path} anomalies {len(ANOMALIES)}")
     if ANOMALIES:
         print("  MANUAL REVIEW REQUIRED for flagged chunks (check tamil_real/*_chunk*.txt and audio):")
         for a in ANOMALIES:
-            print(f"    seq {a['seq']} chunk {a['chunk']} flag {a['flag']} chars {a['chars']} dur {a['duration_chunk_s']:.0f}s")
+            print(f"    seq {a['seq']} chunk {a['chunk']} flag {a['flag']} chars {a['chars']}")
     else:
         print("  No anomalies flagged - proceed to verify Chapter count and ==== check")
-    # translation
     print("\nTranslating to English (single call)...")
     translate_prompt=f"""Translate the following Tamil Periya Puranam story of {nayanar} into clear, faithful English.
 
@@ -246,6 +240,21 @@ Tamil source:
     print(f"\nDONE {nayanar} pipeline. Review files:\n  Tamil : {story_tamil}\n  English: {BASE/f'{SLUG}_english.txt'}")
 
 if __name__=="__main__":
+    # parallel experiment defaults (instrumented) - no-args fallback
+    _defaults = {
+        "Mei-p-porul Nayanar": [(78, '1jabkJh2ZhF_u1CeHfvHOShkafdm1bpZS'), (79, '1iDDAo6CdKtW0D5DNdvBWvhsu8TgirYQn'), (80, '1PloBX2YrBakxpe2B3xgrvC7fe8A2ybXz'), (81, '1ro8knoXsmaK5cD8Kx_RnBKMcG3sfNsvE'), (82, '19Zp0-klSELzorZd1x6y1t8vnjqE4BvC5'), (83, '1Xn6jv-gall6b_uIEVL5rujF7Zetr9HVJ'), (84, '1ZscDQrKyGOL6L3KNg_wjCBv4uGbAxmLs')],
+        "Sakkiya Nayanar": [(915, '15MfnAlHBTFdHUTnqU_Ixl11eo_9yXsGo'), (916, '1gwO_8WfBdkEaJqfpWsL6wAVUSHDLn8uB'), (917, '1WxxOMXyS42L6DAIhK3u9ZM9ptJQWilZu'), (918, '1Kc6S7ruGyNcX-VZTtWTnuV0SKkCF13j3'), (919, '1a1nrLMG5qdEHE6AWh28AuZY0pYTyEdL4'), (920, '19a_RStdRD0ZYZkFHZP5POmrw4yprXdL8'), (921, '1IPSBgK8tsX-k0zwlTToMOJ70kicMVzed'), (922, '1QdTktNepjaZsbPt7WXCqvztv8r8HBRvu')],
+    }
+    if len(sys.argv) == 1:
+        import pathlib as _pl
+        stem = _pl.Path(__file__).stem
+        if "mei_p_porul" in stem:
+            run("Mei-p-porul Nayanar", _defaults["Mei-p-porul Nayanar"])
+        elif "sakkiya" in stem:
+            run("Sakkiya Nayanar", _defaults["Sakkiya Nayanar"])
+        else:
+            print("No args and unknown default - provide --nayanar and --seq/--fid")
+        sys.exit(0)
     import argparse
     p=argparse.ArgumentParser()
     p.add_argument("--nayanar", required=True)
