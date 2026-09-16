@@ -2,7 +2,7 @@
 
 > **Purpose:** project-local detailed handoff for continued work on `nalvar.in` — PWA, SEO, path routing, and Blog phase 2. The wiki `D:\knowledge-base\HANDOFF.md` is the thin master pointer; this file is the **authoritative project detail**.
 >
-> **Last updated:** 2026-09-16 · `main` at `f5b2534`+dirty (Day6 2/4 DONE Chandesura 18F 66ch 206K + Karaikal 18F 64ch 198K 2-parallel 40.5m + 9.6m chunked English — 246 HUGE 37k/50k fixed 255K→5827, 493 TINY 22→3438, 251/261 tails 0 flagged) · `output/day-06` 2/4 done 36F 130ch $1.34 — `output/day-01` 21 + `day-02` 14 + `day-03` 11 + `day-04` 7 + `day-05` 6 + `day-06` 2/4 = 61/71 total stories, 250 files · Strategy `periapuranam/transcription-strategy.md` 3-phase A/B/C created → Day6 remaining 60F Kazhar/Kannappa queued Phase A 2-parallel
+> **Last updated:** 2026-09-16 · `main` at `e83750d` (Day6 2/4 DONE Chandesura 18F 66ch 206K + Karaikal 18F 64ch 198K 2-parallel 40.5m + 9.6m chunked English — 246 HUGE 37k/50k fixed 255K→5827, 493 TINY 22→3438, 251/261 tails 0 flagged) · `output/day-06` 2/4 done 36F 130ch $1.34 — `output/day-01` 21 + `day-02` 14 + `day-03` 11 + `day-04` 7 + `day-05` 6 + `day-06` 2/4 = 61/71 total stories, 250 files · Strategy `periapuranam/transcription-strategy.md` 3-phase A/B/C created → Day6 remaining 60F Kazhar/Kannappa queued Phase A 2-parallel
 
 > **Stack:** static PWA (no framework), `index.html` + `data.json` + `remedies.json` + `blog/` + `periapuranam/` (catalog 1024 + Nayanar build day-batched `output/day-01`, `day-02`), Cloudflare Workers Assets (`wrangler.toml` `directory ./dist` `not_found_handling single-page-application`), `sw.js` precache, `manifest.webmanifest`, `scripts/admin-dev-server.mjs` inline PUT dev server
 
