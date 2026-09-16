@@ -1,0 +1,43 @@
+{
+  "slug": "karaikal_ammaiyaar",
+  "nayanar": "Karaikal Ammaiyaar",
+  "chunks": 4,
+  "merged_chars": 191949,
+  "merged_chapters": 18,
+  "has_eq": false,
+  "instrument": [
+    {
+      "chunk": 0,
+      "headers": "Chapter 01, Chapter 02, Chapter 03, Chapter 04, Chapter 05, Chapter 06",
+      "tamil_chars": 59579,
+      "english_chars": 58747,
+      "cost": 0.040592277,
+      "finish": "stop"
+    },
+    {
+      "chunk": 1,
+      "headers": "Chapter 07, Chapter 08, Chapter 09, Chapter 10, Chapter 11",
+      "tamil_chars": 50211,
+      "english_chars": 45746,
+      "cost": 0.030149658,
+      "finish": "stop"
+    },
+    {
+      "chunk": 2,
+      "headers": "Chapter 12, Chapter 13, Chapter 14, Chapter 15",
+      "tamil_chars": 47419,
+      "english_chars": 45487,
+      "cost": 0.03085632,
+      "finish": "stop"
+    },
+    {
+      "chunk": 3,
+      "headers": "Chapter 16, Chapter 17, Chapter 18",
+      "tamil_chars": 41256,
+      "english_chars": 41962,
+      "cost": 0.029132136,
+      "finish": "stop"
+    }
+  ],
+  "elapsed_s": 268.9
+}

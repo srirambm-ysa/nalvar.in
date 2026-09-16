@@ -15,7 +15,7 @@ def run(nayanar, seq_fid_list, phase="all"):
     Tails with 0 chars (e.g., 251c03 75s, 261c04 34s) are logged to _errors.log and pause for manual review per transcription-strategy.md:6.
     """
     SLUG = slugify(nayanar)
-    DAY = "day-01"  # change per batch: day-01, day-02, ... day-10, day-11+
+    DAY = "day-06"  # change per batch: day-01, day-02, ... day-10, day-11+
     PHASES = set(phase.upper().split(",")) if isinstance(phase, str) else set(phase)
     if "ALL" in PHASES:
         PHASES = {"A","B","C"}
@@ -434,7 +434,7 @@ Tamil chunk {chunk_idx+1}/{total_chunks} (contains {headers_in}):
 
 if __name__=="__main__":
     # Default for `python periapuranam/run_<slug>.py` without args (uses per-slug _defaults)
-    _defaults = {}  # replaced per slug: {"Nayanar Name": [(seq, fid), ...]}
+    _defaults = {"Chandesura Nayanar": [(245, '1gRzc8rW_hhsBNjbf6f-c6jWHDwoJX1pS'), (246, '1ojAmXhI1yC4rWgJlOnNRznbUzpZChiUE'), (247, '1CpQRc9EDzV5i-palVJG2RO34xneq-Ofx'), (248, '1_Vm-GGa6QJnAZMwRkk43wrO0i0tCiKOX'), (249, '1LVCqYT4turwXUjRxVtaMKFpoZG8wvE5t'), (250, '1C5kNXbxHKnT4KJtNNTFm8ktlDtQi1-HQ'), (251, '1CF7rgyG6VU22UR7UH6ZguWjmwjU7eAFO'), (252, '1DJKvR0vj3PQfad0nhxE1BUeMY24li-Fx'), (253, '1GJxt2Pt3HedVDW5s4HAZLT2ic3RJtRFc'), (254, '1xMlUFpewV6haiP4TV7S6ZQZVHy0lEKjv'), (255, '1J6pHJz9hzZoLwfn2yr6Tdz22g02N0mbb'), (256, '1Gfg8KX0kpw0G0UDnzIhwtbot4xbDScOF'), (257, '1Fo1LWoaoks-1I5NK3dwFpGId8w2pD3Gu'), (258, '1zLUqZ7HKbJ-Y4Me3P_kHNbU22spRxS0K'), (259, '1cLZXLfq4xkaHqeRNbzXnuvKTZrbECXDL'), (260, '1JyCB-bOtH3oEeNxoAcOsFz9xCKUsyu7a'), (261, '19RZ7XjiYensHFVI0YvyHEOzGa6A5cYuP'), (262, '1R0SMHE6XrxzpROXCgwsgqn-C-ukAgQqc')]}
     import sys as _sys
     if len(_sys.argv) == 1 and _defaults:
         nayanar, seq_fid = next(iter(_defaults.items()))

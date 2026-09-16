@@ -1,0 +1,43 @@
+{
+  "slug": "chandesura_nayanar",
+  "nayanar": "Chandesura Nayanar",
+  "chunks": 4,
+  "merged_chars": 207293,
+  "merged_chapters": 23,
+  "has_eq": false,
+  "instrument": [
+    {
+      "chunk": 0,
+      "headers": "Chapter 01, Chapter 02, Chapter 03, Chapter 04, Chapter 05",
+      "tamil_chars": 57878,
+      "english_chars": 56509,
+      "cost": 0.037320624,
+      "finish": "stop"
+    },
+    {
+      "chunk": 1,
+      "headers": "Chapter 06, Chapter 07, Chapter 08, Chapter 09, Chapter 10",
+      "tamil_chars": 53521,
+      "english_chars": 53876,
+      "cost": 0.035120151,
+      "finish": "stop"
+    },
+    {
+      "chunk": 2,
+      "headers": "Chapter 11, Chapter 12, Chapter 13, Chapter 14, Chapter 15",
+      "tamil_chars": 56792,
+      "english_chars": 55931,
+      "cost": 0.036573075,
+      "finish": "stop"
+    },
+    {
+      "chunk": 3,
+      "headers": "Chapter 16, Chapter 17, Chapter 18",
+      "tamil_chars": 37983,
+      "english_chars": 40970,
+      "cost": 0.028573281,
+      "finish": "stop"
+    }
+  ],
+  "elapsed_s": 306.9
+}

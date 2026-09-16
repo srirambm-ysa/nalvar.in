@@ -15,7 +15,7 @@ def run(nayanar, seq_fid_list, phase="all"):
     Tails with 0 chars (e.g., 251c03 75s, 261c04 34s) are logged to _errors.log and pause for manual review per transcription-strategy.md:6.
     """
     SLUG = slugify(nayanar)
-    DAY = "day-01"  # change per batch: day-01, day-02, ... day-10, day-11+
+    DAY = "day-06"  # change per batch: day-01, day-02, ... day-10, day-11+
     PHASES = set(phase.upper().split(",")) if isinstance(phase, str) else set(phase)
     if "ALL" in PHASES:
         PHASES = {"A","B","C"}
@@ -434,7 +434,7 @@ Tamil chunk {chunk_idx+1}/{total_chunks} (contains {headers_in}):
 
 if __name__=="__main__":
     # Default for `python periapuranam/run_<slug>.py` without args (uses per-slug _defaults)
-    _defaults = {}  # replaced per slug: {"Nayanar Name": [(seq, fid), ...]}
+    _defaults = {"Kannappa Nayanar": [(124, '1ZeczwBALh_H497Zk-uzpj8w73OsahFIX'), (125, '1eTrisZ4k4_9mGJvtTSkSzxQxmTkEtGtb'), (126, '1j5qn-nhIjTzu9f2BAkCF2EfAsXtOR3M6'), (127, '1M4hX9xWOD7v_rcsxSwbjPKQC2cCevKkd'), (128, '1T7GMlsTBp4CuZFaPlaOR27LZMkd5dMU7'), (129, '1N2wXjwMEJqly8KjmVmJhAO0nO2v45Yth'), (130, '1K_jUuzZ8O9LPNKsM7Xs_7W2idh24dehR'), (131, '1jMXTqF_x47rBktCkX3V3orb3Ri9vrpPf'), (132, '1kRFAoOPc13g_zC2G90Fgc9YF3PR9uMgg'), (133, '10bq85KGdiseQILvleWhOseQvGt-CA3IB'), (134, '1IKTto-oqYJN3tSjI5RTcmN4Ha4UVupdQ'), (135, '1AU3ywbU8Tj99SYsfg57qe_vwzJueZJDL'), (136, '1wPNSp4LGcGQbH7B4gMUgfrZHaNqNcdPR'), (137, '1WVpFw2MhdT-srs4aiLS9loBZVbdeH9vg'), (138, '1WGwo09OgllvrjymcRMf8YLQiZUPTLDH0'), (139, '1qdCJk-6UlEIykTLEeS4RthcG7b1-AVJr'), (140, '1ubsMOam2w7XmtB92fVumk_syzYzJmbiK'), (141, '1jZlhNNBZfhCsFJphA3sM0RlTdBS7_K0y'), (142, '1-eHwcA2ChkmiEne1wpB3pFBuZqq2mUCP'), (143, '1gw-VTzCQmq5RuIAjR1VooITSG5BRyuu_'), (144, '1uAgI1zaPmC-U7pYgPtw6v1QcoknVEu7B'), (145, '1vBBFTCgEFOCFWpFToyNGdOp0HmFsywpO'), (146, '1zFNzqu7xNHH3yuIWHX7oy4WRYjVJC2SM'), (147, '1VdNGA2StQLnIObiP2Ek2VT2_wXy3fFnF'), (148, '1Mtn2XGNIwidw9FPl0_ceuKW4u0ldthnz'), (149, '1_h8WDYlud3g6scr_9iQvdjo7DZix58M5'), (150, '1gk37tkEg2mKmPjNoNmai1dVmNvCvJrYi'), (151, '17-2GZzHhjimugmo13K7av2XGQ9korVpS'), (152, '1LuzZwc61K6nvnmTY-QjhjRjfLeNHBXe3'), (153, '1PQoQirAUsTg44jf8z6l8OBNe5_jm0vHs'), (154, '1U4AKZYZIlAxYdF3wkLOaUbBvkQhWZTN2'), (155, '1yNwhDoI8r-uk4gJ3ND_pA7NibHjFDUTm')]}
     import sys as _sys
     if len(_sys.argv) == 1 and _defaults:
         nayanar, seq_fid = next(iter(_defaults.items()))
