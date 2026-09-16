@@ -2,13 +2,20 @@
 
 > **Purpose:** project-local detailed handoff for continued work on `nalvar.in` — PWA, SEO, path routing, and Blog phase 2. The wiki `D:\knowledge-base\HANDOFF.md` is the thin master pointer; this file is the **authoritative project detail**.
 >
-> **Last updated:** 2026-09-15 · `main` at `ab73a27`+dirty (Day5 3/6 DONE 120ch 3-parallel 38m wall + 524 fix + batch wrapper) · `output/day-05` murthi/tiruneelanakkar/appoothi 34F 120ch done — `output/day-01` 21 + `day-02` 14 + `day-03` 11 + `day-04` 7 + `day-05` 3 = 56/71 total stories, 201 files · Day5 remaining 3 (Amar/Eri/Siruthonda 39F 136ch) queued via `run_day05_batch.py`
+> **Last updated:** 2026-09-16 · `main` at `8f6192f`+dirty (Day5 6/6 DONE 73F 269ch two-pass + chunked English) · `output/day-05` 6 folders Murthi/Tiru/Appoothi/Amar/Eri/Siru 376-417K Tamil 132-155K English 3-parallel+chunked `269ch $2.42` — `output/day-01` 21 + `day-02` 14 + `day-03` 11 + `day-04` 7 + `day-05` 6 = 59/71 total stories, 214 files · Lessons `periapuranam/lessons-learnt.md` created → Day6 `96F 336ch` queued two-pass
 
 > **Stack:** static PWA (no framework), `index.html` + `data.json` + `remedies.json` + `blog/` + `periapuranam/` (catalog 1024 + Nayanar build day-batched `output/day-01`, `day-02`), Cloudflare Workers Assets (`wrangler.toml` `directory ./dist` `not_found_handling single-page-application`), `sw.js` precache, `manifest.webmanifest`, `scripts/admin-dev-server.mjs` inline PUT dev server
 
 ---
 
-## 1. Goal Accomplished — This Session (2026-09-15 cont · Day5 3/6 3-Parallel + Budget Fix + Wrapper)
+## 1. Goal Accomplished — This Session (2026-09-16 · Day5 6/6 Two-Pass Complete + Chunked English + Lessons)
+
+- **Day5 6/6 DONE two-pass 73F 269ch $2.42 — output/day-05 6 folders:** `Murthi 11F 43ch 353K Tamil 125K English $0.436`, `Tiruneelanakkar 11F 35ch 275K 99K $0.345`, `Appoothi 12F 42ch 355K 120K $0.432` (3-parallel `38m wall 2.0s throttle 30s stagger`) + **Pass1 Tamil fix + Pass2 English chunked 39F 149ch:** `Amar-Niti 13F 48ch 376K Tamil 132K English $0.365` (`095 HUGE 43198→176c` after re-download 13M→14.2M + chunk `0.4K→110K` valid, `39747` repeat fixed), `Eri-Pattha 13F 53ch 417K 155K $0.438` (`111 TINY 7→81c`), `Siruthonda 13F 48ch 410K 142K $0.401` (`926 TINY 7→89c`, `928 EMPTY 0→544c`) — all `no ====`, `Chapter 11/11/12 13/13/13 ==files`, `finish stop`, `bilingual 508-573K`. **Meter fixed:** `run_day05_batch.py:15` `POLL 30s + HEARTBEAT 300s` filesystem count `RESUME 38/136` event-based, `python -u` unbuffered; **English separate:** `run_day05_translate.py:1` `english_real/` `CHUNK_TAMIL_LIMIT 60000` `3 chunks` per story `Chapter 01-04,05-09,10-13` `stop` no truncation (was `30000 max` length).
+- **Two-pass now mandatory:** `Transcribe → Verify (anomalies dur-aware min dur*6 / max dur*20+500, ffprobe Invalid → re-download) → Translate chunked → Verify` per `periapuranam/lessons-learnt.md:1`. Added `run_amar/eri/siruthonda_nayanar.py:309` cached skip `>500 && not FAILED` (saves $0.36 for 38 cached chunks on resume).
+- **Tracker updated:** `periapuranam/day_wise_plan.xlsx:DayWise_Plan` `J6 2026-09-16 K6 73/73 L6 269ch 52m wall M6 2.4193 O6 Done` + `Day 5` rows `Amar 48ch $0.274+0.090=0.365, Eri 53ch $0.333+0.105=0.438, Siru 48ch $0.304+0.096=0.401` all `Done`.
+- **Lessons:** `periapuranam/lessons-learnt.md:1` created (10 sections: two-pass, chunking 300s/60K, dur-aware flags, meter unbuffered, resume skip, budget fail-fast, cost $2.42 Day5, verification checklist, scaling to Day6 96F 336ch + giants 568F).
+
+## 1. Goal Accomplished — Prior Session (2026-09-15 cont · Day5 3/6 3-Parallel + Budget Fix + Wrapper)
 
 - **Day5 3/6 DONE via 3-parallel (38m wall 18:07-18:45, throttle 2.0s +30s stagger) — output/day-05 34F 120ch:** `Murthi 180-190 11F 43ch 129072c $0.084 353718b 0 anomalies 2103s`, `Tiruneelanakkar 516-526 11F 35ch 100064c $0.067 275373b 0 anomalies after fix 1799s` (was `524 chunk03 30s 0c EMPTY` → re-transcribed `397c $0.00107` + re-merged `10769c` + re-translated `99495c`), `Appoothi 504-515 12F 42ch 129395c $0.084 355322b 0 anomalies 2038s` — all `no ====`, `Chapter 11/11/12 ==files`, `finish:stop`, `bilingual 254k/196k/249k`. **120ch wall 38m** vs `120m seq`, `Day5 73F 256ch` half done, remaining `Amar 91-103 13F 45ch + Eri 105-117 13F 45ch + Siruthonda 924-936 13F 46ch =39F 136ch` queued.
 - **Budget fail-fast patched:** `periapuranam/templates/run_nayanar_template.py:149` + `60 run_*.py` now detect `402/403 Budget/insufficient` → `print FATAL BUDGET ... sys.exit(2)` instead of `3× retry → [FAILED TRANSCRIPTION] 22c` loop (was wasting `18s` per failed chunk at `murthi 180 2 ok +10 failed` + producing `periyapuranam-181-tamil-real.txt 94c` etc.). Tested `curl key` limit `15→30` `remaining 6.33` after credit add; `hello` now `200`.
@@ -126,11 +133,11 @@
 
 ---
 
-## 3. Immediate Next Steps (Day 5 — 3/6 Done, Next Batch Queued)
+## 3. Immediate Next Steps (Day 6 — Day5 6/6 Done, Next is Day6 96F)
 
-1. **Day 5 remaining 3/6 — 39F 136ch via wrapper:** `Amar-Niti 91-103 13F 45ch`, `Eri-Pattha 105-117 13F 45ch`, `Siruthonda 924-936 13F 46ch` — run `python periapuranam/run_day05_batch.py` (produces `output/day-05/batch_progress.json` meter every 5s, wall tracking, 30s stagger, 2.0s throttle, fail-fast intact). Expected `~35m wall` (`1h47m seq` half left). Verify `Chapter 13/13/13` + `no ====`, `instrumentation 0 anomalies` + fix `524` already done `397c`.
-2. **Then Day 6 (96F) + Day 7 buffer:** `Chandesura 18F, Karai 18F, Kazharitrarivar 28F, Kannappa 32F` (largest small-batch) — `336ch $3.24 2h20m seq` likely needs `3` batches of `2` (`~35m` wall). After small-batch `65 stories 408F` done, `Day 8` English single-call `65 stories` already done per-story, `Day 9 QA` missing-file + 8 dups audit + `transcribe_log` review.
-3. **Deferred anomalies batch (end of Days 1-7):** Fix `KazharChinga 987 41832` + `Thillai 053 0-char` single-chunk re-transcribe (dur-aware now), flip `Anomalies OPEN→Done`; keep `Poyyadiai 967 WRONG` flagged for final review. Then `Day1-4 Human Verified No→Yes` after spot-listen `±1` audio per story (pilot drift check).
+1. **Day 6 transcribe Pass 1 — 96F 336ch:** `Chandesura 18F (TBD), Karaikal Ammaiyaar 18F, Kazharitrarivar 28F, Kannappa 32F` — largest small-batch. Use two-pass: run transcribe only (`run_chandesura...`) 2-parallel, verify `Chapter N==files`, `no ====`, dur-aware anomalies + `ffprobe Invalid` re-download. Expected `~45m wall chunked`.
+2. **Day 6 translate Pass 2 — chunked English:** Each `18-32F` Tamil `~250-400K chars` → `english_real` `4-7` chunks per story (`limit 60K`), same meter as `run_day05_translate.py:1`. After Day6 English, small batch `65 stories 408F` complete. Then `Day 7 Sundarar 36F` (exception) + buffer.
+3. **Deferred anomalies batch (end of Days 1-7):** Fix `KazharChinga 987 41832` + `Thillai 053 0-char` single-chunk re-transcribe (dur-aware now), flip `Anomalies OPEN→Done`; keep `Poyyadiai 967 WRONG` flagged for final review. Then `Day1-5 Human Verified No→Yes` after spot-listen `±1` audio per story (pilot drift check).
 4. **Giants deferred `>=50F`:** `Yeyar Kon 62, Thirunavukkarasu 215, ThiruGnanaSambandha 291 568F $27.1 13.8h seq` `Day 10` buffer + `Day 11+` — chunked translate `2-3` calls each (Sambandha `291F 3.2M chars 1.1M tokens $3.42`). Sundarar `36F` exception Day7 deferred.
 
 ## 3. Immediate Next Steps (for next session — PAUSED for review per owner 2026-09-08) [ARCHIVED — Day1 done, see above]

@@ -306,7 +306,19 @@ def run(nayanar, seq_fid_list):
 
                 make_chunk(dest, offset, dur, chunk_path)
 
-            print(f"  chunk {i+1}/{chunks} offset {offset:.0f}s dur {dur:.0f}s size {chunk_path.stat().st_size/1e3:.0f}KB -> transcribing...")
+            chunk_txt_cached = TAMIL_DIR/f"periyapuranam-{seq:03d}_chunk{i:02d}.txt"
+            if chunk_txt_cached.exists() and chunk_txt_cached.stat().st_size > 500:
+                try:
+                    _cached = chunk_txt_cached.read_text(encoding="utf-8").strip()
+                    if _cached and "[FAILED" not in _cached and len(_cached) > 30:
+                        print(f"  chunk {i+1}/{chunks} offset {offset:.0f}s dur {dur:.0f}s size {chunk_path.stat().st_size/1e3:.0f}KB -> cached {len(_cached)} chars skip API", flush=True)
+                        seq_out_parts.append(_cached)
+                        seq_metas.append({"chunk":i,"offset":offset,"dur":dur,"chars":len(_cached),"meta":{"cached":True}})
+                        _flag_anomaly(seq,i,_cached,{"usage":{"cost":0}},0,0,dur)
+                        continue
+                except: pass
+
+            print(f"  chunk {i+1}/{chunks} offset {offset:.0f}s dur {dur:.0f}s size {chunk_path.stat().st_size/1e3:.0f}KB -> transcribing...", flush=True)
 
             t0=time.time()
 

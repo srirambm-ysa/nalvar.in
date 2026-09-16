@@ -1,0 +1,41 @@
+{
+  "nayanar": "Amar-Niti Nayanar",
+  "slug": "amar_niti_nayanar",
+  "day": "day-05",
+  "start": 1789544918.355756,
+  "end": 1789544918.4642122,
+  "elapsed_s": 0.1,
+  "chunks": [
+    {
+      "chunk": 0,
+      "headers": "Chapter 01, Chapter 02, Chapter 03, Chapter 04, Chapter 05, Chapter 06",
+      "tamil_chars": 59516,
+      "english_chars": 58857,
+      "cached": true,
+      "cost": 0,
+      "finish": "stop",
+      "duration_s": 0
+    },
+    {
+      "chunk": 1,
+      "headers": "Chapter 07, Chapter 08, Chapter 09, Chapter 10, Chapter 11",
+      "tamil_chars": 50716,
+      "english_chars": 48347,
+      "cached": true,
+      "cost": 0,
+      "finish": "stop",
+      "duration_s": 0
+    },
+    {
+      "chunk": 2,
+      "headers": "Chapter 12, Chapter 13",
+      "tamil_chars": 26978,
+      "english_chars": 25003,
+      "cached": true,
+      "cost": 0,
+      "finish": "stop",
+      "duration_s": 0
+    }
+  ],
+  "anomalies": []
+}

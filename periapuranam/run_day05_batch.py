@@ -12,8 +12,9 @@ BATCH = "day-05-batch2"
 SLUGS = ["amar_niti_nayanar", "eri_pattha_nayanar", "siruthonda_nayanar"]
 # stagger between launches (s) — matches process_instructions 30s discussion
 STAGGER = 30
-# meter refresh
-POLL = 5
+# meter refresh — event-based (per chunk) + 5-min heartbeat; no 5-sec spam
+POLL = 30
+HEARTBEAT_S = 300
 
 LOG_DIR = ROOT / "output" / "day-05" / "logs"
 PROGRESS_FILE = ROOT / "output" / "day-05" / "batch_progress.json"
@@ -22,46 +23,44 @@ def log_path(slug): return LOG_DIR / f"{slug}.log"
 def slug_label(s): return s.replace("_nayanar","").replace("_"," ")
 
 def count_progress(slug):
-    """parse log for done/total/cost. Returns (done,total,cost_done)"""
-    lp = log_path(slug)
-    if not lp.exists():
-        return 0, None, 0.0
-    txt = lp.read_text(encoding="utf-8", errors="ignore")
-    # done = count of "-> ... chars, cost" lines (successful transcribes + cached skip)
-    # also cached lines have "skip API"
-    # total estimated from "chunk 1/4" highest denominator seen
-    done = txt.count("-> transcribing")  # launched
-    # completed: lines with "chars," after transcribing or cached skip
-    completed = len(re.findall(r"cached \d+ chars skip API|-> \d+ chars, cost", txt))
-    # total: max denominator from "chunk X/Y"
-    totals = re.findall(r"chunk \d+/(\d+)", txt)
-    total = max(map(int, totals)) if totals else None
-    # but story has multiple seq files, so total above is per-seq, not per-story.
-    # Better estimate total per-story from transcribe_log if exists, else None.
-    # For live, sum of per-seq totals: count distinct seq blocks? Use "MERGED seq" count?
-    # Fallback: count expected from day_wise_plan — hardcode for batch2.
-    # We know batch2: 13+13+13 files ~45ch each => ~135ch. Use log MERGED count * avg.
-    # Instead show per-seq progress aggregated: completed is actual done chunks, show as completed.
-    # For meter total, use transcribe_log total if story done, else estimate.
-    story_tamil = ROOT / "output" / "day-05" / slug / "tamil_real" / f"{slug}_tamil.txt"
+    """count via filesystem (chunk txt files) + log cost. Returns (done,total,cost_done)"""
+    tamil_dir = ROOT / "output" / "day-05" / slug / "tamil_real"
+    # done = chunk txt files >500 bytes and not FAILED (event-based truth)
+    done = 0
+    if tamil_dir.exists():
+        for p in tamil_dir.glob("periyapuranam-*_chunk*.txt"):
+            try:
+                if p.stat().st_size > 500:
+                    txt = p.read_text(encoding="utf-8", errors="ignore").strip()
+                    if txt and "[FAILED" not in txt:
+                        done += 1
+            except: pass
+    # total: from transcribe_log if story done else expected
+    total = None
+    story_tamil = tamil_dir / f"{slug}_tamil.txt"
     if story_tamil.exists():
-        # story done — total is known via log
-        log = ROOT / "output" / "day-05" / slug / "tamil_real" / "transcribe_log.json"
+        log = tamil_dir / "transcribe_log.json"
         if log.exists():
             try:
                 j=json.loads(log.read_text(encoding="utf-8"))
                 total = sum(x.get("chunks",0) for x in j)
             except: pass
-    costs = re.findall(r"cost (0\.\d+)", txt)
-    cost = sum(float(c) for c in costs) if costs else 0.0
-    # include instrumentation EN cost if done
+    # cost: parse log for cost (only when available, no spam)
+    lp = log_path(slug)
+    cost = 0.0
+    if lp.exists():
+        try:
+            txt = lp.read_text(encoding="utf-8", errors="ignore")
+            costs = re.findall(r"cost (0\.\d+)", txt)
+            cost = sum(float(c) for c in costs) if costs else 0.0
+        except: pass
     eng_meta = ROOT / "output" / "day-05" / slug / f"{slug}_english_meta.json"
     if eng_meta.exists():
         try:
             j=json.loads(eng_meta.read_text(encoding="utf-8"))
             cost += float(j.get("usage",{}).get("cost",0) or 0)
         except: pass
-    return completed, total, cost
+    return done, total, cost
 
 def main():
     LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -75,24 +74,28 @@ def main():
         if i>0:
             print(f"  stagger {STAGGER}s before {slug}...")
             time.sleep(STAGGER)
-        cmd = [sys.executable, str(ROOT / f"run_{slug}.py")]
+        cmd = [sys.executable, "-u", str(ROOT / f"run_{slug}.py")]
         lp = log_path(slug)
-        # truncate log for fresh batch2 (keep old as .bak if exists and non-empty)
-        if lp.exists() and lp.stat().st_size>0:
-            bak = lp.with_suffix(".log.bak")
-            if not bak.exists():
-                lp.rename(bak)
-        f = open(lp, "w", encoding="utf-8", buffering=1)
+        # do NOT truncate if resume: keep existing log and append (preserves cached skip visibility)
+        # only truncate if day05 batch1 logs (murthi etc) — for batch2 we append
+        f = open(lp, "a", encoding="utf-8", buffering=1)
         # keep handle to close later
-        p = subprocess.Popen(cmd, stdout=f, stderr=subprocess.STDOUT, cwd=str(ROOT.parent))
+        p = subprocess.Popen(cmd, stdout=f, stderr=subprocess.STDOUT, cwd=str(ROOT.parent), env={**os.environ, "PYTHONUNBUFFERED":"1"})
         procs[slug]= (p,f)
-        print(f"  launched {slug} pid {p.pid} -> {lp}")
+        print(f"  launched {slug} pid {p.pid} -> {lp} (-u unbuffered, append)")
 
-    # live meter
+    # live meter — event-based: only print when done increments or every 5 mins
     try:
+        last_done = -1
+        last_print = time.time()
+        # initial snapshot
+        wall = time.time()-wall_start
+        done_total_init = sum(count_progress(s)[0] for s in SLUGS)
+        print(f"[{time.strftime('%H:%M:%S')} wall {wall/60:.1f}m] RESUME {done_total_init}/{total_expected} chunks already cached (will skip API)", flush=True)
         while any(p.poll() is None for p,_ in procs.values()):
             time.sleep(POLL)
             wall = time.time()-wall_start
+            wall_m = wall/60
             parts=[]
             done_total=0
             cost_total=0.0
@@ -105,15 +108,16 @@ def main():
                 p,_ = procs[slug]
                 state = "run" if p.poll() is None else f"exit {p.poll()}"
                 parts.append(f"{slug_label(slug)} {done}/{tot} {state}")
-            # eta: avg cost per chunk ~0.0096 + 22s per chunk => remaining*22s / parallelism(3)
-            # wall tracks real, eta = remaining*22/3
             remaining = max(0, total_expected - done_total)
-            # parallel factor 3 but staggered, approx 22s per chunk /3
             eta_s = remaining * 22 / 3 if remaining else 0
-            wall_m = wall/60
             eta_m = eta_s/60
-            meter = f"[{time.strftime('%H:%M:%S')} wall {wall_m:.1f}m] {done_total}/{total_expected} {done_total/total_expected*100:.0f}%  ${cost_total:.2f}  ETA {eta_m:.0f}m  |  " + "  ".join(parts)
-            print(meter, flush=True)
+            # only print on progress or heartbeat (5-min)
+            should_print = (done_total != last_done) or (time.time() - last_print >= HEARTBEAT_S)
+            if should_print:
+                meter = f"[{time.strftime('%H:%M:%S')} wall {wall_m:.1f}m] {done_total}/{total_expected} {done_total/total_expected*100:.0f}%  ${cost_total:.2f}  ETA {eta_m:.0f}m  |  " + "  ".join(parts)
+                print(meter, flush=True)
+                last_done = done_total
+                last_print = time.time()
             # write progress file (for resume/dashboard)
             prog = {
                 "batch": BATCH,
