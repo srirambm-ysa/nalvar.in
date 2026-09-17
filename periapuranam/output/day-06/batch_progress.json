@@ -1,0 +1,42 @@
+{
+  "batch": "day-06-remaining-3phase",
+  "phase": "B",
+  "wall_s": 30.4,
+  "wall_m": 0.5,
+  "done": 189,
+  "total_expected": 210,
+  "cost": 0.0104,
+  "per_slug": {
+    "chandesura_nayanar": {
+      "done": 64,
+      "total": 68,
+      "cost": 0.8096,
+      "pid": 6604,
+      "exit": 0
+    },
+    "karaikal_ammaiyaar": {
+      "done": 63,
+      "total": 64,
+      "cost": 0.7074,
+      "pid": 4156,
+      "exit": 0
+    },
+    "kazharitrarivar_nayanar": {
+      "done": 89,
+      "total": 90,
+      "cost": 0.0104,
+      "pid": 9664,
+      "exit": 0,
+      "phase": "B"
+    },
+    "kannappa_nayanar": {
+      "done": 100,
+      "total": 112,
+      "cost": 0.0,
+      "pid": 1560,
+      "exit": null,
+      "phase": "B"
+    }
+  },
+  "updated": "2026-09-17 19:36:35"
+}

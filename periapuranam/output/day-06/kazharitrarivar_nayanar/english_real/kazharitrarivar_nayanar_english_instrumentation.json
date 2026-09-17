@@ -1,0 +1,77 @@
+{
+  "nayanar": "Kazharitrarivar Nayanar",
+  "slug": "kazharitrarivar_nayanar",
+  "day": "day-06",
+  "phase": "C",
+  "start": 1789657162.1644301,
+  "end": 1789657658.9878645,
+  "elapsed_s": 496.8,
+  "chunks": [
+    {
+      "chunk": 0,
+      "headers": "Chapter 01, Chapter 02, Chapter 03, Chapter 04, Chapter 05, Chapter 06",
+      "tamil_chars": 57346,
+      "english_chars": 58181,
+      "cost": 0.038041839,
+      "finish": "stop",
+      "duration_s": 81.9,
+      "prompt_tokens": 15812,
+      "completion_tokens": 13473
+    },
+    {
+      "chunk": 1,
+      "headers": "Chapter 07, Chapter 08, Chapter 09, Chapter 10, Chapter 11",
+      "tamil_chars": 53717,
+      "english_chars": 51792,
+      "cost": 0.036357651,
+      "finish": "stop",
+      "duration_s": 77.7,
+      "prompt_tokens": 14858,
+      "completion_tokens": 12907
+    },
+    {
+      "chunk": 2,
+      "headers": "Chapter 12, Chapter 13, Chapter 14, Chapter 15, Chapter 16",
+      "tamil_chars": 49818,
+      "english_chars": 52061,
+      "cost": 0.034950069,
+      "finish": "stop",
+      "duration_s": 76.6,
+      "prompt_tokens": 14177,
+      "completion_tokens": 12420
+    },
+    {
+      "chunk": 3,
+      "headers": "Chapter 17, Chapter 18, Chapter 19, Chapter 20, Chapter 21",
+      "tamil_chars": 53253,
+      "english_chars": 53888,
+      "cost": 0.040940163,
+      "finish": "stop",
+      "duration_s": 143.4,
+      "prompt_tokens": 15454,
+      "completion_tokens": 14687
+    },
+    {
+      "chunk": 4,
+      "headers": "Chapter 22, Chapter 23, Chapter 24, Chapter 25, Chapter 26, Chapter 27",
+      "tamil_chars": 57152,
+      "english_chars": 58790,
+      "cost": 0.040149153,
+      "finish": "stop",
+      "duration_s": 84.8,
+      "prompt_tokens": 16199,
+      "completion_tokens": 14278
+    },
+    {
+      "chunk": 5,
+      "headers": "Chapter 28",
+      "tamil_chars": 16128,
+      "english_chars": 17370,
+      "cost": 0.011699523,
+      "finish": "stop",
+      "duration_s": 25.1,
+      "prompt_tokens": 4584,
+      "completion_tokens": 4177
+    }
+  ]
+}

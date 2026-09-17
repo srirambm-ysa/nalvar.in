@@ -1,0 +1,1178 @@
+[
+  {
+    "seq": 937,
+    "fid": "1EfHpd4dr2-tuZc5EKAm7Yw5_rYbqMpeA",
+    "duration": 1008.62839,
+    "chunks": 4,
+    "merged_chars": 12695,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-937-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3620,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3761,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 300,
+        "chars": 3766,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 3,
+        "offset": 900,
+        "dur": 108.62838999999997,
+        "chars": 1542,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 938,
+    "fid": "1_3HbFUr7wKlbJ4kfLrMyodhYQUyp1wrz",
+    "duration": 504.290975,
+    "chunks": 2,
+    "merged_chars": 6143,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-938-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3650,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 204.290975,
+        "chars": 2491,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 939,
+    "fid": "10m3kWnlI6NxCsQFNqNY-hJFebtbZ4sQD",
+    "duration": 1123.079546,
+    "chunks": 4,
+    "merged_chars": 13543,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-939-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3361,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3640,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 300,
+        "chars": 3744,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 3,
+        "offset": 900,
+        "dur": 223.07954599999994,
+        "chars": 2792,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 940,
+    "fid": "1pL_KjvPZqJyQIqOIEJm_02sXOraF_agZ",
+    "duration": 685.499501,
+    "chunks": 3,
+    "merged_chars": 8356,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-940-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3505,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3689,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 85.49950100000001,
+        "chars": 1158,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 941,
+    "fid": "1NPXWrdQkHI9oF1cIz7E9Lwi7zKepXlN5",
+    "duration": 861.344218,
+    "chunks": 3,
+    "merged_chars": 10645,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-941-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3523,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3941,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 261.34421799999996,
+        "chars": 3177,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 942,
+    "fid": "1UGQH-MhXocnjOski0VcxCk2T4hZTM4CY",
+    "duration": 459.151383,
+    "chunks": 2,
+    "merged_chars": 5716,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-942-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3660,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 159.151383,
+        "chars": 2054,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 943,
+    "fid": "1FWOBTePebesW_lyQDllWcpviRM9XbqHN",
+    "duration": 847.087166,
+    "chunks": 3,
+    "merged_chars": 9955,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-943-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3367,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3506,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 247.08716600000002,
+        "chars": 3078,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 944,
+    "fid": "11B5QtLhSJ-cVP94g8KHXIi4MATVKyraq",
+    "duration": 927.358549,
+    "chunks": 4,
+    "merged_chars": 10908,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-944-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3551,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3380,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 300,
+        "chars": 3671,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 3,
+        "offset": 900,
+        "dur": 27.35854900000004,
+        "chars": 300,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 945,
+    "fid": "1gkwme20e_WrZdwc1KxZR3EPTgpwQGAEd",
+    "duration": 860.11356,
+    "chunks": 3,
+    "merged_chars": 10195,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-945-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3482,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3564,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 260.11356,
+        "chars": 3145,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 946,
+    "fid": "1viub_5eL5pXEltaMFXsuekrrxLdai6at",
+    "duration": 818.340862,
+    "chunks": 3,
+    "merged_chars": 10158,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-946-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3452,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3740,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 218.34086200000002,
+        "chars": 2962,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 947,
+    "fid": "1Lr6WNCAq7FVkNSjhB467I5NeC_6EmXZg",
+    "duration": 978.581769,
+    "chunks": 4,
+    "merged_chars": 12295,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-947-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3590,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3579,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 300,
+        "chars": 4095,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 3,
+        "offset": 900,
+        "dur": 78.58176900000001,
+        "chars": 1025,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 948,
+    "fid": "1nX2SM64d24Ssf1FIJxG_ZGjylm_7-ugn",
+    "duration": 982.90068,
+    "chunks": 4,
+    "merged_chars": 11762,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-948-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3621,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3578,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 300,
+        "chars": 3494,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 3,
+        "offset": 900,
+        "dur": 82.90067999999997,
+        "chars": 1063,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 949,
+    "fid": "1zM_CS03SbJZFaup-_9LTrIu-D8m4iFqY",
+    "duration": 615.444898,
+    "chunks": 3,
+    "merged_chars": 7709,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-949-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3545,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3923,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 15.444897999999966,
+        "chars": 237,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 950,
+    "fid": "1yyqq6EAX_Qcc-COwV7ZAQlWp8heYuRb3",
+    "duration": 792.218413,
+    "chunks": 3,
+    "merged_chars": 9473,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-950-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3532,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3642,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 192.21841300000006,
+        "chars": 2295,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 951,
+    "fid": "1TmvpbGG1mG0cSNkHRovsfU-2Zf2OtOSq",
+    "duration": 1045.826757,
+    "chunks": 4,
+    "merged_chars": 12865,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-951-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3619,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3547,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 300,
+        "chars": 3757,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 3,
+        "offset": 900,
+        "dur": 145.82675700000004,
+        "chars": 1936,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 952,
+    "fid": "1UNx55xIoAUEDX8ESsk0Xa0jOTGczlsYA",
+    "duration": 644.307302,
+    "chunks": 3,
+    "merged_chars": 7803,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-952-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3681,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3527,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 44.30730200000005,
+        "chars": 591,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 953,
+    "fid": "1xDdaOPqD3bMt6EjIZx2euIlwW9BhIMZb",
+    "duration": 833.340952,
+    "chunks": 3,
+    "merged_chars": 10309,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-953-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3731,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3641,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 233.34095200000002,
+        "chars": 2933,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 954,
+    "fid": "1C8kL3Ogu8u94CWyGjg0eZpNOFVep-ZFp",
+    "duration": 843.697052,
+    "chunks": 3,
+    "merged_chars": 11052,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-954-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3940,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3853,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 243.69705199999999,
+        "chars": 3255,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 955,
+    "fid": "1vRmhKXVJLYIL7v7LgTNqHWt2QavArOOf",
+    "duration": 882.009977,
+    "chunks": 3,
+    "merged_chars": 11396,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-955-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3780,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3860,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 282.00997700000005,
+        "chars": 3752,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 956,
+    "fid": "1ti6FB-yu_03Z6lrvt9Ao5d0PZxHhojdL",
+    "duration": 821.104036,
+    "chunks": 3,
+    "merged_chars": 10050,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-956-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3681,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3691,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 221.10403599999995,
+        "chars": 2674,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 957,
+    "fid": "1Ob4RbyxMcLzor_fvuizO_E63Jble1HdD",
+    "duration": 825.794467,
+    "chunks": 3,
+    "merged_chars": 10240,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-957-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3357,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3915,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 225.79446700000005,
+        "chars": 2964,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 958,
+    "fid": "11dx_kkBG2bKh1Zid7hk0lRbyDRiRvzPf",
+    "duration": 728.015238,
+    "chunks": 3,
+    "merged_chars": 8455,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-958-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3682,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3826,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 128.01523799999995,
+        "chars": 943,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 959,
+    "fid": "1aCDKLLCe8QcWHqHZRRiHuFDL7Z5Cvi6b",
+    "duration": 707.024399,
+    "chunks": 3,
+    "merged_chars": 8550,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-959-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3628,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3628,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 107.02439900000002,
+        "chars": 1290,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 960,
+    "fid": "1KCQ2DuyPaXuctwyHlAT88EyE7fkHJMvq",
+    "duration": 828.813061,
+    "chunks": 3,
+    "merged_chars": 9918,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-960-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3414,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3636,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 228.81306099999995,
+        "chars": 2864,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 961,
+    "fid": "1PCYHnNNTyksC2Jl3o_yoNljRGGm9JJ3c",
+    "duration": 896.801088,
+    "chunks": 3,
+    "merged_chars": 11016,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-961-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3554,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3786,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 296.80108800000005,
+        "chars": 3672,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 962,
+    "fid": "1tKhSH1nTc55pwnko78pCB7qEb5hLA3Jl",
+    "duration": 740.902313,
+    "chunks": 3,
+    "merged_chars": 9022,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-962-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3639,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3602,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 140.90231300000005,
+        "chars": 1777,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 963,
+    "fid": "1kAth_KDgrB8vLU-LQ-biMZQ8VeJwySRA",
+    "duration": 787.644082,
+    "chunks": 3,
+    "merged_chars": 9943,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-963-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3696,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 3835,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 187.64408200000003,
+        "chars": 2408,
+        "meta": {
+          "cached": true
+        }
+      }
+    ]
+  },
+  {
+    "seq": 964,
+    "fid": "1WgyLVBBLCuZbIveWF4TE36zqvanPDiHV",
+    "duration": 1205.881905,
+    "chunks": 5,
+    "merged_chars": 16090,
+    "merged_file": "D:\\nalvar\\periapuranam\\output\\day-06\\kazharitrarivar_nayanar\\tamil_real\\periyapuranam-964-tamil-real.txt",
+    "chunks_meta": [
+      {
+        "chunk": 0,
+        "offset": 0,
+        "dur": 300,
+        "chars": 3905,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 1,
+        "offset": 300,
+        "dur": 300,
+        "chars": 4085,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 2,
+        "offset": 600,
+        "dur": 300,
+        "chars": 4064,
+        "meta": {
+          "id": "gen-1789653941-xeWcWsrwlLaSRonmplH5",
+          "object": "chat.completion",
+          "created": 1789653941,
+          "model": "google/gemini-2.5-flash",
+          "provider": "Google",
+          "system_fingerprint": null,
+          "service_tier": "default",
+          "choices": [
+            {
+              "index": 0,
+              "logprobs": null,
+              "finish_reason": "stop",
+              "native_finish_reason": "STOP",
+              "message": {
+                "role": "assistant",
+                "content": "களையும் காவல் செய்யும் கடமையும் கருணையும் உடைய நீர் அது செய்யாமல் இங்கு எதற்காக இருந்தீர்கள் என்று இறைவனை நோக்கி பாடுவதாக இத்திருப்பதிகம் அமைகின்றது. இறைவனாரே உமது எல்லை அருகிலேயே இது நிகழ்வது நிகழ்கின்றது என்றால் உம்முடைய அனுமதியும் உள்ளப்பாடும் இன்றி இவ்வாறு நிகழாது. எனவே நீர் அவ்வேடர் வடிவாய் உன் பூத கணங்களை அனுப்பி கவர்ந்து கொண்ட பொருட்களை எல்லாம் மீளக் கொடுத்தருளல் வேண்டும். என்பன எல்லாம் எத்துக்கு இங்கு அருகிருந்தீர் என்றதொரு வினா அதனை வினவுவதன் முகமாக இங்கே பெற வைத்த குறிப்பு அருளியது தமிழ் நாவலர் பெருமான் திருவாக்கின் அருமைப்பாடு ஆகும். எத்துக்கு மூத்தீர் என்று வழியமை திருமண படலத்திலே கந்தபுராணத்திலே கூட இதே போன்று ஒரு இடம் வருவதை நாம் காண்கின்றோம். திருமுருகன் பூண்டி கொங்கு நாட்டு பதிகப் பாடல் பெற்ற தலங்களுள் இரண்டாவது தலம். முருகப்பெருமான் சூரசம்ஹாரத்தின் பின் சிவபெருமானை பூஜித்த தலங்களுள் ஒன்று. எனவே திருமுருகன் பூண்டி என்று பெயர். பூஜித்த முருகப்பெருமான் சன்னிதி தனியாக சிறந்து விளங்குகின்றது. அப் பூஜையின் பயனாக இன்றும் இங்கு பக்தர்கள் எல்லோரும் பொதுமக்கள் எல்லோரும் வழிபட்டு பிரம்மஹத்தி சித்த பிரமை முதலிய வலிமையான நோய்களிலிருந்து நீங்கிச் செல்வதை இப்பொழுதும் நாம் காண்கின்றோம். அந்த நோய்கள் நீங்குவதற்கு உதவும் பிரம்ம தீர்த்தம் கோயிலுக்கு வெளியில் இருக்கின்றது. எனவே அவ்வாறு சித்த பிரமை பைத்தியம் முதலிய நோய் உடையவர்கள் அங்கே வந்து தங்கி வழிபடுவதற்காக தனி இடங்களும் அமைக்கப்பட்டிருக்கின்றன. துர்வாச முனிவர் தேவலோகத்திலிருந்து மாதவி மரம் என்ற கொடியினை கொண்டு வந்து இங்கு வைத்ததனால் இதற்கு மாதவி வனம் முல்லை வனம் என்று பெயர். முல்லைத்தாது மணம் கமழ் என்று பதிகத்தினுள்ளே இது குறிக்கப்படுகின்றது. மாதவி குறுக்கத்தி மரம் என்பது தலபுராணம். இந்த சன்னிதி தனியாக இருக்கின்றது. துர்வாச முனிவர் முதலியவர்களுக்கு பிரம்ம தாண்டவம் காட்டி அருளிய நடராஜப் பெருமான் சன்னிதி சிறப்பாக தனியாக இருக்கின்றது. நம்பிகள் வேடு பரி பற்றி ஆண்டுதோறும் ஐதீகத் திருவிழா கொண்டாடப்படுகின்றது. அந்த நிதி பறித்த இடத்திலிருந்து இறைவர் இருக்கும் இடத்தை கூ கூ என்று கூவி நம்பிகளுக்கு காட்டி அருளிய விநாயகர் சன்னிதி கூப்பிடு விநாயகர் என்று விசேஷமாக வழிபடப்படுகின்றது. இந்த இடம் இந்த தலத்திற்கு வடக்கில் அவிநாசிக்குச் செல்லும் வழியில் சிறிது தூரத்தில் இருக்கின்றது. கோயிலுக்கு எதிரில் உள்ள தனி விநாயகர் கோயிலுக்கு முன்புறம் உள்ள பாறையில் உள்ள சிறு குழியில் 12 ஆண்டுகளுக்கு ஒருமுறை ஊற்று பெருகும். அது மாமாங்கக் குழி என்று வழங்கப்படுகின்றது. நம்பிகள் அது பொருள் பரியுண்ட திருக்கோலமும் அதனை மீளப் பெற்ற திருக்கோலமுமாக இரண்டுமே சுவாமி கோயிலின் முகப்பில் ஸ்தாபிக்கப்பட்டு வழிபடப் பெற்று வருகின்றன. திருக்கோயில் தலபுராணம் சுமாராக 300 ஆண்டுகளுக்கு முன் வாழ்ந்த செட்டிப்பாளையம் மகாவித்வான் வாசுதேவ முதலியார் இயற்றியுள்ளார். இவரே பவானி புராணம் அவிநாசி கருணாம்பிகை சதகம் முதலிய பல நூல்களை இயற்றியவர். மூலமும் உரையுமாக அச்சிடப்பட்டிருக்கின்றது. காப்பு பாயிரம் புராண வரலாறு முதல் 11 சருக்கங்களும் 618 செய்யுள்களையும் உடையது. இதில் வேடு பரி சருக்கம் நம்பிகளைப் பற்றிய இத்தல வரலாற்றைக் கூறுவதாக அமைந்திருக்கின்றது. சுவாமியின் திருநாமம் முருகநாதேஸ்வரர் முருகாவுடையார். இறைவியார் திருநாமங்கள் முயங்கு பூண்முலை அம்மை ஆலிங்க பூஷண ஸ்தனாம்பிகை ஆவுடை நாயகி மங்களாம்பிகை. பிரம்ம தீர்த்தம் ஞான தீர்த்தம் சுப்பிரமணிய தீர்த்தம் சண்முக தீர்த்தம் என்று தீர்த்தங்கள். சுவாமியும் அம்பாளும் மேற்கு பார்த்த சன்னிதிகள். அவிநாசிக்கு மிக அருகில் இருக்கின்றது இத்திருத்தலம். இவையெல்லாம் திருமுருகன் பூண்டி தலத்தினைப் பற்றிய தலபுராணச் செய்திகள். சுந்தரமூர்த்தி சுவாமிகள் இவ்வாறு இறைவனை வேண்டி திருப்பதிகம் பாடுகின்றார். இனி 171வது திருப்பாடல். பாடி அவர் பரவுதலும் பரம்பொருளாம் அவர் அருளால் வேடுவர் தாம் பறித்த பொருள் அவையெல்லாம் விண் நெருங்க நீடு திருவாயிலின் முன் குவித்திடலும் நேர் இறைஞ்சி ஆடும் அவர் திருவருளால் அப்படியே கைக்கொண்டார். முன்பு கூறியபடி சுந்தரமூர்த்தி சுவாமிகள் இறைவனாரை வேண்டிப் பாடித் துதிக்கவே பரம்பொருளாகிய அவ் இறைவரது திருவருளினால் வேடுவர்கள் தாம் பறித்துக் கொண்டு போன பொருட்களை எல்லாம் ஆகாயம் அளவு நீடுகின்ற திருவாயிலின் திருமுன்பு குவிக்கின்றார்கள். அது கண்டு அருட்கூத்து ஆடுகின்ற இறைவரது திருவருளினாலே அதனை அவ்வாறே எடுத்துக் கொண்டார் சுந்தரமூர்த்தி சுவாமிகள். 172 மற்றும் 173வது திருப்பாடல்கள். கைக்கொண்டு கொடுப்போம் அக்கை வினைஞர் தமை ஏவி மைக்கொண்ட மிடற்றாரை வணங்கிப் போய் கொங்கு அகன்று மெய்க்கொண்ட காதலினால் விரைந்து ஏகி மென்கரும்பும் செய்கொண்ட சாலியும் சூழ் திருவாரூர் சென்று அணைந்தார்.",
+                "refusal": null,
+                "reasoning": null
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 7573,
+            "completion_tokens": 1114,
+            "total_tokens": 8687,
+            "cost": 0.010203831,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 7500,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0103069,
+              "upstream_inference_prompt_cost": 0.0075219,
+              "upstream_inference_completions_cost": 0.002785
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          }
+        }
+      },
+      {
+        "chunk": 3,
+        "offset": 900,
+        "dur": 300,
+        "chars": 3928,
+        "meta": {
+          "cached": true
+        }
+      },
+      {
+        "chunk": 4,
+        "offset": 1200,
+        "dur": 5.881904999999961,
+        "chars": 100,
+        "meta": {
+          "id": "gen-1789653953-GnNGdplTUs0PqFCy5VEK",
+          "object": "chat.completion",
+          "created": 1789653953,
+          "model": "google/gemini-2.5-flash",
+          "provider": "Google",
+          "system_fingerprint": null,
+          "service_tier": "default",
+          "choices": [
+            {
+              "index": 0,
+              "logprobs": null,
+              "finish_reason": "stop",
+              "native_finish_reason": "STOP",
+              "message": {
+                "role": "assistant",
+                "content": "அடியார்கள் திருவடிக்கள் போற்றி போற்றி உரையாசிரியர் ஐயா திருவடிக்கள் போற்றி போற்றி திருச்சிற்றம்பலம்.",
+                "refusal": null,
+                "reasoning": null
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 223,
+            "completion_tokens": 27,
+            "total_tokens": 250,
+            "cost": 0.000237006,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 150,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002394,
+              "upstream_inference_prompt_cost": 0.0001719,
+              "upstream_inference_completions_cost": 6.75e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "slug": "kannappa_nayanar",
+  "nayanar": "Kannappa Nayanar",
+  "phase": "C",
+  "chunks": 9,
+  "merged_chars": 421021,
+  "merged_chapters": 32,
+  "has_eq": false,
+  "instrument": [
+    {
+      "chunk": 0,
+      "headers": "Chapter 01, Chapter 02, Chapter 03, Chapter 04",
+      "tamil_chars": 53927,
+      "english_chars": 54495,
+      "cost": 0.038228256,
+      "finish": "stop",
+      "duration_s": 58.0,
+      "prompt_tokens": 14948,
+      "completion_tokens": 13652
+    },
+    {
+      "chunk": 1,
+      "headers": "Chapter 05, Chapter 06, Chapter 07, Chapter 08, Chapter 09",
+      "tamil_chars": 56785,
+      "english_chars": 54442,
+      "cost": 0.037476153,
+      "finish": "stop",
+      "duration_s": 79.8,
+      "prompt_tokens": 15074,
+      "completion_tokens": 13333
+    },
+    {
+      "chunk": 2,
+      "headers": "Chapter 10, Chapter 11, Chapter 12, Chapter 13, Chapter 14",
+      "tamil_chars": 55283,
+      "english_chars": 51171,
+      "cost": 0.03327588,
+      "finish": "stop",
+      "duration_s": 77.2,
+      "prompt_tokens": 13990,
+      "completion_tokens": 11766
+    },
+    {
+      "chunk": 3,
+      "headers": "Chapter 15, Chapter 16, Chapter 17, Chapter 18",
+      "tamil_chars": 54060,
+      "english_chars": 46310,
+      "cost": 0.03172158,
+      "finish": "stop",
+      "duration_s": 63.0,
+      "prompt_tokens": 14490,
+      "completion_tokens": 11078
+    },
+    {
+      "chunk": 4,
+      "headers": "Chapter 19, Chapter 20, Chapter 21",
+      "tamil_chars": 46126,
+      "english_chars": 46094,
+      "cost": 0.031967298,
+      "finish": "stop",
+      "duration_s": 192.9,
+      "prompt_tokens": 12859,
+      "completion_tokens": 11373
+    },
+    {
+      "chunk": 5,
+      "headers": "Chapter 22, Chapter 23, Chapter 24, Chapter 25",
+      "tamil_chars": 56489,
+      "english_chars": 56723,
+      "cost": 0.039625146,
+      "finish": "stop",
+      "duration_s": 76.4,
+      "prompt_tokens": 14993,
+      "completion_tokens": 14211
+    },
+    {
+      "chunk": 6,
+      "headers": "Chapter 26, Chapter 27, Chapter 28",
+      "tamil_chars": 47648,
+      "english_chars": 46958,
+      "cost": 0.030736629,
+      "finish": "stop",
+      "duration_s": 70.7,
+      "prompt_tokens": 12732,
+      "completion_tokens": 10891
+    },
+    {
+      "chunk": 7,
+      "headers": "Chapter 29, Chapter 30, Chapter 31",
+      "tamil_chars": 46164,
+      "english_chars": 45527,
+      "cost": 0.03078405,
+      "finish": "stop",
+      "duration_s": 63.8,
+      "prompt_tokens": 12550,
+      "completion_tokens": 10932
+    },
+    {
+      "chunk": 8,
+      "headers": "Chapter 32",
+      "tamil_chars": 19440,
+      "english_chars": 19284,
+      "cost": 0.013115718,
+      "finish": "stop",
+      "duration_s": 30.4,
+      "prompt_tokens": 5394,
+      "completion_tokens": 4652
+    }
+  ],
+  "elapsed_s": 723.2
+}
