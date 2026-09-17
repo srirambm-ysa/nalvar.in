@@ -338,7 +338,7 @@ def run(nayanar, seq_fid_list, phase="all"):
                 final.append(g)
         groups=final
         total=len(groups)
-        print(f" Tamil {len(story_content)} chars {len(chapters)} chapters → {total} English chunks (limit {CHUNK_TAMIL_LIMIT})")
+        print(f" Tamil {len(story_content)} chars {len(chapters)} chapters -> {total} English chunks (limit {CHUNK_TAMIL_LIMIT})")
         english_dir = BASE / "english_real"
         english_dir.mkdir(parents=True, exist_ok=True)
         # helper for single chunk translate

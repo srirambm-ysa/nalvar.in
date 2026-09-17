@@ -433,22 +433,31 @@ Tamil chunk {chunk_idx+1}/{total_chunks} (contains {headers_in}):
     print(f"\nDONE {nayanar} phase {phase} pipeline. Review files:\n  Tamil : {story_tamil}\n  English: {BASE/f'{SLUG}_english.txt'}")
 
 if __name__=="__main__":
-    # Default for `python periapuranam/run_<slug>.py` without args (uses per-slug _defaults)
-    _defaults = {"Chandesura Nayanar": [(245, '1gRzc8rW_hhsBNjbf6f-c6jWHDwoJX1pS'), (246, '1ojAmXhI1yC4rWgJlOnNRznbUzpZChiUE'), (247, '1CpQRc9EDzV5i-palVJG2RO34xneq-Ofx'), (248, '1_Vm-GGa6QJnAZMwRkk43wrO0i0tCiKOX'), (249, '1LVCqYT4turwXUjRxVtaMKFpoZG8wvE5t'), (250, '1C5kNXbxHKnT4KJtNNTFm8ktlDtQi1-HQ'), (251, '1CF7rgyG6VU22UR7UH6ZguWjmwjU7eAFO'), (252, '1DJKvR0vj3PQfad0nhxE1BUeMY24li-Fx'), (253, '1GJxt2Pt3HedVDW5s4HAZLT2ic3RJtRFc'), (254, '1xMlUFpewV6haiP4TV7S6ZQZVHy0lEKjv'), (255, '1J6pHJz9hzZoLwfn2yr6Tdz22g02N0mbb'), (256, '1Gfg8KX0kpw0G0UDnzIhwtbot4xbDScOF'), (257, '1Fo1LWoaoks-1I5NK3dwFpGId8w2pD3Gu'), (258, '1zLUqZ7HKbJ-Y4Me3P_kHNbU22spRxS0K'), (259, '1cLZXLfq4xkaHqeRNbzXnuvKTZrbECXDL'), (260, '1JyCB-bOtH3oEeNxoAcOsFz9xCKUsyu7a'), (261, '19RZ7XjiYensHFVI0YvyHEOzGa6A5cYuP'), (262, '1R0SMHE6XrxzpROXCgwsgqn-C-ukAgQqc')]}
+    _defaults_chandesura = {"Chandesura Nayanar": [(245, '1gRzc8rW_hhsBNjbf6f-c6jWHDwoJX1pS'), (246, '1ojAmXhI1yC4rWgJlOnNRznbUzpZChiUE'), (247, '1CpQRc9EDzV5i-palVJG2RO34xneq-Ofx'), (248, '1_Vm-GGa6QJnAZMwRkk43wrO0i0tCiKOX'), (249, '1LVCqYT4turwXUjRxVtaMKFpoZG8wvE5t'), (250, '1C5kNXbxHKnT4KJtNNTFm8ktlDtQi1-HQ'), (251, '1CF7rgyG6VU22UR7UH6ZguWjmwjU7eAFO'), (252, '1DJKvR0vj3PQfad0nhxE1BUeMY24li-Fx'), (253, '1GJxt2Pt3HedVDW5s4HAZLT2ic3RJtRFc'), (254, '1xMlUFpewV6haiP4TV7S6ZQZVHy0lEKjv'), (255, '1J6pHJz9hzZoLwfn2yr6Tdz22g02N0mbb'), (256, '1Gfg8KX0kpw0G0UDnzIhwtbot4xbDScOF'), (257, '1Fo1LWoaoks-1I5NK3dwFpGId8w2pD3Gu'), (258, '1zLUqZ7HKbJ-Y4Me3P_kHNbU22spRxS0K'), (259, '1cLZXLfq4xkaHqeRNbzXnuvKTZrbECXDL'), (260, '1JyCB-bOtH3oEeNxoAcOsFz9xCKUsyu7a'), (261, '19RZ7XjiYensHFVI0YvyHEOzGa6A5cYuP'), (262, '1R0SMHE6XrxzpROXCgwsgqn-C-ukAgQqc')]}
+    _defaults = _defaults_chandesura
     import sys as _sys
+    import argparse
+    p=argparse.ArgumentParser()
+    p.add_argument("--phase", default=None, help="A=download, B=transcribe Tamil, C=translate English, all=A+B+C")
+    p.add_argument("--nayanar", required=False, default=None)
+    p.add_argument("--seq", required=False, default=None, help="seq comma separated")
+    p.add_argument("--fid", required=False, default=None, help="fid comma separated")
+    args,_ = p.parse_known_args()
+    if args.phase and not args.nayanar and _defaults:
+        nayanar, seq_fid = next(iter(_defaults.items()))
+        print(f"Running with defaults {nayanar} {len(seq_fid)} files phase={args.phase}")
+        run(nayanar, seq_fid, phase=args.phase)
+        _sys.exit(0)
     if len(_sys.argv) == 1 and _defaults:
         nayanar, seq_fid = next(iter(_defaults.items()))
         print(f"Running with defaults {nayanar} {len(seq_fid)} files phase=all")
         run(nayanar, seq_fid, phase="all")
         _sys.exit(0)
-    import argparse
-    p=argparse.ArgumentParser()
-    p.add_argument("--nayanar", required=True)
-    p.add_argument("--seq", required=True, help="seq comma separated")
-    p.add_argument("--fid", required=True, help="fid comma separated")
-    p.add_argument("--phase", default="all", help="A=download, B=transcribe Tamil, C=translate English, all=A+B+C (default all)")
-    args=p.parse_args()
-    seqs=[int(x) for x in args.seq.split(",")]
-    fids=args.fid.split(",")
-    seq_fid=list(zip(seqs,fids))
-    run(args.nayanar, seq_fid, phase=args.phase)
+    if args.nayanar and args.seq and args.fid:
+        seqs=[int(x) for x in args.seq.split(",")]
+        fids=args.fid.split(",")
+        seq_fid=list(zip(seqs,fids))
+        run(args.nayanar, seq_fid, phase=args.phase or "all")
+        _sys.exit(0)
+    p.print_help()
+    _sys.exit(1)

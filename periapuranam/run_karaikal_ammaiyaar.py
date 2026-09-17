@@ -436,19 +436,28 @@ if __name__=="__main__":
     # Default for `python periapuranam/run_<slug>.py` without args (uses per-slug _defaults)
     _defaults = {"Karaikal Ammaiyaar": [(486, '1P8_RUVeGzyyhrw7F4vqqP2-uTUWedGJZ'), (487, '1h0pXLqa68Gq3VEUi5XTF-E8WK-BbHr1K'), (488, '12Fr6T_eWdBPlUIPHD7XAWDgF7BfdiXyI'), (489, '1ERi35UjU4UF35A1lcK_sHq-cGi0kiXwI'), (490, '1DTZnh6rbmGrcP-wXSM0zbX028ubjajCA'), (491, '1L9bSjWsrm4Q2okVvps4h2yVqqlZNpD_s'), (492, '1lCj_CYF4S6XnG6IVkQuZvAkHweDTQxAN'), (493, '1tKk6TXTeWNODEQ1HR5R8Bsu1WzitkJir'), (494, '1aYJrK0hO5yeUDMplt9RGECFBx9lHtUmB'), (495, '1dBP6faLpO2Idf92XRwmRfYw-ND9btZbj'), (496, '1Ev2Gmn1Es7oP0O2ajOZF6AkNzwgksWw_'), (497, '1GexRRPo0QmA0GE2A7lJCSSXH36CD6kMI'), (498, '1ISC8YsL8c-fu3Ny70cQ1EjTAAXpGb81b'), (499, '1qtLXfmQ43EGrYwJPv7ztZX7RExbsax7C'), (500, '1Ew85Ec2FJ4HyLp7z6u1Hn1fiOoQh24Mm'), (501, '1jux_3coeM8vaw8T-rGJkldf49Thz0KgO'), (502, '1Ow4EdikhuMGCSvnzHVI5-atIQBG-sH8Y'), (503, '1k2er9zLnCgrB6XI1TkRMKjiu24_fbGSZ')]}
     import sys as _sys
+    import argparse
+    p=argparse.ArgumentParser()
+    p.add_argument("--phase", default=None, help="A=download, B=transcribe Tamil, C=translate English, all=A+B+C")
+    p.add_argument("--nayanar", required=False, default=None)
+    p.add_argument("--seq", required=False, default=None, help="seq comma separated")
+    p.add_argument("--fid", required=False, default=None, help="fid comma separated")
+    args,_ = p.parse_known_args()
+    if args.phase and not args.nayanar and _defaults:
+        nayanar, seq_fid = next(iter(_defaults.items()))
+        print(f"Running with defaults {nayanar} {len(seq_fid)} files phase={args.phase}")
+        run(nayanar, seq_fid, phase=args.phase)
+        _sys.exit(0)
     if len(_sys.argv) == 1 and _defaults:
         nayanar, seq_fid = next(iter(_defaults.items()))
         print(f"Running with defaults {nayanar} {len(seq_fid)} files phase=all")
         run(nayanar, seq_fid, phase="all")
         _sys.exit(0)
-    import argparse
-    p=argparse.ArgumentParser()
-    p.add_argument("--nayanar", required=True)
-    p.add_argument("--seq", required=True, help="seq comma separated")
-    p.add_argument("--fid", required=True, help="fid comma separated")
-    p.add_argument("--phase", default="all", help="A=download, B=transcribe Tamil, C=translate English, all=A+B+C (default all)")
-    args=p.parse_args()
-    seqs=[int(x) for x in args.seq.split(",")]
-    fids=args.fid.split(",")
-    seq_fid=list(zip(seqs,fids))
-    run(args.nayanar, seq_fid, phase=args.phase)
+    if args.nayanar and args.seq and args.fid:
+        seqs=[int(x) for x in args.seq.split(",")]
+        fids=args.fid.split(",")
+        seq_fid=list(zip(seqs,fids))
+        run(args.nayanar, seq_fid, phase=args.phase or "all")
+        _sys.exit(0)
+    p.print_help()
+    _sys.exit(1)
