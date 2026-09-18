@@ -1,0 +1,93 @@
+{
+  "nayanar": "Tiruk Kurippu Tonda Nayanar",
+  "slug": "tiruk_kurippu_tonda_nayanar",
+  "day": "day-07",
+  "phase": "C",
+  "start": 1789718660.3911839,
+  "end": 1789719021.7484508,
+  "elapsed_s": 361.4,
+  "chunks": [
+    {
+      "chunk": 0,
+      "headers": "Chapter 01, Chapter 02, Chapter 03, Chapter 04, Chapter 05",
+      "tamil_chars": 53366,
+      "english_chars": 52585,
+      "cached": true,
+      "cost": 0,
+      "finish": "stop"
+    },
+    {
+      "chunk": 1,
+      "headers": "Chapter 06, Chapter 07, Chapter 08, Chapter 09",
+      "tamil_chars": 50407,
+      "english_chars": 49459,
+      "cached": true,
+      "cost": 0,
+      "finish": "stop"
+    },
+    {
+      "chunk": 2,
+      "headers": "Chapter 10, Chapter 11, Chapter 12, Chapter 13, Chapter 14",
+      "tamil_chars": 57765,
+      "english_chars": 59349,
+      "cached": true,
+      "cost": 0,
+      "finish": "stop"
+    },
+    {
+      "chunk": 3,
+      "headers": "Chapter 15, Chapter 16, Chapter 17, Chapter 18, Chapter 19",
+      "tamil_chars": 57048,
+      "english_chars": 54166,
+      "cost": 0.037104408,
+      "finish": "stop",
+      "duration_s": 121.1,
+      "prompt_tokens": 15464,
+      "completion_tokens": 13136
+    },
+    {
+      "chunk": 4,
+      "headers": "Chapter 20, Chapter 21, Chapter 22, Chapter 23, Chapter 24",
+      "tamil_chars": 54679,
+      "english_chars": 54165,
+      "cost": 0.034919874,
+      "finish": "stop",
+      "duration_s": 74.3,
+      "prompt_tokens": 15217,
+      "completion_tokens": 12283
+    },
+    {
+      "chunk": 5,
+      "headers": "Chapter 25, Chapter 26, Chapter 27, Chapter 28, Chapter 29",
+      "tamil_chars": 54558,
+      "english_chars": 51526,
+      "cost": 0.035428635,
+      "finish": "stop",
+      "duration_s": 65.7,
+      "prompt_tokens": 14980,
+      "completion_tokens": 12517
+    },
+    {
+      "chunk": 6,
+      "headers": "Chapter 30, Chapter 31, Chapter 32, Chapter 33, Chapter 34",
+      "tamil_chars": 52460,
+      "english_chars": 50030,
+      "cost": 0.033329439,
+      "finish": "stop",
+      "duration_s": 67.2,
+      "prompt_tokens": 14212,
+      "completion_tokens": 11761
+    },
+    {
+      "chunk": 7,
+      "headers": "Chapter 35, Chapter 36",
+      "tamil_chars": 19298,
+      "english_chars": 18670,
+      "cost": 0.012362229,
+      "finish": "stop",
+      "duration_s": 26.8,
+      "prompt_tokens": 5132,
+      "completion_tokens": 4379
+    }
+  ]
+}
